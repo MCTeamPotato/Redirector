@@ -73,7 +73,7 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, "redirectionor.refmap.json"
+    add sourceSets.main, "redirectionor-refmap.json"
     config "redirectionor.mixins.json"
 }
 
