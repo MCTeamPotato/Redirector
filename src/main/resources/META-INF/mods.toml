@@ -3,9 +3,9 @@ loaderVersion="[36,)"
 license="LGPL-v3"
 
 [[mods]]
-modId="directionoptimizer"
+modId="redirectionor"
 version="${file.jarVersion}"
-displayName="DirectionOptimizer"
+displayName="Redirectionor"
 authors="Team Potato"
 description='''
 
