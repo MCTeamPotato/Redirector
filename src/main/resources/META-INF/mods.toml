@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="LGPL-v3"
+
+[[mods]]
+modId="directionoptimizer"
+version="${file.jarVersion}"
+displayName="DirectionOptimizer"
+authors="Team Potato"
+description='''
+
+'''

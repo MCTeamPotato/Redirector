@@ -1,0 +1,51 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.teampotato.directionoptimizer.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "directionoptimizer.refmap.json",
+  "injectors": {
+    "defaultRequire": 0
+  },
+  "mixins": [
+    "block.AbstractCoralPlantBlockMixin",
+    "block.AbstractFireBlockMixin",
+    "block.ConcretePowderBlockMixin",
+    "block.CoralBlockMixin",
+    "block.FireBlockMixin",
+    "block.FlowingFluidBlockMixin",
+    "block.FrostedIceBlockMixin",
+    "block.LeavesBlockMixin",
+    "block.PistonBlockMixin",
+    "block.PistonBlockStructureHelperMixin",
+    "block.PistonHeadBlockMixin",
+    "block.RedstoneDiodeBlockMixin",
+    "block.RedstoneOreBlockMixin",
+    "block.RedstoneWireBlockMixin",
+    "block.SpongeBlockMixin",
+    "block.pattern.BlockPatternMixin",
+    "entity.monster.ShulkerEntityMixin",
+    "fluid.LavaFluidMixin",
+    "pathfinding.SwimNodeProcessorMixin",
+    "pathfinding.WalkAndSwimNodeProcessorMixin",
+    "state.DirectionPropertyMixin",
+    "tileentity.EndGatewayTileEntityMixin",
+    "util.math.vector.OrientationMixin",
+    "util.palette.UpgradeDataMixin",
+    "world.WorldMixin",
+    "world.gen.feature.BlueIceFeatureMixin",
+    "world.gen.feature.GlowstoneBlobFeatureMixin",
+    "world.gen.feature.NoExposedOreFeatureMixin",
+    "world.gen.feature.TreeFeatureMixin",
+    "world.gen.feature.structure.BuriedTreasureMixin",
+    "world.gen.feature.structure.OceanMonumentPiecesMixin"
+  ],
+  "client": [
+    "client.renderer.BlockModelRendererMixin",
+    "client.renderer.ItemRendererMixin",
+    "client.renderer.chunk.ChunkRenderDispatcherMixin",
+    "client.renderer.chunk.SetVisibilityMixin",
+    "client.renderer.model.FaceBakeryMixin",
+    "client.renderer.model.SimpleBakedModelMixin"
+  ]
+}
