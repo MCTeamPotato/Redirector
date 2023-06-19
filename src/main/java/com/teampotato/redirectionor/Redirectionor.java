@@ -14,4 +14,5 @@ public class Redirectionor {
     public static final Direction SOUTH = Direction.SOUTH;
     public static final Direction WEST = Direction.WEST;
     public static final Direction EAST = Direction.EAST;
+    //TODO: get3DDataValue()
 }

@@ -34,11 +34,6 @@ public abstract class RedstoneWireBlockMixin {
         return Redirectionor.DOWN;
     }
 
-    @Redirect(method = "getSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown3() {
-        return Redirectionor.DOWN;
-    }
-
     @Redirect(method = "animateTick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private Direction implDown4() {
         return Redirectionor.DOWN;

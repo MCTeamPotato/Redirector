@@ -119,7 +119,6 @@
     "client.particle.ParticleManagerMixin",
     "client.renderer.BlockModelRendererMixin",
     "client.renderer.FluidBlockRendererMixin",
-    "client.renderer.ItemRendererMixin",
     "client.renderer.chunk.ChunkRenderDispatcherMixin",
     "client.renderer.chunk.SetVisibilityMixin",
     "client.renderer.chunk.VisGraphMixin",
@@ -127,7 +126,6 @@
     "client.renderer.model.FaceBakeryMixin",
     "client.renderer.model.ModelRendererMixin",
     "client.renderer.model.SimpleBakedModelMixin",
-    "client.renderer.tileentity.EndPortalTileEntityRendererMixin",
-    "client.world.ClientWorldMixin"
+    "client.renderer.tileentity.EndPortalTileEntityRendererMixin"
   ]
 }

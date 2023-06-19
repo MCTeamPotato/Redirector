@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(WetSpongeBlock.class)
 public abstract class WetSpongeBlockMixin {
     @Redirect(method = "animateTick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private static Direction implDown() {
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 }
