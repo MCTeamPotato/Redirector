@@ -13,4 +13,9 @@ public abstract class ShulkerEntityMixin {
     private Direction[] implOpt1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "defineSynchedData", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 }

@@ -13,4 +13,9 @@ public abstract class LavaFluidMixin {
     private Direction[] implOpt1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "spreadTo", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown1() {
+        return Redirectionor.DOWN;
+    }
 }

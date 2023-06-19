@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(BlockModelProvider.class)
-public abstract class BlockModelProviderMixin {//TODO: continue
+public abstract class BlockModelProviderMixin {
     @Redirect(method = "createFacingDispatch", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private static Direction implDown1() {
         return Redirectionor.DOWN;

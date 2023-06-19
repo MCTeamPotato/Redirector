@@ -7,10 +7,10 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(OceanMonumentPieces.MonumentBuilding.class)
-public abstract class OceanMonumentPiecesMixin {
-    @Redirect(method = "generateRoomGraph", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt1() {
-        return Redirectionor.DIRECTIONS;
+@Mixin(OceanMonumentPieces.SimpleTopRoom.class)
+public abstract class SimpleTopRoomMixin {
+    @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
     }
 }
