@@ -23,4 +23,24 @@ public abstract class RedstoneWireBlockMixin {
     private Direction[] implOpt3() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "updateShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown1() {
+        return Redirectionor.DOWN;
+    }
+
+    @Redirect(method = "updateIndirectNeighbourShapes", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown2() {
+        return Redirectionor.DOWN;
+    }
+
+    @Redirect(method = "getSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown3() {
+        return Redirectionor.DOWN;
+    }
+
+    @Redirect(method = "animateTick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown4() {
+        return Redirectionor.DOWN;
+    }
 }

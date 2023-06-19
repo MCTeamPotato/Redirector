@@ -13,4 +13,9 @@ public abstract class ConcretePowderBlockMixin {
     private static Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "touchesLiquid", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private static Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 }

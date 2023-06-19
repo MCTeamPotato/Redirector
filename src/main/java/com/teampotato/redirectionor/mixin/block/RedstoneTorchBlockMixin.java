@@ -18,4 +18,14 @@ public abstract class RedstoneTorchBlockMixin {
     private Direction[] implOpt2() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "hasNeighborSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown1() {
+        return Redirectionor.DOWN;
+    }
+
+    @Redirect(method = "getDirectSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown2() {
+        return Redirectionor.DOWN;
+    }
 }

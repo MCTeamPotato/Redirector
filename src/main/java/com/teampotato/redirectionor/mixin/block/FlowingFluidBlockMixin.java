@@ -13,4 +13,9 @@ public abstract class FlowingFluidBlockMixin {
     private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "shouldSpreadLiquid", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 }
