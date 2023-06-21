@@ -13,4 +13,9 @@ public abstract class WallOrFloorItemMixin {
     private Direction implDown1() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "getPlacementState", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
 }

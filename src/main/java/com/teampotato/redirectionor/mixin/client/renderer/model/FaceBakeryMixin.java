@@ -23,4 +23,9 @@ public abstract class FaceBakeryMixin {
     private Direction[] implOpt3() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "calculateFacing", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

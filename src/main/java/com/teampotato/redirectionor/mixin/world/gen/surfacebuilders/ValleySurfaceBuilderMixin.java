@@ -13,4 +13,9 @@ public abstract class ValleySurfaceBuilderMixin {
     private Direction implDown() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "apply(Ljava/util/Random;Lnet/minecraft/world/chunk/IChunk;Lnet/minecraft/world/biome/Biome;IIIDLnet/minecraft/block/BlockState;Lnet/minecraft/block/BlockState;IJLnet/minecraft/world/gen/surfacebuilders/SurfaceBuilderConfig;)V", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

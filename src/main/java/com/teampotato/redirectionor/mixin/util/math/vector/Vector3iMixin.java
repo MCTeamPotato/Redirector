@@ -13,4 +13,9 @@ public abstract class Vector3iMixin {
     private Direction implDown1() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "above(I)Lnet/minecraft/util/math/vector/Vector3i;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"), remap = false)
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
 }

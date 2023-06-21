@@ -23,4 +23,9 @@ public abstract class PistonBlockMixin {
     private static Direction implDown2() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "isPushable", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp1() {
+        return Redirectionor.UP;
+    }
 }

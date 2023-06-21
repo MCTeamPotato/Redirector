@@ -13,4 +13,14 @@ public abstract class BlockMixin {
     private static Direction implDown1() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "canSupportRigidBlock", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "canSustainPlant", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
 }

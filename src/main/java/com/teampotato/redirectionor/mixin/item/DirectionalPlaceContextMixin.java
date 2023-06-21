@@ -3,19 +3,39 @@ package com.teampotato.redirectionor.mixin.item;
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.item.DirectionalPlaceContext;
 import net.minecraft.util.Direction;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.*;
 
 @Mixin(DirectionalPlaceContext.class)
 public abstract class DirectionalPlaceContextMixin {
-    @Redirect(method = "getNearestLookingDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown1() {
-        return Redirectionor.DOWN;
-    }
+    @Shadow @Final private Direction direction;
 
-    @Redirect(method = "getNearestLookingDirections", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown2() {
-        return Redirectionor.DOWN;
+    @Unique private static final Direction[] DOWN_CASE = new Direction[]{Redirectionor.DOWN, Redirectionor.NORTH, Redirectionor.EAST, Redirectionor.SOUTH, Redirectionor.WEST, Redirectionor.UP};
+    @Unique private static final Direction[] UP_CASE = new Direction[]{Redirectionor.DOWN, Redirectionor.UP, Redirectionor.NORTH, Redirectionor.EAST, Redirectionor.SOUTH, Redirectionor.WEST};
+    @Unique private static final Direction[] NORTH_CASE = new Direction[]{Redirectionor.DOWN, Redirectionor.NORTH, Redirectionor.EAST, Redirectionor.WEST, Redirectionor.UP, Redirectionor.SOUTH};
+    @Unique private static final Direction[] SOUTH_CASE = new Direction[]{Redirectionor.DOWN, Redirectionor.SOUTH, Redirectionor.EAST, Redirectionor.WEST, Redirectionor.UP, Redirectionor.NORTH};
+    @Unique private static final Direction[] WEST_CASE = new Direction[]{Redirectionor.DOWN, Redirectionor.WEST, Redirectionor.SOUTH, Redirectionor.UP, Redirectionor.NORTH, Redirectionor.EAST};
+    @Unique private static final Direction[] EAST_CASE = new Direction[]{Redirectionor.DOWN, Redirectionor.EAST, Redirectionor.SOUTH, Redirectionor.UP, Redirectionor.NORTH, Redirectionor.WEST};
+
+    /**
+     * @author Kasualix
+     * @reason avoid direction allocation
+     */
+    @Overwrite
+    public Direction[] getNearestLookingDirections() {
+        switch(this.direction) {
+            case DOWN:
+            default:
+                return DOWN_CASE;
+            case UP:
+                return UP_CASE;
+            case NORTH:
+                return NORTH_CASE;
+            case SOUTH:
+                return SOUTH_CASE;
+            case WEST:
+                return WEST_CASE;
+            case EAST:
+                return EAST_CASE;
+        }
     }
 }

@@ -28,4 +28,19 @@ public abstract class FireBlockMixin {
     private Direction implDown1() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "getStateForPlacement(Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "canSurvive", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp3() {
+        return Redirectionor.UP;
+    }
 }

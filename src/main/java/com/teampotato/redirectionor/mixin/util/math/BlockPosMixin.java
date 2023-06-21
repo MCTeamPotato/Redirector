@@ -18,4 +18,14 @@ public abstract class BlockPosMixin {
     private Direction implDown2() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "above()Lnet/minecraft/util/math/BlockPos;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"), remap = false)
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "above(I)Lnet/minecraft/util/math/BlockPos;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"), remap = false)
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
 }

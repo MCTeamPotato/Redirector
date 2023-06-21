@@ -13,4 +13,9 @@ public abstract class FallingBlockEntityMixin {
     private Direction implDown() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
 }

@@ -18,4 +18,14 @@ public abstract class BrewingStandTileEntityMixin {
     private Direction implDown2() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "getSlotsForFace", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "getCapability", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"), remap = false)
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
 }

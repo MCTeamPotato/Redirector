@@ -38,4 +38,29 @@ public abstract class RedstoneWireBlockMixin {
     private Direction implDown4() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "updateShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "getSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "updateIndirectNeighbourShapes", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp3() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "canSurviveOn", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp4() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "animateTick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp5() {
+        return Redirectionor.UP;
+    }
 }

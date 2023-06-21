@@ -18,4 +18,9 @@ public abstract class WallBlockMixin {
     private Direction implDown2() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "updateShape(Lnet/minecraft/block/BlockState;Lnet/minecraft/util/Direction;Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

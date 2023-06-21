@@ -28,4 +28,9 @@ public abstract class VineBlockMixin {
     private Direction implDown4() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "randomTick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

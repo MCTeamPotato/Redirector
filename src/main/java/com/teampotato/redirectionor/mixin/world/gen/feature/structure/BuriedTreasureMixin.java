@@ -13,4 +13,9 @@ public abstract class BuriedTreasureMixin {
     private Direction[] implOpt1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
 }

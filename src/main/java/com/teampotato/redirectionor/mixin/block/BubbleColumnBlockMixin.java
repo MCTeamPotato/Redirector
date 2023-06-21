@@ -13,4 +13,9 @@ public abstract class BubbleColumnBlockMixin {
     private Direction implDown() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "updateShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

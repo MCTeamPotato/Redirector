@@ -13,4 +13,9 @@ public abstract class StriderEntityMixin {
     private Direction implDown() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "checkStriderSpawnRules", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp1() {
+        return Redirectionor.UP;
+    }
 }

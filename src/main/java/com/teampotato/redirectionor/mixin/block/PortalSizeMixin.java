@@ -13,4 +13,19 @@ public abstract class PortalSizeMixin {
     private Direction implDown1() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "hasTopFrame", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "getDistanceUntilTop", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "createPortalBlocks", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp3() {
+        return Redirectionor.UP;
+    }
 }

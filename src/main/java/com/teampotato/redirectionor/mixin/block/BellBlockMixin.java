@@ -23,4 +23,19 @@ public abstract class BellBlockMixin {
     private static Direction implDown3() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "canSurvive", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "getConnectedDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp3() {
+        return Redirectionor.UP;
+    }
 }

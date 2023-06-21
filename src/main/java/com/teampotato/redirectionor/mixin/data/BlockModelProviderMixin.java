@@ -28,4 +28,19 @@ public abstract class BlockModelProviderMixin {
     private Direction implDown4() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "createFacingDispatch", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "createColumnWithFacing", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "createDispenserBlock", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp3() {
+        return Redirectionor.UP;
+    }
 }

@@ -13,4 +13,9 @@ public abstract class MonumentBuildingMixin {
     private Direction[] implOpt1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "generateRoomGraph", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
 }

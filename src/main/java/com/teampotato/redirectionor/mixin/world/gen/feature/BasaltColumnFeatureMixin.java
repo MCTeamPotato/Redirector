@@ -18,4 +18,19 @@ public abstract class BasaltColumnFeatureMixin {
     private static Direction implDown2() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "placeColumn", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "canPlaceAt", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp2() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "findAir", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp3() {
+        return Redirectionor.UP;
+    }
 }

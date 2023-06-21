@@ -13,4 +13,14 @@ public abstract class HorizontalFaceBlockMixin {
     private static Direction implDown() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "getConnectedDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp1() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp2() {
+        return Redirectionor.UP;
+    }
 }
