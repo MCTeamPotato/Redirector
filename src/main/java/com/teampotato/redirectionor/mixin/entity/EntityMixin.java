@@ -35,7 +35,7 @@ public abstract class EntityMixin {
             blockpos$mutable.setWithOffset(blockpos, direction1);
             if (!this.level.getBlockState(blockpos$mutable).isCollisionShapeFullBlock(this.level, blockpos$mutable)) {
                 double d1 = vector3d.get(direction1.getAxis());
-                double d2 = direction1.getAxisDirection() == Direction.AxisDirection.POSITIVE ? 1.0D - d1 : d1;
+                double d2 = direction1.getAxisDirection() == Redirectionor.POSITIVE ? 1.0D - d1 : d1;
                 if (d2 < d0) {
                     d0 = d2;
                     direction = direction1;
