@@ -39,7 +39,7 @@ public abstract class FluidBlockRendererMixin {
 
     @Shadow protected abstract int getLightColor(IBlockDisplayReader pLightReader, BlockPos pPos);
 
-    @Shadow protected abstract void vertexVanilla(IVertexBuilder vertexBuilderIn, double x, double y, double z, float red, float green, float blue, float alpha, float u, float v, int packedLight);
+    @Shadow(remap = false) protected abstract void vertexVanilla(IVertexBuilder vertexBuilderIn, double x, double y, double z, float red, float green, float blue, float alpha, float u, float v, int packedLight);
 
     /**
      * @author Kasualix
