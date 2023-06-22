@@ -28,9 +28,6 @@ public class Redirectionor {
     public static final int WEST_3D_DATA_VALUE = WEST.get3DDataValue();
     public static final int EAST_3D_DATA_VALUE = EAST.get3DDataValue();
 
-    //TODO: ordinal()
-    public static final int DOWN_ORDINAL = DOWN.ordinal();
-    public static final int UP_ORDINAL = UP.ordinal();
     public static final int NORTH_ORDINAL = NORTH.ordinal();
     public static final int SOUTH_ORDINAL = SOUTH.ordinal();
     public static final int WEST_ORDINAL = WEST.ordinal();
