@@ -9,6 +9,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LavaFluid.class)
 public abstract class LavaFluidMixin {
+
+    @Redirect(method = "randomTick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
     @Redirect(method = "hasFlammableNeighbours", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
     private Direction[] implOpt1() {
         return Redirectionor.DIRECTIONS;

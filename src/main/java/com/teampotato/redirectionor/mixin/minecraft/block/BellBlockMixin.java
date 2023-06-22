@@ -29,6 +29,15 @@ public abstract class BellBlockMixin {
     @Shadow @Final private static VoxelShape TO_WEST;
     @Shadow @Final private static VoxelShape TO_EAST;
 
+    @Redirect(method = "getConnectedDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private static Direction implDown3() {
+        return Redirectionor.DOWN;
+    }
+
+    @Redirect(method = "getConnectedDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private static Direction implUp() {
+        return Redirectionor.UP;
+    }
     @Redirect(method = "canSurvive", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private Direction implDown2() {
         return Redirectionor.DOWN;

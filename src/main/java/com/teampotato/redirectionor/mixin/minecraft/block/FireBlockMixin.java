@@ -9,6 +9,16 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(FireBlock.class)
 public abstract class FireBlockMixin {
+    @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
+    }
+
     @Redirect(method = "getStateForPlacement(Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
     private Direction[] implOpt1() {
         return Redirectionor.DIRECTIONS;
