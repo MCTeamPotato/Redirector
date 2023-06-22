@@ -13,4 +13,9 @@ public abstract class PistonHeadBlockMixin {
     private static Direction[] implOpt1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.NORTH;
+    }
 }

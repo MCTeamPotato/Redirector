@@ -18,4 +18,9 @@ public abstract class UpgradeDataMixin {
     private Direction[] implOpt2() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "upgradeSides", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private static Direction implNorth1() {
+        return Redirectionor.NORTH;
+    }
 }

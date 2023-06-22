@@ -10,17 +10,18 @@ import org.spongepowered.asm.mixin.*;
 
 import java.util.Random;
 
-@Mixin(Entity.class)
+@Mixin(value = Entity.class, priority = 10)
 public abstract class EntityMixin {
     @Shadow public World level;
     @Shadow @Final protected Random random;
     @Shadow public abstract Vector3d getDeltaMovement();
     @Shadow public abstract void setDeltaMovement(double pX, double pY, double pZ);
+
     @Unique private static final Direction[] directions = new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST, Direction.UP};
 
     /**
      * @author Kasualix
-     * @reason avoid Direction allocation
+     * @reason avoid allocation
      */
     @Overwrite
     protected void moveTowardsClosestSpace(double pX, double pY, double pZ) {

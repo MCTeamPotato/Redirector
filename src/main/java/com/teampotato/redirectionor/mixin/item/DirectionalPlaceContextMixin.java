@@ -4,8 +4,10 @@ import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.item.DirectionalPlaceContext;
 import net.minecraft.util.Direction;
 import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(DirectionalPlaceContext.class)
+@Mixin(value = DirectionalPlaceContext.class, priority = 10)
 public abstract class DirectionalPlaceContextMixin {
     @Shadow @Final private Direction direction;
 
@@ -18,7 +20,7 @@ public abstract class DirectionalPlaceContextMixin {
 
     /**
      * @author Kasualix
-     * @reason avoid direction allocation
+     * @reason avoid allocation
      */
     @Overwrite
     public Direction[] getNearestLookingDirections() {
@@ -37,5 +39,10 @@ public abstract class DirectionalPlaceContextMixin {
             case EAST:
                 return EAST_CASE;
         }
+    }
+
+    @Redirect(method = "getHorizontalDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.NORTH;
     }
 }

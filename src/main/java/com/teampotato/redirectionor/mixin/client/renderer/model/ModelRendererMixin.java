@@ -18,4 +18,9 @@ public abstract class ModelRendererMixin {
     private Direction implUp() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.NORTH;
+    }
 }

@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Shadow;
 
 import javax.annotation.Nullable;
 
-@Mixin(AxisAlignedBB.class)
+@Mixin(value = AxisAlignedBB.class, priority = 10)
 public abstract class AxisAlignedBBMixin {
     @Shadow @Nullable
     private static Direction clipPoint(double[] pMinDistance, @Nullable Direction pPrevDirection, double pDistanceSide, double pDistanceOtherA, double pDistanceOtherB, double pMinSide, double pMinOtherA, double pMaxOtherA, double pMinOtherB, double pMaxOtherB, Direction pHitSide, double pStartSide, double pStartOtherA, double pStartOtherB) {
@@ -19,7 +19,7 @@ public abstract class AxisAlignedBBMixin {
 
     /**
      * @author Kasualix
-     * @reason avoid direction allocation
+     * @reason avoid allocation
      */
     @Overwrite
     @Nullable

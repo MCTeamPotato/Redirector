@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 import java.util.EnumSet;
 
-@Mixin(World.class)
+@Mixin(value = World.class, priority = 10)
 public abstract class WorldMixin implements IWorld {
     @Shadow public abstract BlockState getBlockState(BlockPos pPos);
     @Shadow public abstract void neighborChanged(BlockPos pPos, Block pBlock, BlockPos pFromPos);
@@ -29,7 +29,7 @@ public abstract class WorldMixin implements IWorld {
 
     /**
      * @author Kasualix
-     * @reason avoid direction allocation
+     * @reason avoid allocation
      */
     @Overwrite
     public void updateNeighborsAtExceptFromFacing(BlockPos pPos, Block pBlockType, Direction pSkipSide) {
@@ -46,7 +46,7 @@ public abstract class WorldMixin implements IWorld {
 
     /**
      * @author Kasualix
-     * @reason avoid direction allocation
+     * @reason avoid allocation
      */
     @Overwrite
     public int getDirectSignalTo(BlockPos pPos) {
@@ -68,12 +68,10 @@ public abstract class WorldMixin implements IWorld {
                         return i;
                     } else {
                         i = Math.max(i, this.getDirectSignal(pPos.west(), Redirectionor.WEST));
-                        if (i >= 15) {
-                            return i;
-                        } else {
+                        if (i < 15) {
                             i = Math.max(i, this.getDirectSignal(pPos.east(), Redirectionor.EAST));
-                            return i;
                         }
+                        return i;
                     }
                 }
             }
@@ -82,7 +80,7 @@ public abstract class WorldMixin implements IWorld {
 
     /**
      * @author Kasualix
-     * @reason avoid direction allocation
+     * @reason avoid allocation
      */
     @Overwrite
     public boolean hasNeighborSignal(BlockPos pPos) {

@@ -13,4 +13,9 @@ public abstract class JunglePyramidPieceMixin {
     private Direction implUp1() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.UP;
+    }
 }

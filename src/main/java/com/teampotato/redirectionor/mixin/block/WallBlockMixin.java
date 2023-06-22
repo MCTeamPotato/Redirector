@@ -23,4 +23,14 @@ public abstract class WallBlockMixin {
     private Direction implUp() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth1() {
+        return Redirectionor.NORTH;
+    }
+
+    @Redirect(method = "sideUpdate", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth2() {
+        return Redirectionor.NORTH;
+    }
 }

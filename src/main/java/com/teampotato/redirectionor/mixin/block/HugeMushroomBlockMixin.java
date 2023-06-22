@@ -28,4 +28,14 @@ public abstract class HugeMushroomBlockMixin {
     private Direction implUp2() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "rotate", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth1() {
+        return Redirectionor.NORTH;
+    }
+
+    @Redirect(method = "mirror", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth2() {
+        return Redirectionor.NORTH;
+    }
 }

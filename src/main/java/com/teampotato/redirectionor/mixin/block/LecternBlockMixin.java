@@ -13,4 +13,9 @@ public abstract class LecternBlockMixin {
     private Direction implUp1() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.NORTH;
+    }
 }

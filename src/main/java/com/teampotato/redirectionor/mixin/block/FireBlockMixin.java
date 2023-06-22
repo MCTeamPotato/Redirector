@@ -43,4 +43,9 @@ public abstract class FireBlockMixin {
     private Direction implUp3() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.NORTH;
+    }
 }
