@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin({BellBlock.class, FenceBlock.class, PaneBlock.class, TripWireBlock.class, WallBlock.class})
+@Mixin({FenceBlock.class, PaneBlock.class, TripWireBlock.class, WallBlock.class})
 public abstract class InGetStateForPlacement {
     @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
     private Direction implNorth() {

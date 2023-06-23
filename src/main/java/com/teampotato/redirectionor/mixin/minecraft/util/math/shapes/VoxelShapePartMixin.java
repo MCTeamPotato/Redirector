@@ -12,7 +12,6 @@ import org.spongepowered.asm.mixin.Shadow;
 public abstract class VoxelShapePartMixin {
 
     @Shadow public abstract int getSize(Direction.Axis pAxis);
-
     @Shadow public abstract boolean isFull(AxisRotation pRotation, int pX, int pY, int pZ);
 
     /**

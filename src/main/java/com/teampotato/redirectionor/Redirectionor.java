@@ -50,15 +50,12 @@ public class Redirectionor {
     public static final DoorHingeSide LEFT = DoorHingeSide.LEFT;
     public static final DoorHingeSide RIGHT = DoorHingeSide.RIGHT;
 
-    //TODO
     public static final Direction.AxisDirection POSITIVE = Direction.AxisDirection.POSITIVE;
     public static final Direction.AxisDirection NEGATIVE = Direction.AxisDirection.NEGATIVE;
 
-    //TODO
+    //TODO: incomplete
     public static final Direction.Axis[] AXISES = Direction.Axis.values();
     public static final Direction.Axis X = Direction.Axis.X;
     public static final Direction.Axis Y = Direction.Axis.Y;
     public static final Direction.Axis Z = Direction.Axis.Z;
-
-    //TODO: getNormal()
 }
