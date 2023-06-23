@@ -18,19 +18,8 @@ public abstract class SkyLightEngineMixin {
     private Direction implDown2() {
         return Redirectionor.DOWN;
     }
-
-    @Redirect(method = "checkNeighborsAfterUpdate", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp1() {
-        return Redirectionor.UP;
-    }
-
-    @Redirect(method = "getComputedLevel", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp2() {
-        return Redirectionor.UP;
-    }
-
-    @Redirect(method = "checkNode", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp3() {
+    @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 }

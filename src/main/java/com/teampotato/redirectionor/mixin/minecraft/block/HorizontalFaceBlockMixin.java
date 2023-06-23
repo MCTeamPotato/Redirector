@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(HorizontalFaceBlock.class)
 public abstract class HorizontalFaceBlockMixin {
     @Redirect(method = "getConnectedDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private static Direction implDown3() {
+    private static Direction implDown() {
         return Redirectionor.DOWN;
     }
 

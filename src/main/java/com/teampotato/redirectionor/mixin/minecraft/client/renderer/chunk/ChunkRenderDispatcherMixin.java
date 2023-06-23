@@ -14,9 +14,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = ChunkRenderDispatcher.ChunkRender.class, priority = 10)
 public abstract class ChunkRenderDispatcherMixin {
     @Shadow protected abstract double getDistToPlayerSqr();
-
     @Shadow protected abstract boolean doesChunkExistAt(BlockPos pBlockPos);
-
     @Shadow @Final private BlockPos.Mutable[] relativeOrigins;
 
     @Redirect(method = "setOrigin", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
