@@ -28,4 +28,14 @@ public abstract class ModelRendererMixin {
     private Direction implSouth() {
         return Redirectionor.SOUTH;
     }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
+    private Direction implWest() {
+        return Redirectionor.WEST;
+    }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
+    private Direction implEast() {
+        return Redirectionor.EAST;
+    }
 }

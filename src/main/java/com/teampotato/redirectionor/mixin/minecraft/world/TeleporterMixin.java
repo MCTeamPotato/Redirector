@@ -18,4 +18,9 @@ public abstract class TeleporterMixin {
     private Direction implSouth() {
         return Redirectionor.SOUTH;
     }
+
+    @Redirect(method = "createPortal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
+    private Direction implEast() {
+        return Redirectionor.EAST;
+    }
 }

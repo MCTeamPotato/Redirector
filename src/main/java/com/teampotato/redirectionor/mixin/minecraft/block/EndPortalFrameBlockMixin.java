@@ -18,4 +18,14 @@ public abstract class EndPortalFrameBlockMixin {
     private static Direction implSouth() {
         return Redirectionor.SOUTH;
     }
+
+    @Redirect(method = "getOrCreatePortalShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
+    private static Direction implWest() {
+        return Redirectionor.WEST;
+    }
+
+    @Redirect(method = "getOrCreatePortalShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
+    private Direction implEast() {
+        return Redirectionor.EAST;
+    }
 }

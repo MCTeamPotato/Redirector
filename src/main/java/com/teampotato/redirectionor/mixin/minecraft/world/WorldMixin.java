@@ -60,9 +60,7 @@ public abstract class WorldMixin implements IWorld {
                 return i;
             } else {
                 i = Math.max(i, this.getDirectSignal(pPos.north(), Redirectionor.NORTH));
-                if (i >= 15) {
-                    return i;
-                } else {
+                if (i < 15) {
                     i = Math.max(i, this.getDirectSignal(pPos.south(), Redirectionor.SOUTH));
                     if (i < 15) {
                         i = Math.max(i, this.getDirectSignal(pPos.west(), Redirectionor.WEST));
@@ -70,8 +68,8 @@ public abstract class WorldMixin implements IWorld {
                             i = Math.max(i, this.getDirectSignal(pPos.east(), Redirectionor.EAST));
                         }
                     }
-                    return i;
                 }
+                return i;
             }
         }
     }

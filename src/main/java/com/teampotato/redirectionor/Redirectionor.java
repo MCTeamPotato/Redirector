@@ -59,4 +59,6 @@ public class Redirectionor {
     public static final Direction.Axis X = Direction.Axis.X;
     public static final Direction.Axis Y = Direction.Axis.Y;
     public static final Direction.Axis Z = Direction.Axis.Z;
+
+    //TODO: getNormal()
 }

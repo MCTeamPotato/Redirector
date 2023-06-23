@@ -28,4 +28,14 @@ public abstract class ShulkerBulletEntityMixin {
     private Direction implSouth() {
         return Redirectionor.SOUTH;
     }
+
+    @Redirect(method = "selectNextMoveDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
+    private Direction implWest() {
+        return Redirectionor.WEST;
+    }
+
+    @Redirect(method = "selectNextMoveDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
+    private Direction implEast() {
+        return Redirectionor.EAST;
+    }
 }

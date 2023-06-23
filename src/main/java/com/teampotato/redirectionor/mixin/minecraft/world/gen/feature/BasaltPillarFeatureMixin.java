@@ -18,9 +18,7 @@ import java.util.Random;
 
 @Mixin(value = BasaltPillarFeature.class, priority = 10)
 public abstract class BasaltPillarFeatureMixin {
-
     @Shadow protected abstract boolean placeHangOff(IWorld pLevel, Random pRandom, BlockPos pPos);
-
     @Shadow protected abstract void placeBaseHangOff(IWorld pLevel, Random pRandom, BlockPos pPos);
 
     /**
