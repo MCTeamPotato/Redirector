@@ -1,7 +1,10 @@
 package com.teampotato.redirectionor.mixin.global.south;
 
 import com.teampotato.redirectionor.Redirectionor;
-import net.minecraft.block.*;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.PaneBlock;
+import net.minecraft.block.TripWireBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.util.Direction;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
