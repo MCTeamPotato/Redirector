@@ -28,4 +28,9 @@ public abstract class PortalSizeMixin {
     private Direction implUp3() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth() {
+        return Redirectionor.SOUTH;
+    }
 }

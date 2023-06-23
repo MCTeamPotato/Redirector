@@ -10,7 +10,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(EndPortalFrameBlock.class)
 public abstract class EndPortalFrameBlockMixin {
     @Redirect(method = "getOrCreatePortalShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
-    private static Direction implNorth2() {
+    private static Direction implNorth() {
         return Redirectionor.NORTH;
+    }
+
+    @Redirect(method = "getOrCreatePortalShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private static Direction implSouth() {
+        return Redirectionor.SOUTH;
     }
 }

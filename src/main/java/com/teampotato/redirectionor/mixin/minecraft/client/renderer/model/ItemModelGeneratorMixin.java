@@ -13,4 +13,9 @@ public abstract class ItemModelGeneratorMixin {
     private Direction implNorth() {
         return Redirectionor.NORTH;
     }
+
+    @Redirect(method = "processFrames", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth() {
+        return Redirectionor.SOUTH;
+    }
 }

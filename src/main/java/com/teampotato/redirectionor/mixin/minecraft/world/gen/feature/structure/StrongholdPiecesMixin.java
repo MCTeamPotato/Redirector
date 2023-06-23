@@ -14,6 +14,11 @@ public abstract class StrongholdPiecesMixin {
         private Direction implSouth() {
             return Redirectionor.SOUTH;
         }
+
+        @Redirect(method = "<init>(ILnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/util/Direction;)V", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+        private Direction implNorth() {
+            return Redirectionor.SOUTH;
+        }
     }
 
     @Mixin(StrongholdPieces.Crossing.class)
@@ -21,11 +26,6 @@ public abstract class StrongholdPiecesMixin {
         @Redirect(method = "addChildren", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
         private Direction implWest() {
             return Redirectionor.WEST;
-        }
-
-        @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
-        private Direction implSouth() {
-            return Redirectionor.SOUTH;
         }
     }
 
@@ -53,11 +53,6 @@ public abstract class StrongholdPiecesMixin {
         private Direction implWest() {
             return Redirectionor.WEST;
         }
-
-        @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
-        private Direction implSouth() {
-            return Redirectionor.SOUTH;
-        }
     }
 
     @Mixin(StrongholdPieces.PortalRoom.class)
@@ -70,11 +65,6 @@ public abstract class StrongholdPiecesMixin {
         @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
         private Direction implWest() {
             return Redirectionor.WEST;
-        }
-
-        @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
-        private Direction implSouth() {
-            return Redirectionor.SOUTH;
         }
     }
 
@@ -104,19 +94,6 @@ public abstract class StrongholdPiecesMixin {
         @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
         private Direction implWest() {
             return Redirectionor.WEST;
-        }
-
-        @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
-        private Direction implSouth() {
-            return Redirectionor.SOUTH;
-        }
-    }
-
-    @Mixin(StrongholdPieces.StairsStraight.class)
-    public abstract static class StairsStraightMixin {
-        @Redirect(method = "postProcess", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
-        private Direction implSouth() {
-            return Redirectionor.SOUTH;
         }
     }
 

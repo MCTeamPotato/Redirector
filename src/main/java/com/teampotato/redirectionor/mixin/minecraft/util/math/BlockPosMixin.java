@@ -38,4 +38,14 @@ public abstract class BlockPosMixin {
     private Direction implNorth2() {
         return Redirectionor.NORTH;
     }
+
+    @Redirect(method = "south()Lnet/minecraft/util/math/BlockPos;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth1() {
+        return Redirectionor.SOUTH;
+    }
+
+    @Redirect(method = "south(I)Lnet/minecraft/util/math/BlockPos;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth2() {
+        return Redirectionor.SOUTH;
+    }
 }

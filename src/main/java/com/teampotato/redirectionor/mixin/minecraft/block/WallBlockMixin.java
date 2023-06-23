@@ -10,12 +10,17 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(WallBlock.class)
 public abstract class WallBlockMixin {
     @Redirect(method = "updateShape(Lnet/minecraft/world/IWorldReader;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;ZZZZ)Lnet/minecraft/block/BlockState;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown2() {
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 
     @Redirect(method = "sideUpdate", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
-    private Direction implNorth2() {
+    private Direction implNorth() {
         return Redirectionor.NORTH;
+    }
+
+    @Redirect(method = "sideUpdate", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth() {
+        return Redirectionor.SOUTH;
     }
 }

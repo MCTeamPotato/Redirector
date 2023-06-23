@@ -13,4 +13,9 @@ public abstract class FeatureJigsawPieceMixin {
     private Direction implDown() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "getShuffledJigsawBlocks", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth() {
+        return Redirectionor.SOUTH;
+    }
 }

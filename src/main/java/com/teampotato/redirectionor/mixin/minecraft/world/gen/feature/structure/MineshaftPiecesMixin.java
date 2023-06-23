@@ -14,5 +14,12 @@ public abstract class MineshaftPiecesMixin {
         private Direction implNorth2() {
             return Redirectionor.NORTH;
         }
+
+        @Redirect(method = "placeSupport", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+        private Direction implSouth() {
+            return Redirectionor.SOUTH;
+        }
     }
+
+
 }
