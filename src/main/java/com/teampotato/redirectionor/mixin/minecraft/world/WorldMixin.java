@@ -95,7 +95,7 @@ public abstract class WorldMixin implements IWorld {
         }
     }
 
-    @Redirect(method = "loadedAndEntityCanStandOn", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"), remap = false)
+    @Redirect(method = "loadedAndEntityCanStandOn", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
     private Direction implUp1() {
         return Redirectionor.UP;
     }

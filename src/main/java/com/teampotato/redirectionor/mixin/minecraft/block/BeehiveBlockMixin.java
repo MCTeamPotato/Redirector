@@ -13,7 +13,9 @@ import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(value = BeehiveBlock.class, priority = 10)
 public abstract class BeehiveBlockMixin {
-    @Shadow protected abstract void spawnFluidParticle(World pParticleData, double pX1, double pX2, double pZ1, double pZ2, double pY);
+    @Shadow
+    @OnlyIn(Dist.CLIENT)
+    protected abstract void spawnFluidParticle(World pParticleData, double pX1, double pX2, double pZ1, double pZ2, double pY);
 
     /**
      * @author Kasualix
