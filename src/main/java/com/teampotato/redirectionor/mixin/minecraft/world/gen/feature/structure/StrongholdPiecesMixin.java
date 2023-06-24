@@ -14,11 +14,6 @@ public abstract class StrongholdPiecesMixin {
         private Direction implSouth() {
             return Redirectionor.SOUTH;
         }
-
-        @Redirect(method = "<init>(ILnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/util/Direction;)V", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
-        private Direction implNorth() {
-            return Redirectionor.SOUTH;
-        }
     }
 
     @Mixin(StrongholdPieces.LeftTurn.class)

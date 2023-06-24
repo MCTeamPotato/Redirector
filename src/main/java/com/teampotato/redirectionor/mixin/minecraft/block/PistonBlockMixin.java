@@ -9,11 +9,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(PistonBlock.class)
 public abstract class PistonBlockMixin {
-    @Redirect(method = "getNeighborSignal", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt1() {
-        return Redirectionor.DIRECTIONS;
-    }
-
     @Redirect(method = "getNeighborSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private Direction implDown1() {
         return Redirectionor.DOWN;

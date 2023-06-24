@@ -128,7 +128,6 @@
     "minecraft.util.TeleportationRepositionerMixin",
     "minecraft.util.TransportationHelperMixin",
     "minecraft.util.math.AxisAlignedBBMixin",
-    "minecraft.util.math.BlockPosMixin",
     "minecraft.util.math.shapes.VoxelShapeMixin",
     "minecraft.util.math.shapes.VoxelShapePartMixin",
     "minecraft.util.math.shapes.VoxelShapesMixin",
