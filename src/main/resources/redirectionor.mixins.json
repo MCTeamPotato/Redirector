@@ -13,7 +13,6 @@
   "mixins": [
     "api.VoxelShapeImpl",
     "global.directions.InPlace",
-    "global.down.InAnimateTick",
     "global.down.InGetCapability",
     "global.down.InGetSlotsForFace",
     "global.down.InGetStateForPlacement",
@@ -22,7 +21,6 @@
     "global.down.InUpdateShape",
     "global.down.InUseOn",
     "global.east.InAddChildren",
-    "global.east.InAnimateTick",
     "global.east.InGetStateForPlacement",
     "global.east.InPostProcess",
     "global.north.InAddChildren",
@@ -32,11 +30,9 @@
     "global.north.InInit",
     "global.north.InPostProcess",
     "global.south.InAddChildren",
-    "global.south.InAnimateTick",
     "global.south.InGetStateForPlacement",
     "global.south.InInit",
     "global.south.InPostProcess",
-    "global.up.InAnimateTick",
     "global.up.InCanBeReplaced",
     "global.up.InCanSurvive",
     "global.up.InGetCapability",
@@ -126,8 +122,6 @@
     "minecraft.play.ServerPlayNetHandlerMixin",
     "minecraft.state.DirectionPropertyMixin",
     "minecraft.tileentity.AbstractFurnaceTileEntityMixin",
-    "minecraft.tileentity.EndGatewayTileEntityMixin",
-    "minecraft.tileentity.EndPortalTileEntityMixin",
     "minecraft.tileentity.HopperTileEntityMixin",
     "minecraft.tileentity.ShulkerBoxTileEntityMixin",
     "minecraft.util.DirectionMixin",
@@ -198,6 +192,10 @@
     "minecraft.world.spawner.WorldEntitySpawnerMixin"
   ],
   "client": [
+    "global.down.InAnimateTick",
+    "global.east.InAnimateTick",
+    "global.south.InAnimateTick",
+    "global.up.InAnimateTick",
     "minecraft.client.MinecraftMixin",
     "minecraft.client.entity.player.ClientPlayerEntityMixin",
     "minecraft.client.multiplayer.PlayerControllerMixin",
@@ -217,6 +215,8 @@
     "minecraft.client.renderer.tileentity.BellTileEntityRendererMixin",
     "minecraft.client.renderer.tileentity.ChestTileEntityRendererMixin",
     "minecraft.client.renderer.tileentity.EndPortalTileEntityRendererMixin",
-    "minecraft.client.renderer.tileentity.ShulkerBoxTileEntityRendererMixin"
+    "minecraft.client.renderer.tileentity.ShulkerBoxTileEntityRendererMixin",
+    "minecraft.tileentity.EndGatewayTileEntityMixin",
+    "minecraft.tileentity.EndPortalTileEntityMixin"
   ]
 }

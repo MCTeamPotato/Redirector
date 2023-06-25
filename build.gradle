@@ -16,7 +16,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.16.5-1.0.1'
+version = '1.16.5-1.1.0'
 group = 'com.teampotato.redirectionor'
 archivesBaseName = 'redirectionor'
 
