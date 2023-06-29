@@ -1,0 +1,16 @@
+package com.teampotato.redirectionor.mixin.client.renderer.chunk;
+
+import com.teampotato.redirectionor.Redirectionor;
+import net.minecraft.client.renderer.chunk.ChunkRenderDispatcher;
+import net.minecraft.core.Direction;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+@Mixin(ChunkRenderDispatcher.RenderChunk.class)
+public abstract class MixinChunkRenderDispatcher {
+    @Redirect(method = "setOrigin", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
+    private Direction[] implValues1() {
+        return Redirectionor.DIRECTIONS;
+    }
+}
