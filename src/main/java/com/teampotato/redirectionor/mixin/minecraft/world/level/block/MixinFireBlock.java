@@ -23,4 +23,9 @@ public abstract class MixinFireBlock {
     private Direction[] implValues3() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;EAST:Lnet/minecraft/core/Direction;"))
+    private Direction implEast() {
+        return Redirectionor.EAST;
+    }
 }
