@@ -2,11 +2,11 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.teampotato.redirectionor.mixin",
-  "compatibilityLevel": "JAVA_8",
-  "refmap": "redirectionor.refmap.json",
+  "compatibilityLevel": "JAVA_17",
   "injectors": {
     "defaultRequire": 1
   },
+  "refmap": "redirectionor.refmap.json",
   "client": [
     "global.east.InAnimateTick",
     "global.south.InAnimateTick",
