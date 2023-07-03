@@ -13,4 +13,9 @@ public abstract class MixinPortalShape {
     private Direction implSouth() {
         return Redirectionor.SOUTH;
     }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;WEST:Lnet/minecraft/core/Direction;"))
+    private Direction implWest() {
+        return Redirectionor.WEST;
+    }
 }

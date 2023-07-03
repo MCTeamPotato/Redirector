@@ -47,7 +47,7 @@ public abstract class MixinLocalPlayer extends AbstractClientPlayer {
 
             if (direction != null) {
                 Vec3 vec3 = this.getDeltaMovement();
-                if (direction.getAxis() == Direction.Axis.X) {
+                if (direction.getAxis() == Redirectionor.X) {
                     this.setDeltaMovement(0.1D * (double)direction.getStepX(), vec3.y, vec3.z);
                 } else {
                     this.setDeltaMovement(vec3.x, vec3.y, 0.1D * (double)direction.getStepZ());

@@ -19,6 +19,11 @@ public abstract class MixinFaceBakery {
         return Redirectionor.DIRECTIONS;
     }
 
+    @Redirect(method = "calculateFacing", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private static Direction implUp() {
+        return Redirectionor.UP;
+    }
+
     @Redirect(method = "recalculateWinding", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
     private Direction[] implValues3() {
         return Redirectionor.DIRECTIONS;

@@ -12,6 +12,8 @@ import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -19,19 +21,18 @@ import java.util.List;
 @Mixin(ShulkerBullet.class)
 public abstract class MixinShulkerBullet extends Projectile {
     @Shadow @Nullable private Entity finalTarget;
-
     @Shadow protected abstract void setMoveDirection(@org.jetbrains.annotations.Nullable Direction pDirection);
-
     @Shadow private int flightSteps;
-
     @Shadow private double targetDeltaZ;
-
     @Shadow private double targetDeltaY;
-
     @Shadow private double targetDeltaX;
-
     protected MixinShulkerBullet(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+    }
+
+    @Redirect(method = "<init>(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/Direction$Axis;)V", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
     }
 
     /**

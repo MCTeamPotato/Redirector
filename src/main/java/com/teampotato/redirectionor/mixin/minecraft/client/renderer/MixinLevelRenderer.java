@@ -13,4 +13,9 @@ public abstract class MixinLevelRenderer {
     private Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "levelEvent", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }
