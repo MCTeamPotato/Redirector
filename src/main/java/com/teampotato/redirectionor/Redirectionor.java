@@ -2,6 +2,7 @@ package com.teampotato.redirectionor;
 
 import net.minecraft.core.Direction;
 import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraftforge.fml.common.Mod;
 
@@ -65,4 +66,8 @@ public class Redirectionor {
 
     public static final Direction.AxisDirection POSITIVE = Direction.AxisDirection.POSITIVE;
     public static final Direction.AxisDirection NEGATIVE = Direction.AxisDirection.NEGATIVE;
+
+    public static final Rotation COUNTERCLOCKWISE_90 = Rotation.COUNTERCLOCKWISE_90;
+    public static final Rotation CLOCKWISE_180 = Rotation.CLOCKWISE_180;
+    public static final Rotation CLOCKWISE_90 = Rotation.CLOCKWISE_90;
 }

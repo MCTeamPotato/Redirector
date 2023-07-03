@@ -95,8 +95,15 @@
     "minecraft.world.level.levelgen.structure.structures.MixinOceanMonumentPieces$MixinOceanMonumentSimpleRoom",
     "minecraft.world.level.levelgen.structure.structures.MixinOceanMonumentPieces$MixinOceanMonumentSimpleTopRoom",
     "minecraft.world.level.levelgen.structure.structures.MixinStrongholdPieces",
+    "minecraft.world.level.levelgen.structure.structures.MixinWoodlandMansionPieces$MixinMansionGrid",
+    "minecraft.world.level.levelgen.structure.structures.MixinWoodlandMansionPieces$MixinMansionPiecePlacer",
+    "minecraft.world.level.levelgen.structure.structures.MixinWoodlandMansionPieces$MixinWoodlandMansionPiece",
+    "minecraft.world.level.levelgen.structure.templatesystem.MixinStructureTemplate",
     "minecraft.world.level.material.MixinLavaFluid",
     "minecraft.world.level.pathfinder.MixinAmphibiousNodeEvaluator",
-    "minecraft.world.level.pathfinder.MixinSwimNodeEvaluator"
+    "minecraft.world.level.pathfinder.MixinSwimNodeEvaluator",
+    "minecraft.world.level.pathfinder.MixinWalkNodeEvaluator",
+    "minecraft.world.level.portal.MixinPortalForcer",
+    "minecraft.world.phys.MixinAABB"
   ]
 }
