@@ -27,13 +27,9 @@ import java.util.function.Supplier;
 @Mixin(BlockModelGenerators.class)
 public abstract class MixinBlockModelGenerators {
     @Shadow protected abstract void createSimpleFlatItemModel(Block pFlatBlock);
-
     @Shadow abstract void createSimpleFlatItemModel(Item pFlatItem);
-
     @Shadow @Final Consumer<BlockStateGenerator> blockStateOutput;
-
     @Shadow @Final BiConsumer<ResourceLocation, Supplier<JsonElement>> modelOutput;
-
     @Shadow
     private static PropertyDispatch createBooleanModelDispatch(BooleanProperty pProperty, ResourceLocation pTrueModelLocation, ResourceLocation pFalseModelLocation) {
         throw new RuntimeException();

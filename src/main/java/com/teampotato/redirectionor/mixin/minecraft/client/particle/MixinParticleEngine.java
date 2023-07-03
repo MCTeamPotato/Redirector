@@ -8,7 +8,6 @@ import net.minecraft.client.particle.TerrainParticle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import org.spongepowered.asm.mixin.Final;
@@ -29,7 +28,7 @@ public abstract class MixinParticleEngine {
     @Overwrite
     public void crack(BlockPos pPos, Direction pSide) {
         BlockState blockstate = this.level.getBlockState(pPos);
-        if (blockstate.getRenderShape() != RenderShape.INVISIBLE) {
+        if (blockstate.getRenderShape() != Redirectionor.INVISIBLE) {
             int i = pPos.getX();
             int j = pPos.getY();
             int k = pPos.getZ();

@@ -2,6 +2,7 @@ package com.teampotato.redirectionor;
 
 import net.minecraft.core.Direction;
 import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraftforge.fml.common.Mod;
@@ -70,4 +71,11 @@ public class Redirectionor {
     public static final Rotation COUNTERCLOCKWISE_90 = Rotation.COUNTERCLOCKWISE_90;
     public static final Rotation CLOCKWISE_180 = Rotation.CLOCKWISE_180;
     public static final Rotation CLOCKWISE_90 = Rotation.CLOCKWISE_90;
+
+    public static final RenderShape INVISIBLE = RenderShape.INVISIBLE;
+    public static final RenderShape ENTITYBLOCK_ANIMATED = RenderShape.ENTITYBLOCK_ANIMATED;
+    public static final RenderShape MODEL = RenderShape.MODEL;
+
+    public static final BedPart BED_HEAD = BedPart.HEAD;
+    public static final BedPart BED_FOOT = BedPart.FOOT;
 }

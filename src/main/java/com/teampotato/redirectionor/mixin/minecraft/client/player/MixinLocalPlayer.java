@@ -38,7 +38,7 @@ public abstract class MixinLocalPlayer extends AbstractClientPlayer {
             double d2 = Double.MAX_VALUE;
             for(Direction direction1 : adirection) {
                 double d3 = direction1.getAxis().choose(d0, 0.0D, d1);
-                double d4 = direction1.getAxisDirection() == Direction.AxisDirection.POSITIVE ? 1.0D - d3 : d3;
+                double d4 = direction1.getAxisDirection() == Redirectionor.POSITIVE ? 1.0D - d3 : d3;
                 if (d4 < d2 && !this.suffocatesAt(blockpos.relative(direction1))) {
                     d2 = d4;
                     direction = direction1;
