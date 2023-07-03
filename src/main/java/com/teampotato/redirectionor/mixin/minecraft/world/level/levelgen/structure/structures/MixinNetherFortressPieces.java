@@ -29,6 +29,28 @@ public abstract class MixinNetherFortressPieces {
          */
         @Overwrite
         @Nullable
+        protected StructurePiece generateChildLeft(NetherFortressPieces.StartPiece pStartPiece, StructurePieceAccessor pPieces, RandomSource pRandom, int pOffsetY, int pOffsetX, boolean pCastlePiece) {
+            Direction direction = this.getOrientation();
+            if (direction != null) {
+                switch (direction) {
+                    case NORTH, SOUTH -> {
+                        return this.generateAndAddPiece(pStartPiece, pPieces, pRandom, this.boundingBox.minX() - 1, this.boundingBox.minY() + pOffsetY, this.boundingBox.minZ() + pOffsetX, Redirectionor.WEST, this.getGenDepth(), pCastlePiece);
+                    }
+                    case WEST, EAST -> {
+                        return this.generateAndAddPiece(pStartPiece, pPieces, pRandom, this.boundingBox.minX() + pOffsetX, this.boundingBox.minY() + pOffsetY, this.boundingBox.minZ() - 1, Redirectionor.NORTH, this.getGenDepth(), pCastlePiece);
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        /**
+         * @author Kasualix
+         * @reason avoid allocation
+         */
+        @Overwrite
+        @Nullable
         protected StructurePiece generateChildRight(NetherFortressPieces.StartPiece pStartPiece, StructurePieceAccessor pPieces, RandomSource pRandom, int pOffsetY, int pOffsetX, boolean pCastlePiece) {
             Direction direction = this.getOrientation();
             if (direction != null) {

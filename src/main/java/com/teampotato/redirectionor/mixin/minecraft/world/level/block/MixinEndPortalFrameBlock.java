@@ -18,9 +18,7 @@ import org.spongepowered.asm.mixin.Shadow;
 @Mixin(EndPortalFrameBlock.class)
 public abstract class MixinEndPortalFrameBlock {
     @Shadow private static BlockPattern portalShape;
-
     @Shadow @Final public static BooleanProperty HAS_EYE;
-
     @Shadow @Final public static DirectionProperty FACING;
 
     /**
