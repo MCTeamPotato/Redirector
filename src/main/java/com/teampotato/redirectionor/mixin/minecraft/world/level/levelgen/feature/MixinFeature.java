@@ -13,4 +13,9 @@ public abstract class MixinFeature {
     private static Direction[] implValues1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "markAboveForPostProcessing", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

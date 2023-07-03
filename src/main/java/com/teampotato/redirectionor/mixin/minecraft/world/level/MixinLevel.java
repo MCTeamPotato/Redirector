@@ -69,4 +69,9 @@ public abstract class MixinLevel implements LevelAccessor{
                 this.getSignal(pPos.west(), Redirectionor.WEST) > 0 ||
                 this.getSignal(pPos.east(), Redirectionor.EAST) > 0;
     }
+
+    @Redirect(method = "loadedAndEntityCanStandOn", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

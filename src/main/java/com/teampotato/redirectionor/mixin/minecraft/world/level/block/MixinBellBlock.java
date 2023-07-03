@@ -49,4 +49,17 @@ public abstract class MixinBellBlock {
             return direction == Redirectionor.EAST ? TO_EAST : TO_WEST;
         }
     }
+
+    /**
+     * @author Kasualix
+     * @reason avoid allocation
+     */
+    @Overwrite
+    private static Direction getConnectedDirection(BlockState pState) {
+        return switch (pState.getValue(ATTACHMENT)) {
+            case FLOOR -> Redirectionor.UP;
+            case CEILING -> Redirectionor.DOWN;
+            default -> pState.getValue(FACING).getOpposite();
+        };
+    }
 }

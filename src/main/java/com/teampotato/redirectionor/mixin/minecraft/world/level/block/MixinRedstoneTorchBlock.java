@@ -18,4 +18,9 @@ public abstract class MixinRedstoneTorchBlock {
     private Direction[] implValues2() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "getSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }

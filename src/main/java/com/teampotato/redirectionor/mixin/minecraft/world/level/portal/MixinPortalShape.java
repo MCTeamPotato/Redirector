@@ -18,4 +18,9 @@ public abstract class MixinPortalShape {
     private Direction implWest() {
         return Redirectionor.WEST;
     }
+
+    @Redirect(method = {"hasTopFrame", "getDistanceUntilTop", "createPortalBlocks"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp () {
+        return Redirectionor.UP;
+    }
 }

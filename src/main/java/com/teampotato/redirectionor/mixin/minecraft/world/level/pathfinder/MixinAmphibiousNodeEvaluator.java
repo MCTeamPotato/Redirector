@@ -13,4 +13,9 @@ public abstract class MixinAmphibiousNodeEvaluator {
     private Direction[] implValues1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "getNeighbors", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp () {
+        return Redirectionor.UP;
+    }
 }

@@ -22,6 +22,8 @@ public class Redirectionor {
     public static Direction UP = Direction.UP;
     public static Direction DOWN = Direction.DOWN;
 
+    public static Direction.AxisDirection UP_AXIS_DIRECTION = UP.getAxisDirection();
+
     public static int EAST_3D_DATA_VALUE = EAST.get3DDataValue();
     public static int SOUTH_3D_DATA_VALUE = SOUTH.get3DDataValue();
     public static int NORTH_3D_DATA_VALUE = NORTH.get3DDataValue();

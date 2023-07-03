@@ -13,4 +13,9 @@ public abstract class MixinPistonBaseBlock {
     private Direction[] implValues1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "isPushable", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private static Direction implUp() {
+        return Redirectionor.UP;
+    }
 }
