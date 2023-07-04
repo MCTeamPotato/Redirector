@@ -2,7 +2,6 @@ package com.teampotato.redirectionor;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction8;
-import net.minecraft.core.FrontAndTop;
 import net.minecraft.data.models.blockstates.VariantProperties;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.Rotation;
@@ -81,27 +80,12 @@ public class Redirectionor {
     public static RenderShape MODEL = RenderShape.MODEL;
 
     public static BedPart BED_HEAD = BedPart.HEAD;
-    public static BedPart BED_FOOT = BedPart.FOOT;
 
     public static Direction8 _8_NORTH = Direction8.NORTH;
     public static Direction8 NORTH_EAST = Direction8.NORTH_EAST;
     public static Direction8 _8_EAST = Direction8.EAST;
     public static Direction8 SOUTH_EAST = Direction8.SOUTH_EAST;
     public static Direction8 _8_SOUTH = Direction8.SOUTH;
-    public static Direction8 SOUTH_WEST = Direction8.SOUTH_WEST;
     public static Direction8 _8_WEST =  Direction8.WEST;
     public static Direction8 NORTH_WEST = Direction8.NORTH_WEST;
-
-    public static FrontAndTop DOWN_EAST = FrontAndTop.DOWN_EAST;
-    public static FrontAndTop DOWN_NORTH = FrontAndTop.DOWN_NORTH;
-    public static FrontAndTop DOWN_SOUTH = FrontAndTop.DOWN_SOUTH;
-    public static FrontAndTop DOWN_WEST = FrontAndTop.DOWN_WEST;
-    public static FrontAndTop UP_EAST = FrontAndTop.UP_EAST;
-    public static FrontAndTop UP_NORTH = FrontAndTop.UP_NORTH;
-    public static FrontAndTop UP_SOUTH = FrontAndTop.UP_SOUTH;
-    public static FrontAndTop UP_WEST = FrontAndTop.UP_WEST;
-    public static FrontAndTop WEST_UP = FrontAndTop.WEST_UP;
-    public static FrontAndTop EAST_UP = FrontAndTop.EAST_UP;
-    public static FrontAndTop NORTH_UP = FrontAndTop.NORTH_UP;
-    public static FrontAndTop SOUTH_UP = FrontAndTop.SOUTH_UP;
 }
