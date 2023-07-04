@@ -13,6 +13,9 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LocalPlayer.class)
 public abstract class MixinLocalPlayer extends AbstractClientPlayer {
@@ -22,7 +25,13 @@ public abstract class MixinLocalPlayer extends AbstractClientPlayer {
         super(pClientLevel, pGameProfile, pProfilePublicKey);
     }
 
-    private static final Direction[] adirection = new Direction[]{Redirectionor.WEST, Redirectionor.EAST, Redirectionor.NORTH, Redirectionor.SOUTH};
+    @Unique
+    private static final Direction[] redirectionor$adirection = new Direction[]{Redirectionor.WEST, Redirectionor.EAST, Redirectionor.NORTH, Redirectionor.SOUTH};
+
+    @Redirect(method = "drop", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 
     /**
      * @author Kasualix
@@ -36,7 +45,7 @@ public abstract class MixinLocalPlayer extends AbstractClientPlayer {
             double d1 = pZ - (double)blockpos.getZ();
             Direction direction = null;
             double d2 = Double.MAX_VALUE;
-            for(Direction direction1 : adirection) {
+            for(Direction direction1 : redirectionor$adirection) {
                 double d3 = direction1.getAxis().choose(d0, 0.0D, d1);
                 double d4 = direction1.getAxisDirection() == Redirectionor.POSITIVE ? 1.0D - d3 : d3;
                 if (d4 < d2 && !this.suffocatesAt(blockpos.relative(direction1))) {

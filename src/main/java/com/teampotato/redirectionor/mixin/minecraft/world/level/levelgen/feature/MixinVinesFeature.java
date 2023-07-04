@@ -13,4 +13,9 @@ public abstract class MixinVinesFeature {
     private Direction[] implValues1() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "place", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 }

@@ -13,4 +13,10 @@ public abstract class MixinSpawnUtil {
     private static Direction implUp() {
         return Redirectionor.UP;
     }
+
+
+    @Redirect(method = "moveToPossibleSpawnPosition", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
+    private static Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 }

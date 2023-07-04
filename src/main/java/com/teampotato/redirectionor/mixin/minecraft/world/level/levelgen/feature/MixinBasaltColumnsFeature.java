@@ -23,4 +23,9 @@ public abstract class MixinBasaltColumnsFeature {
     private static Direction implUp3() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = {"findSurface", "canPlaceAt"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
+    private static Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 }

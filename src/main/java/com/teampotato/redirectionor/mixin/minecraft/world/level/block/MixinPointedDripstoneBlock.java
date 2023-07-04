@@ -14,23 +14,23 @@ public abstract class MixinPointedDripstoneBlock {
         return Redirectionor.UP;
     }
 
-    @Redirect(method = "growStalagmiteBelow", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    @Redirect(method = {"growStalagmiteBelow", "createMergedTips", "isStalagmite"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
     private static Direction implUp2() {
         return Redirectionor.UP;
     }
 
-    @Redirect(method = "createMergedTips", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
-    private static Direction implUp3() {
-        return Redirectionor.UP;
-    }
-
-    @Redirect(method = "isStalagmite", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
-    private static Direction implUp4() {
-        return Redirectionor.UP;
-    }
-
     @Redirect(method = "findStalactiteTipAboveCauldron", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;getAxisDirection()Lnet/minecraft/core/Direction$AxisDirection;"))
-    private static Direction.AxisDirection implUp5(Direction instance) {
+    private static Direction.AxisDirection implUp(Direction instance) {
         return Redirectionor.UP_AXIS_DIRECTION;
+    }
+
+    @Redirect(method = "getShape", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
+    }
+
+    @Redirect(method = {"spawnFallingStalactite", "growStalactiteOrStalagmiteIfPossible", "growStalagmiteBelow", "createMergedTips", "isStalactite", "findFillableCauldronBelowStalactiteTip"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
+    private static Direction implDown2() {
+        return Redirectionor.DOWN;
     }
 }

@@ -18,4 +18,9 @@ public abstract class MixinBlock {
     private static Direction implUp2() {
         return Redirectionor.UP;
     }
+
+    @Redirect(method = "canSupportCenter", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
+    private static Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 }

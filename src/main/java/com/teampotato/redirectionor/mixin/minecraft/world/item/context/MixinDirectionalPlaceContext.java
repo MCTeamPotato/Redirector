@@ -40,4 +40,13 @@ public abstract class MixinDirectionalPlaceContext {
     public Direction getHorizontalDirection() {
         return this.direction.getAxis() == Redirectionor.Y ? Redirectionor.NORTH : this.direction;
     }
+
+    /**
+     * @author Kasualix
+     * @reason avoid allocation
+     */
+    @Overwrite
+    public Direction getNearestLookingDirection() {
+        return Redirectionor.DOWN;
+    }
 }
