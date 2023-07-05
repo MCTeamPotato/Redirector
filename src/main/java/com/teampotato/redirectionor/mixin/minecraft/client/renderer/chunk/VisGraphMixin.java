@@ -5,38 +5,41 @@ import net.minecraft.client.renderer.chunk.VisGraph;
 import net.minecraft.util.Direction;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 import java.util.Set;
 
-@Mixin(value = VisGraph.class, priority = 10)
+@Mixin(VisGraph.class)
 public abstract class VisGraphMixin {
 
-    /**
-     * @author Kasualix
-     * @reason avoid allocation
-     */
-    @Overwrite
-    private void addEdges(int pPos, Set<Direction> pSetFacings) {
-        int i = pPos & 15;
-        if (i == 0) {
-            pSetFacings.add(Redirectionor.WEST);
-        } else if (i == 15) {
-            pSetFacings.add(Redirectionor.EAST);
-        }
+    @Redirect(method = "addEdges", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown() {
+        return Redirectionor.DOWN;
+    }
 
-        int j = pPos >> 8 & 15;
-        if (j == 0) {
-            pSetFacings.add(Redirectionor.DOWN);
-        } else if (j == 15) {
-            pSetFacings.add(Redirectionor.UP);
-        }
+    @Redirect(method = "addEdges", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
+    private Direction implEast() {
+        return Redirectionor.EAST;
+    }
 
-        int k = pPos >> 4 & 15;
-        if (k == 0) {
-            pSetFacings.add(Redirectionor.NORTH);
-        } else if (k == 15) {
-            pSetFacings.add(Redirectionor.SOUTH);
-        }
+    @Redirect(method = "addEdges", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.NORTH;
+    }
 
+    @Redirect(method = "addEdges", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth() {
+        return Redirectionor.SOUTH;
+    }
+
+    @Redirect(method = "addEdges", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
+
+    @Redirect(method = "addEdges", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
+    private Direction implWest() {
+        return Redirectionor.WEST;
     }
 }

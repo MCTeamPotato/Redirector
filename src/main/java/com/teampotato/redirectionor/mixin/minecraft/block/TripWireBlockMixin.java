@@ -7,15 +7,12 @@ import net.minecraft.block.TripWireHookBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.*;
 
 @Mixin(value = TripWireBlock.class, priority = 10)
 public abstract class TripWireBlockMixin {
     @Shadow @Final private TripWireHookBlock hook;
-    private static final Direction[] DIRECTIONS = new Direction[]{Redirectionor.SOUTH, Redirectionor.WEST};
+    @Unique private static final Direction[] redirectionor$directions = new Direction[]{Redirectionor.SOUTH, Redirectionor.WEST};
 
     /**
      * @author Kasualix
@@ -23,7 +20,7 @@ public abstract class TripWireBlockMixin {
      */
     @Overwrite
     private void updateSource(World pLevel, BlockPos pPos, BlockState pState) {
-        for(Direction direction : DIRECTIONS) {
+        for(Direction direction : redirectionor$directions) {
             for(int i = 1; i < 42; ++i) {
                 BlockPos blockpos = pPos.relative(direction, i);
                 BlockState blockstate = pLevel.getBlockState(blockpos);

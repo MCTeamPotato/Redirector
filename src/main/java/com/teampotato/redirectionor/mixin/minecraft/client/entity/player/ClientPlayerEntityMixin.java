@@ -29,7 +29,7 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
     }
 
     @Unique
-    private static final Direction[] directions = new Direction[]{Redirectionor.WEST, Redirectionor.EAST, Redirectionor.NORTH, Redirectionor.SOUTH};
+    private static final Direction[] redirectionor$directions = new Direction[]{Redirectionor.WEST, Redirectionor.EAST, Redirectionor.NORTH, Redirectionor.SOUTH};
 
     /**
      * @author Kasualix
@@ -44,7 +44,7 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
             Direction direction = null;
             double d2 = Double.MAX_VALUE;
 
-            for(Direction direction1 : directions) {
+            for(Direction direction1 : redirectionor$directions) {
                 double d3 = direction1.getAxis().choose(d0, 0.0D, d1);
                 double d4 = direction1.getAxisDirection() == Redirectionor.POSITIVE ? 1.0D - d3 : d3;
                 if (d4 < d2 && !this.suffocatesAt(blockpos.relative(direction1))) {

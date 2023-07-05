@@ -17,7 +17,7 @@ public abstract class EntityMixin {
     @Shadow public abstract Vector3d getDeltaMovement();
     @Shadow public abstract void setDeltaMovement(double pX, double pY, double pZ);
 
-    @Unique private static final Direction[] directions = new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST, Direction.UP};
+    @Unique private static final Direction[] redirectionor$directions = new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST, Direction.UP};
 
     /**
      * @author Kasualix
@@ -31,7 +31,7 @@ public abstract class EntityMixin {
         Direction direction = Redirectionor.UP;
         double d0 = Double.MAX_VALUE;
 
-        for(Direction direction1 : directions) {
+        for(Direction direction1 : redirectionor$directions) {
             blockpos$mutable.setWithOffset(blockpos, direction1);
             if (!this.level.getBlockState(blockpos$mutable).isCollisionShapeFullBlock(this.level, blockpos$mutable)) {
                 double d1 = vector3d.get(direction1.getAxis());

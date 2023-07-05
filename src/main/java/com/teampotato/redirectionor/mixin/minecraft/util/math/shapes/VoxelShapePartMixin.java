@@ -21,9 +21,9 @@ public abstract class VoxelShapePartMixin {
     @Overwrite
     private void forAllAxisFaces(VoxelShapePart.IFaceConsumer pFaceConsumer, AxisRotation pAxisRotation) {
         AxisRotation axisrotation = pAxisRotation.inverse();
-        Direction.Axis direction$axis = axisrotation.cycle(Direction.Axis.Z);
-        int i = this.getSize(axisrotation.cycle(Direction.Axis.X));
-        int j = this.getSize(axisrotation.cycle(Direction.Axis.Y));
+        Direction.Axis direction$axis = axisrotation.cycle(Redirectionor.Z);
+        int i = this.getSize(axisrotation.cycle(Redirectionor.X));
+        int j = this.getSize(axisrotation.cycle(Redirectionor.Y));
         int k = this.getSize(direction$axis);
         Direction direction = Direction.fromAxisAndDirection(direction$axis, Redirectionor.NEGATIVE);
         Direction direction1 = Direction.fromAxisAndDirection(direction$axis, Redirectionor.POSITIVE);
@@ -35,11 +35,11 @@ public abstract class VoxelShapePartMixin {
                 for(int j1 = 0; j1 <= k; ++j1) {
                     boolean flag1 = j1 != k && this.isFull(axisrotation, l, i1, j1);
                     if (!flag && flag1) {
-                        pFaceConsumer.consume(direction, axisrotation.cycle(l, i1, j1, Direction.Axis.X), axisrotation.cycle(l, i1, j1, Direction.Axis.Y), axisrotation.cycle(l, i1, j1, Direction.Axis.Z));
+                        pFaceConsumer.consume(direction, axisrotation.cycle(l, i1, j1, Redirectionor.X), axisrotation.cycle(l, i1, j1, Redirectionor.Y), axisrotation.cycle(l, i1, j1, Redirectionor.Z));
                     }
 
                     if (flag && !flag1) {
-                        pFaceConsumer.consume(direction1, axisrotation.cycle(l, i1, j1 - 1, Direction.Axis.X), axisrotation.cycle(l, i1, j1 - 1, Direction.Axis.Y), axisrotation.cycle(l, i1, j1 - 1, Direction.Axis.Z));
+                        pFaceConsumer.consume(direction1, axisrotation.cycle(l, i1, j1 - 1, Redirectionor.X), axisrotation.cycle(l, i1, j1 - 1, Redirectionor.Y), axisrotation.cycle(l, i1, j1 - 1, Redirectionor.Z));
                     }
 
                     flag = flag1;

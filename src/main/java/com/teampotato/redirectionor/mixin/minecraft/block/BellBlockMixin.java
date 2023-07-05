@@ -84,26 +84,33 @@ public abstract class BellBlockMixin extends ContainerBlock {
         return null;
     }
 
-    /**
-     * @author Kasualix
-     * @reason avoid allocation
-     */
-    @Overwrite
-    private VoxelShape getVoxelShape(BlockState pState) {
-        Direction direction = pState.getValue(FACING);
-        BellAttachment bellattachment = pState.getValue(ATTACHMENT);
-        if (bellattachment == BellAttachment.FLOOR) {
-            return direction != Redirectionor.NORTH && direction != Redirectionor.SOUTH ? EAST_WEST_FLOOR_SHAPE : NORTH_SOUTH_FLOOR_SHAPE;
-        } else if (bellattachment == BellAttachment.CEILING) {
-            return CEILING_SHAPE;
-        } else if (bellattachment == BellAttachment.DOUBLE_WALL) {
-            return direction != Redirectionor.NORTH && direction != Redirectionor.SOUTH ? EAST_WEST_BETWEEN : NORTH_SOUTH_BETWEEN;
-        } else if (direction == Redirectionor.NORTH) {
-            return TO_NORTH;
-        } else if (direction == Redirectionor.SOUTH) {
-            return TO_SOUTH;
-        } else {
-            return direction == Redirectionor.EAST ? TO_EAST : TO_WEST;
-        }
+    @Redirect(method = "getVoxelShape", at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/BellAttachment;FLOOR:Lnet/minecraft/state/properties/BellAttachment;"))
+    private BellAttachment implFloor() {
+        return Redirectionor.FLOOR_TYPE;
+    }
+
+    @Redirect(method = "getVoxelShape", at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/BellAttachment;CEILING:Lnet/minecraft/state/properties/BellAttachment;"))
+    private BellAttachment implCeiling() {
+        return Redirectionor.CEILING_TYPE;
+    }
+
+    @Redirect(method = "getVoxelShape", at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/BellAttachment;DOUBLE_WALL:Lnet/minecraft/state/properties/BellAttachment;"))
+    private BellAttachment implDoubleWall() {
+        return Redirectionor.DOUBLE_WALL_TYPE;
+    }
+
+    @Redirect(method = "getVoxelShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
+    private Direction implEast() {
+        return Redirectionor.EAST;
+    }
+
+    @Redirect(method = "getVoxelShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
+    private Direction implNorth() {
+        return Redirectionor.NORTH;
+    }
+
+    @Redirect(method = "getVoxelShape", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
+    private Direction implSouth() {
+        return Redirectionor.SOUTH;
     }
 }

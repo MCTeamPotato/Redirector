@@ -55,7 +55,6 @@
     "minecraft.block.AbstractCoralPlantBlockMixin",
     "minecraft.block.AbstractFireBlockMixin",
     "minecraft.block.AnvilBlockMixin",
-    "minecraft.block.BeehiveBlockMixin",
     "minecraft.block.BellBlockMixin",
     "minecraft.block.BlockMixin",
     "minecraft.block.ConcretePowderBlockMixin",
@@ -192,6 +191,7 @@
     "minecraft.world.spawner.WorldEntitySpawnerMixin"
   ],
   "client": [
+    "minecraft.block.BeehiveBlockMixin",
     "global.down.InAnimateTick",
     "global.east.InAnimateTick",
     "global.south.InAnimateTick",

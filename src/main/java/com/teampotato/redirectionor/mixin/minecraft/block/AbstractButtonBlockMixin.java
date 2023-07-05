@@ -15,6 +15,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
+@SuppressWarnings({"NullableProblems", "deprecation"})
 @Mixin(value = AbstractButtonBlock.class, priority = 10)
 public abstract class AbstractButtonBlockMixin extends HorizontalFaceBlock {
     @Shadow @Final public static BooleanProperty POWERED;
