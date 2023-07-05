@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "redirectionor",
+  "version": "${version}",
+  "name": "Redirectionor",
+  "description": "A Minecraft Mod",
+  "authors": [
+    "TeamPotato"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "LGPL-v3",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.teampotato.redirectionor.fabric.RedirectionorFabric"
+    ]
+  },
+  "mixins": [
+    "redirectionor.mixins.json",
+    "redirectionor-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2"
+  }
+}
