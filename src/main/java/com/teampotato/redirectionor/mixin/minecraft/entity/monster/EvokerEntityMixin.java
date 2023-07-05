@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(targets = "net.minecraft.entity.monster.EvokerEntity$AttackSpellGoal")
 public abstract class EvokerEntityMixin {
     @Redirect(method = "createSpellEntity", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp1() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 }

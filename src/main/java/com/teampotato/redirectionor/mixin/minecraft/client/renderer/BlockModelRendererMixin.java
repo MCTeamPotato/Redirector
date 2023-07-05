@@ -17,16 +17,10 @@ import java.util.BitSet;
 @Mixin(value = BlockModelRenderer.class, priority = 10)
 public abstract class BlockModelRendererMixin {
 
-    @Redirect(method = "renderModelSmooth", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt1() {
+    @Redirect(method = {"renderModelSmooth", "renderModelFlat"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
+    private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
-
-    @Redirect(method = "renderModelFlat", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt2() {
-        return Redirectionor.DIRECTIONS;
-    }
-
 
     /**
      * @author Kasualix

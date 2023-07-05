@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(SwimNodeProcessor.class)
 public abstract class SwimNodeProcessorMixin {
     @Redirect(method = "getNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt1() {
+    private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 }

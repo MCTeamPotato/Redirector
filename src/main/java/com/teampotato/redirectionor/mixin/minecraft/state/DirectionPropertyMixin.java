@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(DirectionProperty.class)
 public abstract class DirectionPropertyMixin {
     @Redirect(method = "create(Ljava/lang/String;Ljava/util/function/Predicate;)Lnet/minecraft/state/DirectionProperty;", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private static Direction[] implOpt1() {
+    private static Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 }

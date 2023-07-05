@@ -10,17 +10,17 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(Block.class)
 public abstract class BlockMixin {
     @Redirect(method = "canSupportCenter", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private static Direction implDown1() {
+    private static Direction implDown() {
         return Redirectionor.DOWN;
     }
 
     @Redirect(method = "canSupportRigidBlock", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private static Direction implUp1() {
+    private static Direction implUpStatic() {
         return Redirectionor.UP;
     }
 
     @Redirect(method = "canSustainPlant", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp2() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 }

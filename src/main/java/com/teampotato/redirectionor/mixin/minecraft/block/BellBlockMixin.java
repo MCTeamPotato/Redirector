@@ -10,7 +10,6 @@ import net.minecraft.state.EnumProperty;
 import net.minecraft.state.properties.BellAttachment;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,15 +24,6 @@ import javax.annotation.Nullable;
 public abstract class BellBlockMixin extends ContainerBlock {
     @Shadow @Final public static DirectionProperty FACING;
     @Shadow @Final public static EnumProperty<BellAttachment> ATTACHMENT;
-    @Shadow @Final private static VoxelShape EAST_WEST_FLOOR_SHAPE;
-    @Shadow @Final private static VoxelShape NORTH_SOUTH_FLOOR_SHAPE;
-    @Shadow @Final private static VoxelShape NORTH_SOUTH_BETWEEN;
-    @Shadow @Final private static VoxelShape EAST_WEST_BETWEEN;
-    @Shadow @Final private static VoxelShape CEILING_SHAPE;
-    @Shadow @Final private static VoxelShape TO_NORTH;
-    @Shadow @Final private static VoxelShape TO_SOUTH;
-    @Shadow @Final private static VoxelShape TO_WEST;
-    @Shadow @Final private static VoxelShape TO_EAST;
 
     protected BellBlockMixin(Properties p_i48446_1_) {
         super(p_i48446_1_);

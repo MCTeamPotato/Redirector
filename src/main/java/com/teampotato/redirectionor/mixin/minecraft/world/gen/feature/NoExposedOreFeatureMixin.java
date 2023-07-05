@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(NoExposedOreFeature.class)
 public abstract class NoExposedOreFeatureMixin {
     @Redirect(method = "isFacingAir", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt1() {
+    private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 }

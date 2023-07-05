@@ -11,12 +11,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(DoorBlock.class)
 public abstract class DoorBlockMixin {
     @Redirect(method = "neighborChanged", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown2() {
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 
     @Redirect(method = "neighborChanged", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp2() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 

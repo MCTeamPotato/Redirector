@@ -11,7 +11,7 @@ public abstract class MineshaftPiecesMixin {
     @Mixin(value = MineshaftPieces.Corridor.class, priority = 2000)
     public static abstract class CorridorMixin {
         @Redirect(method = "placeSupport", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
-        private Direction implNorth2() {
+        private Direction implNorth() {
             return Redirectionor.NORTH;
         }
 

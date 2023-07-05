@@ -10,22 +10,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(PortalSize.class)
 public abstract class PortalSizeMixin {
     @Redirect(method = "getDistanceUntilEdgeAboveFrame", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown1() {
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 
-    @Redirect(method = "hasTopFrame", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp1() {
-        return Redirectionor.UP;
-    }
-
-    @Redirect(method = "getDistanceUntilTop", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp2() {
-        return Redirectionor.UP;
-    }
-
-    @Redirect(method = "createPortalBlocks", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp3() {
+    @Redirect(method = {"hasTopFrame", "getDistanceUntilTop", "createPortalBlocks"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 

@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(ScaffoldingItem.class)
 public abstract class ScaffoldingItemMixin {
     @Redirect(method = "updatePlacementContext", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp1() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 }

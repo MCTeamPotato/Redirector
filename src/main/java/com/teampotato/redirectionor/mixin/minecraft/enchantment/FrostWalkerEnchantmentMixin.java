@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(FrostWalkerEnchantment.class)
 public abstract class FrostWalkerEnchantmentMixin {
     @Redirect(method = "onEntityMoved", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private static Direction implUp1() {
+    private static Direction implUp() {
         return Redirectionor.UP;
     }
 }

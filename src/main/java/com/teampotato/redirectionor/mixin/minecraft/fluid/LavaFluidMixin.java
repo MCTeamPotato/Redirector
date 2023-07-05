@@ -15,12 +15,12 @@ public abstract class LavaFluidMixin {
         return Redirectionor.UP;
     }
     @Redirect(method = "hasFlammableNeighbours", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt1() {
+    private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 
     @Redirect(method = "spreadTo", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown1() {
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 }

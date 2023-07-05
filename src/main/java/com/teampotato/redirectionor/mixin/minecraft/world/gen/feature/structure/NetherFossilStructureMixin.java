@@ -15,7 +15,7 @@ public abstract class NetherFossilStructureMixin {
     }
 
     @Redirect(method = "generatePieces(Lnet/minecraft/util/registry/DynamicRegistries;Lnet/minecraft/world/gen/ChunkGenerator;Lnet/minecraft/world/gen/feature/template/TemplateManager;IILnet/minecraft/world/biome/Biome;Lnet/minecraft/world/gen/feature/NoFeatureConfig;)V", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp1() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 }

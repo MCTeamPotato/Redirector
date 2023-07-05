@@ -10,12 +10,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(Vector3i.class)
 public abstract class Vector3iMixin {
     @Redirect(method = "below(I)Lnet/minecraft/util/math/vector/Vector3i;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown1() {
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 
     @Redirect(method = "above(I)Lnet/minecraft/util/math/vector/Vector3i;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp1() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 }

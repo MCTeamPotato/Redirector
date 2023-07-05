@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(StairsBlock.class)
 public abstract class StairsBlockMixin {
-    @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/Half;TOP:Lnet/minecraft/state/properties/Half;"))
+    @Redirect(method = {"getShape", "getStateForPlacement"}, at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/Half;TOP:Lnet/minecraft/state/properties/Half;"))
     private Half implTop() {
         return Redirectionor.TOP;
     }

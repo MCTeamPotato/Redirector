@@ -10,17 +10,17 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(UpgradeData.class)
 public abstract class UpgradeDataMixin {
     @Redirect(method = "upgradeSides", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private static Direction[] implOpt1() {
+    private static Direction[] implOptStatic() {
         return Redirectionor.DIRECTIONS;
     }
 
     @Redirect(method = "upgradeInside", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt2() {
+    private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 
     @Redirect(method = "upgradeSides", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
-    private static Direction implNorth1() {
+    private static Direction implNorth() {
         return Redirectionor.NORTH;
     }
 

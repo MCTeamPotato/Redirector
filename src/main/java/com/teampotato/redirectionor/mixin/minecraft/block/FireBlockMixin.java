@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(FireBlock.class)
 public abstract class FireBlockMixin {
-    @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    @Redirect(method = {"tick", "getStateForPlacement(Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
     private Direction implUp() {
         return Redirectionor.UP;
     }
@@ -19,7 +19,7 @@ public abstract class FireBlockMixin {
         return Redirectionor.DOWN;
     }
     @Redirect(method = "*", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt3() {
+    private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 
@@ -41,10 +41,5 @@ public abstract class FireBlockMixin {
     @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
     private Direction implEast() {
         return Redirectionor.EAST;
-    }
-
-    @Redirect(method = "getStateForPlacement(Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState;", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp1() {
-        return Redirectionor.UP;
     }
 }

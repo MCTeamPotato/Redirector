@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(CoralMushroomFeature.class)
 public abstract class CoralMushroomFeatureMixin {
     @Redirect(method = "placeFeature", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown1() {
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 }

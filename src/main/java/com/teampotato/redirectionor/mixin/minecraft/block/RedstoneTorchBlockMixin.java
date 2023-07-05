@@ -9,23 +9,13 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(RedstoneTorchBlock.class)
 public abstract class RedstoneTorchBlockMixin {
-    @Redirect(method = "onPlace", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt1() {
+    @Redirect(method = {"onPlace", "onRemove"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
+    private Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 
-    @Redirect(method = "onRemove", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private Direction[] implOpt2() {
-        return Redirectionor.DIRECTIONS;
-    }
-
-    @Redirect(method = "hasNeighborSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown1() {
-        return Redirectionor.DOWN;
-    }
-
-    @Redirect(method = "getDirectSignal", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown2() {
+    @Redirect(method = {"hasNeighborSignal", "getDirectSignal"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    private Direction implDown() {
         return Redirectionor.DOWN;
     }
 

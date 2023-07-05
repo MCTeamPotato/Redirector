@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(TwistingVineFeature.class)
 public abstract class TwistingVineFeatureMixin {
     @Redirect(method = "placeWeepingVinesColumn", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private static Direction implUp1() {
+    private static Direction implUp() {
         return Redirectionor.UP;
     }
 }

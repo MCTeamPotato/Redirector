@@ -9,13 +9,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(VineBlock.class)
 public abstract class VineBlockMixin {
-    @Redirect(method = "canSupportAtFace", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
+    @Redirect(method = {"canSupportAtFace", "getUpdatedState"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private Direction implDown1() {
-        return Redirectionor.DOWN;
-    }
-
-    @Redirect(method = "getUpdatedState", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
-    private Direction implDown2() {
         return Redirectionor.DOWN;
     }
 }

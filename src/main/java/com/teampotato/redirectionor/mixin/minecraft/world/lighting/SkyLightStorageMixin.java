@@ -9,13 +9,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(SkyLightStorage.class)
 public abstract class SkyLightStorageMixin {
-    @Redirect(method = "getLightValue", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    @Redirect(method = {"getLightValue", "createDataLayer"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
     private Direction implUp1() {
-        return Redirectionor.UP;
-    }
-
-    @Redirect(method = "createDataLayer", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp2() {
         return Redirectionor.UP;
     }
 }

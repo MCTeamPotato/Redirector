@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(RedstoneOreBlock.class)
 public abstract class RedstoneOreBlockMixin {
     @Redirect(method = "spawnParticles", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
-    private static Direction[] implOpt1() {
+    private static Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
 }

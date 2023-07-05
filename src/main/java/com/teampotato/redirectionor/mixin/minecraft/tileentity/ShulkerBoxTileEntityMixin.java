@@ -27,7 +27,7 @@ public abstract class ShulkerBoxTileEntityMixin extends LockableLootTileEntity {
     }
     @Shadow protected abstract AxisAlignedBB getTopBoundingBox(Direction p_190588_1_);
     @Redirect(method = "createUnSidedHandler", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"), remap = false)
-    private Direction implUp1() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 

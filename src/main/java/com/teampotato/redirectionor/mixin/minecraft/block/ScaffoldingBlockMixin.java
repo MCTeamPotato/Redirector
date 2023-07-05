@@ -15,7 +15,7 @@ public abstract class ScaffoldingBlockMixin {
     }
 
     @Redirect(method = "getDistance", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private static Direction implUp1() {
+    private static Direction implUp() {
         return Redirectionor.UP;
     }
 }

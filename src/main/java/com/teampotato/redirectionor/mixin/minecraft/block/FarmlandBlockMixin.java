@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(FarmlandBlock.class)
 public abstract class FarmlandBlockMixin {
     @Redirect(method = "isUnderCrops", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
-    private Direction implUp2() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 }
