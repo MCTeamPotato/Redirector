@@ -18,11 +18,6 @@ public abstract class MixinRedStoneWireBlock {
 
     @Shadow protected abstract void updateNeighborsOfNeighboringWires(Level p_55638_, BlockPos p_55639_);
 
-    @Redirect(method = {"updatePowerStrength", "checkCornerChangeAt", "onRemove"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues1() {
-        return Redirectionor.DIRECTIONS;
-    }
-
     @Redirect(method = {"updateIndirectNeighbourShapes", "canSurviveOn", "getSignal"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
     private Direction implUp1() {
         return Redirectionor.UP;

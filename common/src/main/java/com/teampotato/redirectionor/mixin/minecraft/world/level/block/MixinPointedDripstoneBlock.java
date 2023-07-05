@@ -24,11 +24,6 @@ public abstract class MixinPointedDripstoneBlock {
         return Redirectionor.UP_AXIS_DIRECTION;
     }
 
-    @Redirect(method = "getShape", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
-    private Direction implDown() {
-        return Redirectionor.DOWN;
-    }
-
     @Redirect(method = {"spawnFallingStalactite", "growStalactiteOrStalagmiteIfPossible", "growStalagmiteBelow", "createMergedTips", "isStalactite", "findFillableCauldronBelowStalactiteTip"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
     private static Direction implDownStatic() {
         return Redirectionor.DOWN;

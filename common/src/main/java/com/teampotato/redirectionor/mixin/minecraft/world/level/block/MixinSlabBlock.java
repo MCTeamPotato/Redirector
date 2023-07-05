@@ -13,4 +13,9 @@ public abstract class MixinSlabBlock {
     private Direction implDown() {
         return Redirectionor.DOWN;
     }
+
+    @Redirect(method = "canBeReplaced", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
+    private Direction implUp() {
+        return Redirectionor.UP;
+    }
 }
