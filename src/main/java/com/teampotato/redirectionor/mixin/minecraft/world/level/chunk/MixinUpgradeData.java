@@ -9,8 +9,13 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(UpgradeData.class)
 public abstract class MixinUpgradeData {
-    @Redirect(method = "*", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
+    @Redirect(method = "upgradeSides", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
     private static Direction[] implValues() {
+        return Redirectionor.DIRECTIONS;
+    }
+
+    @Redirect(method = "upgradeInside", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
+    private  Direction[] implValues2() {
         return Redirectionor.DIRECTIONS;
     }
 

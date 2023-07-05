@@ -15,7 +15,7 @@ public abstract class MixinBlock {
     }
 
     @Redirect(method = "canSustainPlant", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"), remap = false)
-    private static Direction implUp2() {
+    private Direction implUp2() {
         return Redirectionor.UP;
     }
 

@@ -29,13 +29,13 @@ import org.spongepowered.asm.mixin.*;
 import java.util.Iterator;
 import java.util.List;
 
-@Mixin(StructureTemplate.class)
+@Mixin(value = StructureTemplate.class, priority = 10)
 public abstract class MixinStructureTemplate {
-    @Shadow protected abstract void addEntitiesToWorld(ServerLevelAccessor pServerLevel, BlockPos p_74525_, StructurePlaceSettings placementIn);
+    @Shadow(remap = false) protected abstract void addEntitiesToWorld(ServerLevelAccessor pServerLevel, BlockPos p_74525_, StructurePlaceSettings placementIn);
     @Shadow @Final private List<StructureTemplate.Palette> palettes;
     @Shadow @Final private List<StructureTemplate.StructureEntityInfo> entityInfoList;
     @Shadow private Vec3i size;
-    @Shadow public static List<StructureTemplate.StructureBlockInfo> processBlockInfos(LevelAccessor pLevel, BlockPos p_74519_, BlockPos p_74520_, StructurePlaceSettings pSettings, List<StructureTemplate.StructureBlockInfo> pBlockInfos, @Nullable StructureTemplate template) {
+    @Shadow(remap = false) public static List<StructureTemplate.StructureBlockInfo> processBlockInfos(LevelAccessor pLevel, BlockPos p_74519_, BlockPos p_74520_, StructurePlaceSettings pSettings, List<StructureTemplate.StructureBlockInfo> pBlockInfos, @Nullable StructureTemplate template) {
         throw new RuntimeException();
     }
     @Shadow public static void updateShapeAtEdge(LevelAccessor pLevel, int p_74512_, DiscreteVoxelShape pShape, int pX, int pY, int pZ) {

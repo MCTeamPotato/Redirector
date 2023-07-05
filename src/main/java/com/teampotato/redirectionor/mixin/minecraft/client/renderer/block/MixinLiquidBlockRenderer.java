@@ -27,7 +27,7 @@ public abstract class MixinLiquidBlockRenderer {
     @Shadow protected abstract float getHeight(BlockAndTintGetter p_203161_, Fluid p_203162_, BlockPos p_203163_, BlockState p_203164_, FluidState p_203165_);
     @Shadow protected abstract float calculateAverageHeight(BlockAndTintGetter p_203150_, Fluid p_203151_, float p_203152_, float p_203153_, float p_203154_, BlockPos p_203155_);
     @Shadow protected abstract int getLightColor(BlockAndTintGetter p_110946_, BlockPos p_110947_);
-    @Shadow protected abstract void vertex(VertexConsumer p_110985_, double p_110986_, double p_110987_, double p_110988_, float p_110989_, float p_110990_, float p_110991_, float alpha, float p_110992_, float p_110993_, int p_110994_);
+    @Shadow(remap = false) protected abstract void vertex(VertexConsumer p_110985_, double p_110986_, double p_110987_, double p_110988_, float p_110989_, float p_110990_, float p_110991_, float alpha, float p_110992_, float p_110993_, int p_110994_);
     @Shadow private TextureAtlasSprite waterOverlay;
 
     /**

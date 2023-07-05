@@ -16,24 +16,14 @@ public abstract class MixinMineshaftPieces {
             return Redirectionor.DIRECTIONS;
         }
 
-        @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;NORTH:Lnet/minecraft/core/Direction;"))
+        @Redirect(method = "placeSupport", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;NORTH:Lnet/minecraft/core/Direction;"))
         private Direction implNorth () {
             return Redirectionor.NORTH;
         }
 
-        @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;SOUTH:Lnet/minecraft/core/Direction;"))
+        @Redirect(method = "placeSupport", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;SOUTH:Lnet/minecraft/core/Direction;"))
         private Direction implSouth () {
             return Redirectionor.SOUTH;
-        }
-
-        @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;WEST:Lnet/minecraft/core/Direction;"))
-        private Direction implWest () {
-            return Redirectionor.WEST;
-        }
-
-        @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;EAST:Lnet/minecraft/core/Direction;"))
-        private Direction implEast () {
-            return Redirectionor.EAST;
         }
 
         @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))

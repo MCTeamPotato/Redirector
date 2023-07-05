@@ -48,11 +48,6 @@ public abstract class MixinRedStoneWireBlock {
         return Redirectionor.UP;
     }
 
-    @Redirect(method = {"updateShape", "updateIndirectNeighbourShapes", "getSignal"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
-    private Direction implDown() {
-        return Redirectionor.DOWN;
-    }
-
     /**
      * @author Kasualix
      * @reason avoid allocation
