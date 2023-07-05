@@ -13,10 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LocalPlayer.class)
-public abstract class MixinLocalPlayer extends AbstractClientPlayer {
-    public MixinLocalPlayer(ClientLevel pClientLevel, GameProfile pGameProfile, @Nullable ProfilePublicKey pProfilePublicKey) {
-        super(pClientLevel, pGameProfile, pProfilePublicKey);
-    }
+public abstract class MixinLocalPlayer {
     @Redirect(method = "drop", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
     private Direction implDown() {
         return Redirectionor.DOWN;

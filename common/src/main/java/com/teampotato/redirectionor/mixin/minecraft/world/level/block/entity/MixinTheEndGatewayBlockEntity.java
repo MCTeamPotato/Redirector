@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(TheEndGatewayBlockEntity.class)
 public abstract class MixinTheEndGatewayBlockEntity {
     @Redirect(method = "getParticleAmount", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues1() {
+    private Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 }

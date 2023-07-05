@@ -10,10 +10,9 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(ConcretePowderBlock.class)
 public abstract class MixinConcretePowderBlock {
     @Redirect(method = "touchesLiquid", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private static Direction[] implValues1() {
+    private static Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
-
 
     @Redirect(method = "touchesLiquid", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
     private static Direction implDown() {

@@ -6,7 +6,7 @@
   "overwrites": {
     "conformVisibility": true
   },
-  "refmap": "redirectionor-refmap.json",
+  "refmap": "redirectionor-common-refmap.json",
   "injectors": {
     "defaultRequire": 1
   },

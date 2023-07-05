@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(BaseCoralPlantTypeBlock.class)
 public abstract class MixinBaseCoralPlantTypeBlock {
     @Redirect(method = "scanForWater", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private static Direction[] implValues1() {
+    private static Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 }

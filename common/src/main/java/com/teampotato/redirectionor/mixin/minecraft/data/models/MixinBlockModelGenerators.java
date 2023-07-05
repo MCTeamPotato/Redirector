@@ -33,6 +33,7 @@ public abstract class MixinBlockModelGenerators {
     @Shadow abstract void createSimpleFlatItemModel(Item pFlatItem);
     @Shadow @Final Consumer<BlockStateGenerator> blockStateOutput;
     @Shadow @Final BiConsumer<ResourceLocation, Supplier<JsonElement>> modelOutput;
+
     @Shadow
     private static PropertyDispatch createBooleanModelDispatch(BooleanProperty pProperty, ResourceLocation pTrueModelLocation, ResourceLocation pFalseModelLocation) {
         throw new RuntimeException();

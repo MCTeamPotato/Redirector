@@ -19,7 +19,7 @@ public abstract class MixinChunkRenderDispatcher {
     @Shadow @Final private BlockPos.MutableBlockPos[] relativeOrigins;
 
     @Redirect(method = "setOrigin", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues1() {
+    private Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 

@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(Shulker.class)
 public abstract class MixinShulker {
     @Redirect(method = "findAttachableSurface", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private  Direction[] implValues1() {
+    private  Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 

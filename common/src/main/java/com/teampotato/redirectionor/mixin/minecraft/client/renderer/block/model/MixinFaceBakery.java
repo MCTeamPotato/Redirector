@@ -9,23 +9,18 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(FaceBakery.class)
 public abstract class MixinFaceBakery {
-    @Redirect(method = "setupShape", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues1() {
+    @Redirect(method = {"setupShape", "recalculateWinding"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
+    private Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 
     @Redirect(method = "calculateFacing", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private static Direction[] implValues2() {
+    private static Direction[] implValuesStatic() {
         return Redirectionor.DIRECTIONS;
     }
 
     @Redirect(method = "calculateFacing", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
     private static Direction implUp() {
         return Redirectionor.UP;
-    }
-
-    @Redirect(method = "recalculateWinding", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues3() {
-        return Redirectionor.DIRECTIONS;
     }
 }
