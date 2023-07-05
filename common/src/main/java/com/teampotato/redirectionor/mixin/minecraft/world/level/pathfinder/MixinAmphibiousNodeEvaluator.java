@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(AmphibiousNodeEvaluator.class)
 public abstract class MixinAmphibiousNodeEvaluator {
     @Redirect(method = "getBlockPathType", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues1() {
+    private Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 

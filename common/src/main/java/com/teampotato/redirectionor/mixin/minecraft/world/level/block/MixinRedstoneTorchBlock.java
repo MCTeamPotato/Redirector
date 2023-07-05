@@ -9,13 +9,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(RedstoneTorchBlock.class)
 public abstract class MixinRedstoneTorchBlock {
-    @Redirect(method = "onPlace", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
+    @Redirect(method = {"onPlace", "onRemove"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
     private Direction[] implValues1() {
-        return Redirectionor.DIRECTIONS;
-    }
-
-    @Redirect(method = "onRemove", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues2() {
         return Redirectionor.DIRECTIONS;
     }
 

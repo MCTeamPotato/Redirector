@@ -9,13 +9,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(MultifaceBlock.class)
 public abstract class MixinMultifaceBlock {
-    @Redirect(method = "availableFaces", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private static Direction[] implValues1() {
-        return Redirectionor.DIRECTIONS;
-    }
-
-    @Redirect(method = "unpack", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private static Direction[] implValues2() {
+    @Redirect(method = {"availableFaces", "unpack"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
+    private static Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 }

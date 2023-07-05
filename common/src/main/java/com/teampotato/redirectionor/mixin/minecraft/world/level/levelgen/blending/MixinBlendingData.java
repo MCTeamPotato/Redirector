@@ -22,13 +22,9 @@ public abstract class MixinBlendingData {
     }
 
     @Shadow protected abstract void addValuesForColumn(int p_190300_, ChunkAccess p_190301_, int p_190302_, int p_190303_);
-
     @Shadow private boolean hasCalculatedData;
-
     @Shadow @Final private static int CELL_HORIZONTAL_MAX_INDEX_OUTSIDE;
-
     @Shadow @Final private static int QUARTS_PER_SECTION;
-
     @Shadow
     private static int getInsideIndex(int p_190331_, int p_190332_) {
         throw new RuntimeException();
@@ -40,7 +36,7 @@ public abstract class MixinBlendingData {
     }
 
     @Redirect(method = "read1", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
-    private static Direction implDown2() {
+    private static Direction implDownStatic() {
         return Redirectionor.DOWN;
     }
 

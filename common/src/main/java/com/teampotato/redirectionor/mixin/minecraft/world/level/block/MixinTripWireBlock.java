@@ -13,14 +13,14 @@ import org.spongepowered.asm.mixin.*;
 public abstract class MixinTripWireBlock {
     @Shadow @Final private TripWireHookBlock hook;
 
-    @Unique private static Direction[] redirectionor$DIRECTIONS = new Direction[]{Redirectionor.SOUTH, Redirectionor.WEST};
+    @Unique private static Direction[] redirectionor$directions = new Direction[]{Redirectionor.SOUTH, Redirectionor.WEST};
     /**
      * @author Kasualix
      * @reason avoid allocation
      */
     @Overwrite
     private void updateSource(Level pLevel, BlockPos pPos, BlockState pState) {
-        for(Direction direction : redirectionor$DIRECTIONS) {
+        for(Direction direction : redirectionor$directions) {
             for(int i = 1; i < 42; ++i) {
                 BlockPos blockpos = pPos.relative(direction, i);
                 BlockState blockstate = pLevel.getBlockState(blockpos);

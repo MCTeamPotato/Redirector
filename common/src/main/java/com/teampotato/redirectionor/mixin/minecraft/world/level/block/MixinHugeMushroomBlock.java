@@ -3,18 +3,9 @@ package com.teampotato.redirectionor.mixin.minecraft.world.level.block;
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.HugeMushroomBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import java.util.Map;
 
 @Mixin(HugeMushroomBlock.class)
 public abstract class MixinHugeMushroomBlock {
