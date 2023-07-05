@@ -33,7 +33,12 @@ allprojects {
     version = rootProject.mod_version
     group = rootProject.maven_group
 
-    repositories {}
+    repositories {
+        maven {
+            name = 'ParchmentMC'
+            url = 'https://maven.parchmentmc.org'
+        }
+    }
 
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
