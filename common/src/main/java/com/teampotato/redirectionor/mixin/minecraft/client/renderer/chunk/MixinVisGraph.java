@@ -4,11 +4,8 @@ import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.client.renderer.chunk.VisGraph;
 import net.minecraft.core.Direction;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import java.util.Set;
 
 @Mixin(VisGraph.class)
 public abstract class MixinVisGraph {

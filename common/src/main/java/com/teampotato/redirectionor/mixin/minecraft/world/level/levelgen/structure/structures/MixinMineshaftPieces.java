@@ -12,7 +12,7 @@ public abstract class MixinMineshaftPieces {
     @Mixin(MineshaftPieces.MineShaftCorridor.class)
     public static abstract class MixinMineShaftCorridor {
         @Redirect(method = "hasSturdyNeighbours", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-        private Direction[] implValues1 () {
+        private Direction[] implValues () {
             return Redirectionor.DIRECTIONS;
         }
 

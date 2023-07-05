@@ -20,7 +20,7 @@ public abstract class MixinLargeDripstoneFeature {
     @Mixin(targets = "net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$LargeDripstone")
     public abstract static class MixinLargeDripstone {
         @Redirect(method = {"moveBackUntilBaseIsInsideStoneAndShrinkRadiusIfNecessary", "placeBlocks"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
-        private Direction implUp1() {
+        private Direction implUp() {
             return Redirectionor.UP;
         }
 

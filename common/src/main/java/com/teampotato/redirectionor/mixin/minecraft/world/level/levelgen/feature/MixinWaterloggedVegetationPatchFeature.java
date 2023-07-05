@@ -1,17 +1,11 @@
 package com.teampotato.redirectionor.mixin.minecraft.world.level.levelgen.feature;
 
 import com.teampotato.redirectionor.Redirectionor;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.levelgen.feature.WaterloggedVegetationPatchFeature;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import java.util.Set;
 
 @Mixin(WaterloggedVegetationPatchFeature.class)
 public abstract class MixinWaterloggedVegetationPatchFeature {

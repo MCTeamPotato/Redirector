@@ -1,20 +1,9 @@
 package com.teampotato.redirectionor.mixin.minecraft.world.level.block;
 
-import com.google.common.base.Predicates;
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.EndPortalFrameBlock;
-import net.minecraft.world.level.block.state.pattern.BlockInWorld;
-import net.minecraft.world.level.block.state.pattern.BlockPattern;
-import net.minecraft.world.level.block.state.pattern.BlockPatternBuilder;
-import net.minecraft.world.level.block.state.predicate.BlockStatePredicate;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 

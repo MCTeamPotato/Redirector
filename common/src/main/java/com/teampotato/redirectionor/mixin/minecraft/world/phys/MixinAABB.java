@@ -3,11 +3,7 @@ package com.teampotato.redirectionor.mixin.minecraft.world.phys;
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 

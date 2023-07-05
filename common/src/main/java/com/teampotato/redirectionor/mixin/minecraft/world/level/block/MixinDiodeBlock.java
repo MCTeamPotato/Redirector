@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(DiodeBlock.class)
 public abstract class MixinDiodeBlock {
     @Redirect(method = "neighborChanged", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] implValues1() {
+    private Direction[] implValues() {
         return Redirectionor.DIRECTIONS;
     }
 }

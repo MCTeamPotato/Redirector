@@ -10,12 +10,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(PointedDripstoneBlock.class)
 public abstract class MixinPointedDripstoneBlock {
     @Redirect(method = "fallOn", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
-    private Direction implUp1() {
+    private Direction implUp() {
         return Redirectionor.UP;
     }
 
     @Redirect(method = {"growStalagmiteBelow", "createMergedTips", "isStalagmite"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
-    private static Direction implUp2() {
+    private static Direction implUpStatic() {
         return Redirectionor.UP;
     }
 
@@ -30,7 +30,7 @@ public abstract class MixinPointedDripstoneBlock {
     }
 
     @Redirect(method = {"spawnFallingStalactite", "growStalactiteOrStalagmiteIfPossible", "growStalagmiteBelow", "createMergedTips", "isStalactite", "findFillableCauldronBelowStalactiteTip"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
-    private static Direction implDown2() {
+    private static Direction implDownStatic() {
         return Redirectionor.DOWN;
     }
 }
