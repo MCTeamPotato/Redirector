@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 
 public abstract class MixinNetherFortressPieces {
-    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.structures.NetherFortressPieces$NetherBridgePiece")
+    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.NetherBridgePieces$NetherBridgePiece")
     public abstract static class MixinNetherBridgePiece {
         @Redirect(method = "generateChildLeft", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;WEST:Lnet/minecraft/core/Direction;"))
         private Direction implWest() {

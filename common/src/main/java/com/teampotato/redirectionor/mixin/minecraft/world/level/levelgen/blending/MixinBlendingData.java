@@ -31,7 +31,7 @@ public abstract class MixinBlendingData {
     }
 
     @Redirect(method = "getHeightAtXZ", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;DOWN:Lnet/minecraft/core/Direction;"))
-    private Direction implDown() {
+    private static Direction implDown() {
         return Redirectionor.DOWN;
     }
 

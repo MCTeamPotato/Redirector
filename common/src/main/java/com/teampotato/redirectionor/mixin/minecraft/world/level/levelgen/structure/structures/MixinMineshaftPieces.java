@@ -2,14 +2,14 @@ package com.teampotato.redirectionor.mixin.minecraft.world.level.levelgen.struct
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;
-import net.minecraft.world.level.levelgen.structure.structures.MineshaftPieces;
+import net.minecraft.world.level.levelgen.structure.MineShaftPieces;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 public abstract class MixinMineshaftPieces {
 
-    @Mixin(MineshaftPieces.MineShaftCorridor.class)
+    @Mixin(MineShaftPieces.MineShaftCorridor.class)
     public static abstract class MixinMineShaftCorridor {
         @Redirect(method = "hasSturdyNeighbours", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
         private Direction[] implValues () {
@@ -37,7 +37,7 @@ public abstract class MixinMineshaftPieces {
         }
     }
 
-    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.structures.MineshaftPieces$MineShaftPiece")
+    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.MineShaftPieces$MineShaftPiece")
     public abstract static class MixinMineShaftPiece {
         @Redirect(method = "setPlanksBlock", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
         private Direction implUp () {

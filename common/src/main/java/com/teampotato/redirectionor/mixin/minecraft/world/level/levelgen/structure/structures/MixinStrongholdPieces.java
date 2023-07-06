@@ -2,14 +2,14 @@ package com.teampotato.redirectionor.mixin.minecraft.world.level.levelgen.struct
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;
-import net.minecraft.world.level.levelgen.structure.structures.StrongholdPieces;
+import net.minecraft.world.level.levelgen.structure.StrongholdPieces;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 public abstract class MixinStrongholdPieces {
 
-    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.structures.StrongholdPieces$StrongholdPiece")
+    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.StrongholdPieces$StrongholdPiece")
     public abstract static class MixinStrongholdPiece {
         @Redirect(method = "generateSmallDoorChildRight", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;EAST:Lnet/minecraft/core/Direction;"))
         private Direction implEast() {

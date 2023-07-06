@@ -120,24 +120,24 @@ public abstract class MixinBlockModelGenerators {
      * @reason avoid allocation
      */
     @Overwrite
-    private static PropertyDispatch.C4<Direction, DoubleBlockHalf, DoorHingeSide, Boolean> configureDoorHalf(PropertyDispatch.C4<Direction, DoubleBlockHalf, DoorHingeSide, Boolean> p_236305_, DoubleBlockHalf p_236306_, ResourceLocation p_236307_, ResourceLocation p_236308_, ResourceLocation p_236309_, ResourceLocation p_236310_) {
-        return p_236305_
-                .select(Redirectionor.EAST, p_236306_, Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, p_236307_))
-                .select(Redirectionor.SOUTH, p_236306_, Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, p_236307_).with(VariantProperties.Y_ROT, Redirectionor.R90))
-                .select(Redirectionor.WEST, p_236306_, Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, p_236307_).with(VariantProperties.Y_ROT, Redirectionor.R180))
-                .select(Redirectionor.NORTH, p_236306_, Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, p_236307_).with(VariantProperties.Y_ROT, Redirectionor.R270))
-                .select(Redirectionor.EAST, p_236306_, Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, p_236309_))
-                .select(Redirectionor.SOUTH, p_236306_, Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, p_236309_).with(VariantProperties.Y_ROT, Redirectionor.R90))
-                .select(Redirectionor.WEST, p_236306_, Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, p_236309_).with(VariantProperties.Y_ROT, Redirectionor.R180))
-                .select(Redirectionor.NORTH, p_236306_, Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, p_236309_).with(VariantProperties.Y_ROT, Redirectionor.R270))
-                .select(Redirectionor.EAST, p_236306_, Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, p_236308_).with(VariantProperties.Y_ROT, Redirectionor.R90))
-                .select(Redirectionor.SOUTH, p_236306_, Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, p_236308_).with(VariantProperties.Y_ROT, Redirectionor.R180))
-                .select(Redirectionor.WEST, p_236306_, Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, p_236308_).with(VariantProperties.Y_ROT, Redirectionor.R270))
-                .select(Redirectionor.NORTH, p_236306_, Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, p_236308_))
-                .select(Redirectionor.EAST, p_236306_, Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, p_236310_).with(VariantProperties.Y_ROT, Redirectionor.R270))
-                .select(Redirectionor.SOUTH, p_236306_, Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, p_236310_))
-                .select(Redirectionor.WEST, p_236306_, Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, p_236310_).with(VariantProperties.Y_ROT, Redirectionor.R90))
-                .select(Redirectionor.NORTH, p_236306_, Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, p_236310_).with(VariantProperties.Y_ROT, Redirectionor.R180));
+    private static PropertyDispatch.C4<Direction, DoubleBlockHalf, DoorHingeSide, Boolean> configureDoorHalf(PropertyDispatch.C4<Direction, DoubleBlockHalf, DoorHingeSide, Boolean> doorProperties, DoubleBlockHalf doorHalf, ResourceLocation doorModelLocation, ResourceLocation doorRightHingeModelLocation) {
+        return doorProperties
+                .select(Redirectionor.EAST, doorHalf,  Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, doorModelLocation))
+                .select(Redirectionor.SOUTH, doorHalf, Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, doorModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R90))
+                .select(Redirectionor.WEST, doorHalf,  Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, doorModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R180))
+                .select(Redirectionor.NORTH, doorHalf, Redirectionor.LEFT, false, Variant.variant().with(VariantProperties.MODEL, doorModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R270))
+                .select(Redirectionor.EAST, doorHalf,  Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation))
+                .select(Redirectionor.SOUTH, doorHalf, Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R90))
+                .select(Redirectionor.WEST, doorHalf,  Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R180))
+                .select(Redirectionor.NORTH, doorHalf, Redirectionor.RIGHT, false, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R270))
+                .select(Redirectionor.EAST, doorHalf,  Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R90))
+                .select(Redirectionor.SOUTH, doorHalf, Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R180))
+                .select(Redirectionor.WEST, doorHalf,  Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R270))
+                .select(Redirectionor.NORTH, doorHalf, Redirectionor.LEFT, true, Variant.variant().with(VariantProperties.MODEL, doorRightHingeModelLocation))
+                .select(Redirectionor.EAST, doorHalf,  Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, doorModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R270))
+                .select(Redirectionor.SOUTH, doorHalf, Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, doorModelLocation))
+                .select(Redirectionor.WEST, doorHalf,  Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, doorModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R90))
+                .select(Redirectionor.NORTH, doorHalf, Redirectionor.RIGHT, true, Variant.variant().with(VariantProperties.MODEL, doorModelLocation).with(VariantProperties.Y_ROT, Redirectionor.R180));
     }
 
     /**

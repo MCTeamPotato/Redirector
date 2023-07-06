@@ -71,7 +71,6 @@ public class Redirectionor {
     public static Rotation CLOCKWISE_180 = Rotation.CLOCKWISE_180;
     public static Rotation CLOCKWISE_90 = Rotation.CLOCKWISE_90;
 
-    public static RenderShape INVISIBLE = RenderShape.INVISIBLE;
     public static RenderShape MODEL = RenderShape.MODEL;
 
     public static BedPart BED_HEAD = BedPart.HEAD;

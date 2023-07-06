@@ -3,13 +3,13 @@ package com.teampotato.redirectionor.mixin.minecraft.world.level.levelgen.struct
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionPieces;
+import net.minecraft.world.level.levelgen.structure.WoodlandMansionPieces;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 public abstract class MixinWoodlandMansionPieces {
-    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionPieces$MansionGrid")
+    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.WoodlandMansionPieces$MansionGrid")
     public abstract static class MixinMansionGrid {
         @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;EAST:Lnet/minecraft/core/Direction;"))
         private Direction implEast() {
@@ -22,7 +22,7 @@ public abstract class MixinWoodlandMansionPieces {
         }
     }
 
-    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.structures.WoodlandMansionPieces$MansionPiecePlacer")
+    @Mixin(targets = "net.minecraft.world.level.levelgen.structure.WoodlandMansionPieces$MansionPiecePlacer")
     public abstract static class MixinMansionPiecePlacer {
         @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;EAST:Lnet/minecraft/core/Direction;"))
         private Direction implEast() {
