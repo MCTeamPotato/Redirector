@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.*;
 @Mixin(value = TripWireBlock.class, priority = 10)
 public abstract class TripWireBlockMixin {
     @Shadow @Final private TripWireHookBlock hook;
-    @Unique private static final Direction[] redirectionor$directions = new Direction[]{Redirectionor.SOUTH, Redirectionor.WEST};
+    @Unique private static Direction[] redirectionor$directions = new Direction[]{Redirectionor.SOUTH, Redirectionor.WEST};
 
     /**
      * @author Kasualix
