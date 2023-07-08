@@ -40,6 +40,5 @@ public abstract class BasaltPillarFeatureMixin {
         return Redirectionor.UP;
     }
 
-    @Unique
-    private static final String redirectionor$place = "place(Lnet/minecraft/world/ISeedReader;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/NoFeatureConfig;)Z";
+    @Unique private static final String redirectionor$place = "place(Lnet/minecraft/world/ISeedReader;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/NoFeatureConfig;)Z";
 }

@@ -4,6 +4,7 @@ import net.minecraft.data.BlockModelFields;
 import net.minecraft.state.properties.*;
 import net.minecraft.util.AxisRotation;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraftforge.fml.common.Mod;
 
@@ -12,6 +13,7 @@ public class Redirectionor {
     public static final String ID = "redirectionor";
 
     public static final Direction[] DIRECTIONS = Direction.values();
+
     public static final Direction DOWN = Direction.DOWN;
     public static final Direction UP = Direction.UP;
     public static final Direction NORTH = Direction.NORTH;
@@ -40,6 +42,10 @@ public class Redirectionor {
     public static final Rotation CLOCKWISE_90 = Rotation.CLOCKWISE_90;
     public static final Rotation CLOCKWISE_180 = Rotation.CLOCKWISE_180;
     public static final Rotation COUNTERCLOCKWISE_90 = Rotation.COUNTERCLOCKWISE_90;
+
+    public static final Mirror MIRROR_NONE = Mirror.NONE;
+    public static final Mirror LEFT_RIGHT = Mirror.LEFT_RIGHT;
+    public static final Mirror FRONT_BACK = Mirror.FRONT_BACK;
 
     public static final AxisRotation AXIS_NONE = AxisRotation.NONE;
     public static final AxisRotation AXIS_FORWARD = AxisRotation.FORWARD;
