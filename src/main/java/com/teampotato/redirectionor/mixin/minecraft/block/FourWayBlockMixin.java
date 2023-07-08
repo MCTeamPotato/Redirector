@@ -1,31 +1,41 @@
 package com.teampotato.redirectionor.mixin.minecraft.block;
 
 import com.teampotato.redirectionor.Redirectionor;
+import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.FourWayBlock;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.util.Direction;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(FourWayBlock.class)
 public abstract class FourWayBlockMixin {
-    @Redirect(method = "lambda$getAABBIndex$1", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;NORTH:Lnet/minecraft/util/Direction;"))
-    private static Direction implNorth() {
-        return Redirectionor.NORTH;
+    @Shadow @Final private Object2IntMap<BlockState> stateToIndex;
+    @Shadow
+    private static int indexFor(Direction pFacing) {
+        throw new RuntimeException();
     }
+    @Shadow @Final public static BooleanProperty NORTH;
+    @Shadow @Final public static BooleanProperty EAST;
+    @Shadow @Final public static BooleanProperty SOUTH;
+    @Shadow @Final public static BooleanProperty WEST;
 
-    @Redirect(method = "lambda$getAABBIndex$1", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;EAST:Lnet/minecraft/util/Direction;"))
-    private static Direction implEast() {
-        return Redirectionor.EAST;
-    }
-
-    @Redirect(method = "lambda$getAABBIndex$1", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;WEST:Lnet/minecraft/util/Direction;"))
-    private static Direction implWest() {
-        return Redirectionor.WEST;
-    }
-
-    @Redirect(method = "lambda$getAABBIndex$1", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;SOUTH:Lnet/minecraft/util/Direction;"))
-    private static Direction implSouth() {
-        return Redirectionor.SOUTH;
+    /**
+     * @author Kasualix
+     * @reason avoid allocation
+     */
+    @Overwrite
+    protected int getAABBIndex(BlockState pState) {
+        return this.stateToIndex.computeIntIfAbsent(pState, (blockState) -> {
+            int i = 0;
+            if (blockState.getValue(NORTH)) i |= indexFor(Redirectionor.NORTH);
+            if (blockState.getValue(EAST)) i |= indexFor(Redirectionor.EAST);
+            if (blockState.getValue(SOUTH)) i |= indexFor(Redirectionor.SOUTH);
+            if (blockState.getValue(WEST)) i |= indexFor(Redirectionor.WEST);
+            return i;
+        });
     }
 }

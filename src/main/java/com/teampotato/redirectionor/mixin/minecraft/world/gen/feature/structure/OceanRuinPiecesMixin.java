@@ -19,7 +19,7 @@ public class OceanRuinPiecesMixin {
     @Mixin(OceanRuinPieces.Piece.class)
     public abstract static class MixinPiece {
         @Redirect(method = {"loadTemplate", "postProcess"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Mirror;NONE:Lnet/minecraft/util/Mirror;"))
-        private static Mirror implMirrorNone() {
+        private Mirror implMirrorNone() {
             return Redirectionor.MIRROR_NONE;
         }
     }

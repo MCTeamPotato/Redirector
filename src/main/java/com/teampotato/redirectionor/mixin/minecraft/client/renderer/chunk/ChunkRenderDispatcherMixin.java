@@ -15,22 +15,22 @@ public abstract class ChunkRenderDispatcherMixin {
         return Redirectionor.DIRECTIONS;
     }
 
-    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 0))
+    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 0, remap = false))
     private int implOrdinal0(Direction instance) {
         return Redirectionor.WEST_ORDINAL;
     }
 
-    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 1))
+    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 1, remap = false))
     private int implOrdinal1(Direction instance) {
         return Redirectionor.NORTH_ORDINAL;
     }
 
-    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 2))
+    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 2, remap = false))
     private int implOrdinal2(Direction instance) {
         return Redirectionor.EAST_ORDINAL;
     }
 
-    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 3))
+    @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;ordinal()I", ordinal = 3, remap = false))
     private int implOrdinal3(Direction instance) {
         return Redirectionor.SOUTH_ORDINAL;
     }

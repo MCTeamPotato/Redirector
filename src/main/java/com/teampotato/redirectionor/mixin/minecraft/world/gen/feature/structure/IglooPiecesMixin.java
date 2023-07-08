@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(IglooPieces.Piece.class)
 public abstract class IglooPiecesMixin {
     @Redirect(method = {"loadTemplate", "postProcess"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Mirror;NONE:Lnet/minecraft/util/Mirror;"))
-    private static Mirror implMirrorNone() {
+    private Mirror implMirrorNone() {
         return Redirectionor.MIRROR_NONE;
     }
 }
