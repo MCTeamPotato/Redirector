@@ -28,4 +28,15 @@ public abstract class PortalSizeMixin {
     private Direction implWest() {
         return Redirectionor.WEST;
     }
+
+    @Redirect(method = {"findPortalShape", "getRelativePosition", "createPortalInfo"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;X:Lnet/minecraft/util/Direction$Axis;"))
+    private static Direction.Axis implXStatic() {
+        return Redirectionor.X;
+    }
+
+    @Redirect(method = "<init>", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;X:Lnet/minecraft/util/Direction$Axis;"))
+    private Direction.Axis implX() {
+        return Redirectionor.X;
+    }
+
 }

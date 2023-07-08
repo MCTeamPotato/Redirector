@@ -2,26 +2,14 @@ package com.teampotato.redirectionor.mixin.minecraft.block;
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.block.BellBlock;
-import net.minecraft.block.ContainerBlock;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.EnumProperty;
 import net.minecraft.state.properties.BellAttachment;
 import net.minecraft.util.Direction;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(value = BellBlock.class, priority = 10)
-public abstract class BellBlockMixin extends ContainerBlock {
-    @Shadow @Final public static DirectionProperty FACING;
-    @Shadow @Final public static EnumProperty<BellAttachment> ATTACHMENT;
-
-    protected BellBlockMixin(Properties p_i48446_1_) {
-        super(p_i48446_1_);
-    }
-
+@Mixin(BellBlock.class)
+public abstract class BellBlockMixin {
     @Redirect(method = "getConnectedDirection", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private static Direction implDown3() {
         return Redirectionor.DOWN;

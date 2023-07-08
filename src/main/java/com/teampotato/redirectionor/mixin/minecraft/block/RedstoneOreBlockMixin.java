@@ -13,4 +13,9 @@ public abstract class RedstoneOreBlockMixin {
     private static Direction[] implOpt() {
         return Redirectionor.DIRECTIONS;
     }
+
+    @Redirect(method = "spawnParticles", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;X:Lnet/minecraft/util/Direction$Axis;"))
+    private static Direction.Axis implX() {
+        return Redirectionor.X;
+    }
 }

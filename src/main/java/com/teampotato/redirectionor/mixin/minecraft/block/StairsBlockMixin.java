@@ -4,6 +4,8 @@ import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.state.properties.Half;
 import net.minecraft.state.properties.StairsShape;
+import net.minecraft.util.Direction;
+import net.minecraft.util.Rotation;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -13,6 +15,16 @@ public abstract class StairsBlockMixin {
     @Redirect(method = {"getShape", "getStateForPlacement"}, at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/Half;TOP:Lnet/minecraft/state/properties/Half;"))
     private Half implTop() {
         return Redirectionor.TOP;
+    }
+
+    @Redirect(method = "mirror", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;X:Lnet/minecraft/util/Direction$Axis;"))
+    private Direction.Axis implX() {
+        return Redirectionor.X;
+    }
+
+    @Redirect(method = "mirror", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;Z:Lnet/minecraft/util/Direction$Axis;"))
+    private Direction.Axis implZ() {
+        return Redirectionor.Z;
     }
 
     @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/Half;BOTTOM:Lnet/minecraft/state/properties/Half;"))
@@ -43,5 +55,10 @@ public abstract class StairsBlockMixin {
     @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/StairsShape;OUTER_RIGHT:Lnet/minecraft/state/properties/StairsShape;"))
     private StairsShape implOuterRight() {
         return Redirectionor.OUTER_RIGHT;
+    }
+
+    @Redirect(method = "mirror", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Rotation;CLOCKWISE_180:Lnet/minecraft/util/Rotation;"))
+    private Rotation implClockWise180() {
+        return Redirectionor.CLOCKWISE_180;
     }
 }

@@ -18,4 +18,5 @@ public abstract class TrapDoorBlockMixin {
     private Half implBottom() {
         return Redirectionor.BOTTOM;
     }
+
 }

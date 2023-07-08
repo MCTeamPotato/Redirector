@@ -55,7 +55,7 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 
             if (direction != null) {
                 Vector3d vector3d = this.getDeltaMovement();
-                if (direction.getAxis() == Direction.Axis.X) {
+                if (direction.getAxis() == Redirectionor.X) {
                     this.setDeltaMovement(0.1D * (double)direction.getStepX(), vector3d.y, vector3d.z);
                 } else {
                     this.setDeltaMovement(vector3d.x, vector3d.y, 0.1D * (double)direction.getStepZ());
