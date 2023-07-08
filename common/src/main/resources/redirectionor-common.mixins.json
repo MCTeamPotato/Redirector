@@ -68,7 +68,7 @@
     "minecraft.world.item.MixinStandingAndWallBlockItem",
     "minecraft.world.item.context.MixinDirectionalPlaceContext",
     "minecraft.world.item.context.MixinUseOnContext",
-    "minecraft.world.level.MixinLevel",
+    "minecraft.world.level.MixinSignalGetter",
     "minecraft.world.level.MixinNaturalSpawner",
     "minecraft.world.level.biome.MixinBiomeSource",
     "minecraft.world.level.block.MixinAmethystClusterBlock",

@@ -40,74 +40,74 @@ public abstract class MixinShulkerBullet extends Projectile {
      * @reason avoid allocation
      */
     @Overwrite
-    private void selectNextMoveDirection(@Nullable Direction.Axis pAxis) {
-        double d0 = 0.5D;
-        BlockPos blockpos;
+    private void selectNextMoveDirection(@Nullable Direction.Axis axis) {
+        double d = 0.5;
+        BlockPos blockPos;
         if (this.finalTarget == null) {
-            blockpos = this.blockPosition().below();
+            blockPos = this.blockPosition().below();
         } else {
-            d0 = (double)this.finalTarget.getBbHeight() * 0.5D;
-            blockpos = new BlockPos(this.finalTarget.getX(), this.finalTarget.getY() + d0, this.finalTarget.getZ());
+            d = (double)this.finalTarget.getBbHeight() * 0.5;
+            blockPos = BlockPos.containing(this.finalTarget.getX(), this.finalTarget.getY() + d, this.finalTarget.getZ());
         }
 
-        double d1 = (double)blockpos.getX() + 0.5D;
-        double d2 = (double)blockpos.getY() + d0;
-        double d3 = (double)blockpos.getZ() + 0.5D;
+        double e = (double)blockPos.getX() + 0.5;
+        double f = (double)blockPos.getY() + d;
+        double g = (double)blockPos.getZ() + 0.5;
         Direction direction = null;
-        if (!blockpos.closerToCenterThan(this.position(), 2.0D)) {
-            BlockPos blockpos1 = this.blockPosition();
+        if (!blockPos.closerToCenterThan(this.position(), 2.0)) {
+            BlockPos blockPos2 = this.blockPosition();
             List<Direction> list = Lists.newArrayList();
-            if (pAxis != Redirectionor.X) {
-                if (blockpos1.getX() < blockpos.getX() && this.level.isEmptyBlock(blockpos1.east())) {
+            if (axis != Redirectionor.X) {
+                if (blockPos2.getX() < blockPos.getX() && this.level().isEmptyBlock(blockPos2.east())) {
                     list.add(Redirectionor.EAST);
-                } else if (blockpos1.getX() > blockpos.getX() && this.level.isEmptyBlock(blockpos1.west())) {
+                } else if (blockPos2.getX() > blockPos.getX() && this.level().isEmptyBlock(blockPos2.west())) {
                     list.add(Redirectionor.WEST);
                 }
             }
 
-            if (pAxis != Redirectionor.Y) {
-                if (blockpos1.getY() < blockpos.getY() && this.level.isEmptyBlock(blockpos1.above())) {
+            if (axis != Redirectionor.Y) {
+                if (blockPos2.getY() < blockPos.getY() && this.level().isEmptyBlock(blockPos2.above())) {
                     list.add(Redirectionor.UP);
-                } else if (blockpos1.getY() > blockpos.getY() && this.level.isEmptyBlock(blockpos1.below())) {
+                } else if (blockPos2.getY() > blockPos.getY() && this.level().isEmptyBlock(blockPos2.below())) {
                     list.add(Redirectionor.DOWN);
                 }
             }
 
-            if (pAxis != Redirectionor.Z) {
-                if (blockpos1.getZ() < blockpos.getZ() && this.level.isEmptyBlock(blockpos1.south())) {
+            if (axis != Redirectionor.Z) {
+                if (blockPos2.getZ() < blockPos.getZ() && this.level().isEmptyBlock(blockPos2.south())) {
                     list.add(Redirectionor.SOUTH);
-                } else if (blockpos1.getZ() > blockpos.getZ() && this.level.isEmptyBlock(blockpos1.north())) {
+                } else if (blockPos2.getZ() > blockPos.getZ() && this.level().isEmptyBlock(blockPos2.north())) {
                     list.add(Redirectionor.NORTH);
                 }
             }
 
             direction = Direction.getRandom(this.random);
             if (list.isEmpty()) {
-                for(int i = 5; !this.level.isEmptyBlock(blockpos1.relative(direction)) && i > 0; --i) {
+                for(int i = 5; !this.level().isEmptyBlock(blockPos2.relative(direction)) && i > 0; --i) {
                     direction = Direction.getRandom(this.random);
                 }
             } else {
                 direction = list.get(this.random.nextInt(list.size()));
             }
 
-            d1 = this.getX() + (double)direction.getStepX();
-            d2 = this.getY() + (double)direction.getStepY();
-            d3 = this.getZ() + (double)direction.getStepZ();
+            e = this.getX() + (double)direction.getStepX();
+            f = this.getY() + (double)direction.getStepY();
+            g = this.getZ() + (double)direction.getStepZ();
         }
 
         this.setMoveDirection(direction);
-        double d6 = d1 - this.getX();
-        double d7 = d2 - this.getY();
-        double d4 = d3 - this.getZ();
-        double d5 = Math.sqrt(d6 * d6 + d7 * d7 + d4 * d4);
-        if (d5 == 0.0D) {
-            this.targetDeltaX = 0.0D;
-            this.targetDeltaY = 0.0D;
-            this.targetDeltaZ = 0.0D;
+        double h = e - this.getX();
+        double j = f - this.getY();
+        double k = g - this.getZ();
+        double l = Math.sqrt(h * h + j * j + k * k);
+        if (l == 0.0) {
+            this.targetDeltaX = 0.0;
+            this.targetDeltaY = 0.0;
+            this.targetDeltaZ = 0.0;
         } else {
-            this.targetDeltaX = d6 / d5 * 0.15D;
-            this.targetDeltaY = d7 / d5 * 0.15D;
-            this.targetDeltaZ = d4 / d5 * 0.15D;
+            this.targetDeltaX = h / l * 0.15;
+            this.targetDeltaY = j / l * 0.15;
+            this.targetDeltaZ = k / l * 0.15;
         }
 
         this.hasImpulse = true;

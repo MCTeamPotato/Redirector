@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(SculkCatalystBlockEntity.class)
+@Mixin(SculkCatalystBlockEntity.CatalystListener.class)
 public abstract class MixinSculkCatalystBlockEntity {
     @Redirect(method = "handleGameEvent", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
     private Direction implUp() {

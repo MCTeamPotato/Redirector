@@ -9,8 +9,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(CaveFeatures.class)
 public abstract class MixinCaveFeatures {
-
-
     @Redirect(method = "makeDripleaf", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;UP:Lnet/minecraft/core/Direction;"))
     private static Direction implUp() {
         return Redirectionor.UP;

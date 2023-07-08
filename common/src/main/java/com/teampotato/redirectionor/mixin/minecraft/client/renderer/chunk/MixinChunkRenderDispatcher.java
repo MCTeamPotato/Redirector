@@ -29,7 +29,6 @@ public abstract class MixinChunkRenderDispatcher {
      */
     @Overwrite
     public boolean hasAllNeighbors() {
-        int i = 24;
         if (!(this.getDistToPlayerSqr() > 576.0D)) {
             return true;
         } else {

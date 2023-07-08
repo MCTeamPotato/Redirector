@@ -16,11 +16,8 @@ subprojects {
 
     dependencies {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
-        
-        mappings loom.layered() {
-            officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
-        }
+
+        mappings loom.officialMojangMappings()
     }
 }
 
@@ -33,12 +30,7 @@ allprojects {
     version = rootProject.mod_version
     group = rootProject.maven_group
 
-    repositories {
-        maven {
-            name = 'ParchmentMC'
-            url = 'https://maven.parchmentmc.org'
-        }
-    }
+    repositories {}
 
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"

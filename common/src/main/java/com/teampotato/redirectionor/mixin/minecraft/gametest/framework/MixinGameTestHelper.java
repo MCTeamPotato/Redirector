@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(GameTestHelper.class)
 public abstract class MixinGameTestHelper {
-    @Redirect(method = "useBlock", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;NORTH:Lnet/minecraft/core/Direction;"))
+    @Redirect(method = "useBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)V", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction;NORTH:Lnet/minecraft/core/Direction;"))
     private Direction implNorth() {
         return Redirectionor.NORTH;
     }
