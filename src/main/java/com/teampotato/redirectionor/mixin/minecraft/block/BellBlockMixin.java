@@ -2,23 +2,16 @@ package com.teampotato.redirectionor.mixin.minecraft.block;
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.block.BellBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.ContainerBlock;
-import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.properties.BellAttachment;
 import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import javax.annotation.Nullable;
 
 @Mixin(value = BellBlock.class, priority = 10)
 public abstract class BellBlockMixin extends ContainerBlock {
@@ -43,35 +36,19 @@ public abstract class BellBlockMixin extends ContainerBlock {
         return Redirectionor.DOWN;
     }
 
-    /**
-     * @author Kasualix
-     * @reason avoid allocation
-     */
-    @Overwrite
-    @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext p_196258_1_) {
-        Direction direction = p_196258_1_.getClickedFace();
-        BlockPos blockpos = p_196258_1_.getClickedPos();
-        World world = p_196258_1_.getLevel();
-        Direction.Axis direction$axis = direction.getAxis();
-        if (direction$axis == Redirectionor.Y) {
-            BlockState blockstate = this.defaultBlockState().setValue(ATTACHMENT, direction == Redirectionor.DOWN ? BellAttachment.CEILING : BellAttachment.FLOOR)
-                    .setValue(FACING, p_196258_1_.getHorizontalDirection());
-            if (blockstate.canSurvive(p_196258_1_.getLevel(), blockpos)) return blockstate;
-        } else {
-            BlockState blockstate1 = this.defaultBlockState().setValue(FACING, direction.getOpposite())
-                    .setValue(ATTACHMENT, (direction$axis == Redirectionor.X &&
-                            world.getBlockState(blockpos.west()).isFaceSturdy(world, blockpos.west(), Redirectionor.EAST) &&
-                            world.getBlockState(blockpos.east()).isFaceSturdy(world, blockpos.east(), Redirectionor.WEST) ||
-                            direction$axis == Redirectionor.Z && world.getBlockState(blockpos.north()).isFaceSturdy(world, blockpos.north(), Redirectionor.SOUTH) &&
-                                    world.getBlockState(blockpos.south()).isFaceSturdy(world, blockpos.south(), Redirectionor.NORTH)) ? BellAttachment.DOUBLE_WALL : BellAttachment.SINGLE_WALL);
-            if (blockstate1.canSurvive(p_196258_1_.getLevel(), p_196258_1_.getClickedPos())) return blockstate1;
+    @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;X:Lnet/minecraft/util/Direction$Axis;"))
+    private Direction.Axis implX() {
+        return Redirectionor.X;
+    }
 
-            blockstate1 = blockstate1.setValue(ATTACHMENT, world.getBlockState(blockpos.below()).isFaceSturdy(world, blockpos.below(), Redirectionor.UP) ? BellAttachment.FLOOR : BellAttachment.CEILING);
-            if (blockstate1.canSurvive(p_196258_1_.getLevel(), p_196258_1_.getClickedPos())) return blockstate1;
-        }
+    @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;Y:Lnet/minecraft/util/Direction$Axis;"))
+    private Direction.Axis implY() {
+        return Redirectionor.Y;
+    }
 
-        return null;
+    @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction$Axis;Z:Lnet/minecraft/util/Direction$Axis;"))
+    private Direction.Axis implZ() {
+        return Redirectionor.Z;
     }
 
     @Redirect(method = "getVoxelShape", at = @At(value = "FIELD", target = "Lnet/minecraft/state/properties/BellAttachment;FLOOR:Lnet/minecraft/state/properties/BellAttachment;"))

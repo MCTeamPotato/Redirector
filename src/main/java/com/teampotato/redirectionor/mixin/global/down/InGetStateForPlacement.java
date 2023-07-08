@@ -1,6 +1,7 @@
 package com.teampotato.redirectionor.mixin.global.down;
 
 import com.teampotato.redirectionor.Redirectionor;
+import net.minecraft.block.BellBlock;
 import net.minecraft.block.HopperBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.VineBlock;
@@ -9,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin({SlabBlock.class, HopperBlock.class, VineBlock.class})
+@Mixin({SlabBlock.class, HopperBlock.class, VineBlock.class, BellBlock.class})
 public abstract class InGetStateForPlacement {
     @Redirect(method = "getStateForPlacement", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private Direction implDown() {

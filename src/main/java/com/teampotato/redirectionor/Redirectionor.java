@@ -1,10 +1,7 @@
 package com.teampotato.redirectionor;
 
 import net.minecraft.data.BlockModelFields;
-import net.minecraft.state.properties.BellAttachment;
-import net.minecraft.state.properties.DoorHingeSide;
-import net.minecraft.state.properties.Half;
-import net.minecraft.state.properties.StairsShape;
+import net.minecraft.state.properties.*;
 import net.minecraft.util.Direction;
 import net.minecraftforge.fml.common.Mod;
 
@@ -54,7 +51,6 @@ public class Redirectionor {
     public static Direction.AxisDirection POSITIVE = Direction.AxisDirection.POSITIVE;
     public static Direction.AxisDirection NEGATIVE = Direction.AxisDirection.NEGATIVE;
 
-    //TODO: incomplete
     public static Direction.Axis[] AXISES = Direction.Axis.values();
     public static Direction.Axis X = Direction.Axis.X;
     public static Direction.Axis Y = Direction.Axis.Y;
@@ -62,5 +58,10 @@ public class Redirectionor {
 
     public static BellAttachment FLOOR_TYPE = BellAttachment.FLOOR;
     public static BellAttachment CEILING_TYPE = BellAttachment.CEILING;
+    public static BellAttachment SINGLE_WALL_TYPE = BellAttachment.SINGLE_WALL;
     public static BellAttachment DOUBLE_WALL_TYPE = BellAttachment.DOUBLE_WALL;
+
+    public static AttachFace FLOOR = AttachFace.FLOOR;
+    public static AttachFace WALL = AttachFace.WALL;
+    public static AttachFace CEILING = AttachFace.CEILING;
 }
