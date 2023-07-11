@@ -16,8 +16,7 @@ public abstract class EntityMixin {
     @Shadow @Final protected Random random;
     @Shadow public abstract Vector3d getDeltaMovement();
     @Shadow public abstract void setDeltaMovement(double pX, double pY, double pZ);
-
-    @Unique private static final Direction[] redirectionor$directions = new Direction[]{Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST, Direction.UP};
+    @Unique private static final Direction[] redirectionor$directions = new Direction[]{Redirectionor.NORTH, Redirectionor.SOUTH, Redirectionor.WEST, Redirectionor.EAST, Redirectionor.UP};
 
     /**
      * @author Kasualix
@@ -46,14 +45,12 @@ public abstract class EntityMixin {
         float f = this.random.nextFloat() * 0.2F + 0.1F;
         float f1 = (float)direction.getAxisDirection().getStep();
         Vector3d vector3d1 = this.getDeltaMovement().scale(0.75D);
-        if (direction.getAxis() == Direction.Axis.X) {
+        if (direction.getAxis() == Redirectionor.X) {
             this.setDeltaMovement(f1 * f, vector3d1.y, vector3d1.z);
-        } else if (direction.getAxis() == Direction.Axis.Y) {
+        } else if (direction.getAxis() == Redirectionor.Y) {
             this.setDeltaMovement(vector3d1.x, f1 * f, vector3d1.z);
-        } else if (direction.getAxis() == Direction.Axis.Z) {
+        } else if (direction.getAxis() == Redirectionor.Z) {
             this.setDeltaMovement(vector3d1.x, vector3d1.y, f1 * f);
         }
     }
-
-    //TODO:Axis.X
 }
