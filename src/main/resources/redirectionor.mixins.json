@@ -11,7 +11,6 @@
     "conformVisibility": true
   },
   "mixins": [
-    "api.VoxelShapeImpl",
     "global.directions.InPlace",
     "global.down.InGetCapability",
     "global.down.InGetSlotsForFace",
@@ -164,7 +163,6 @@
     "minecraft.world.gen.feature.HugeFungusFeatureMixin",
     "minecraft.world.gen.feature.NetherFossilStructuresMixin$MixinPiece",
     "minecraft.world.gen.feature.NoExposedOreFeatureMixin",
-    "minecraft.world.gen.feature.SkyLightStorageMixin",
     "minecraft.world.gen.feature.TreeFeatureMixin",
     "minecraft.world.gen.feature.TwistingVineFeatureMixin",
     "minecraft.world.gen.feature.WeepingVineFeatureMixin",
@@ -211,8 +209,6 @@
     "minecraft.world.gen.feature.template.TemplateMixin",
     "minecraft.world.gen.surfacebuilders.ValleySurfaceBuilderMixin",
     "minecraft.world.gen.treedecorator.BeehiveTreeDecoratorMixin",
-    "minecraft.world.lighting.SkyLightEngineMixin",
-    "minecraft.world.lighting.SkyLightStorageMixin",
     "minecraft.world.spawner.WorldEntitySpawnerMixin"
   ],
   "client": [
