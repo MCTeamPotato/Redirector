@@ -184,7 +184,6 @@
     "minecraft.world.level.levelgen.structure.structures.MixinWoodlandMansionPieces$MixinMansionGrid",
     "minecraft.world.level.levelgen.structure.structures.MixinWoodlandMansionPieces$MixinMansionPiecePlacer",
     "minecraft.world.level.levelgen.structure.structures.MixinWoodlandMansionPieces$MixinWoodlandMansionPiece",
-    "minecraft.world.level.lighting.MixinSkyLightSectionStorage",
     "minecraft.world.level.material.MixinFlowingFluid",
     "minecraft.world.level.material.MixinLavaFluid",
     "minecraft.world.level.material.MixinWaterFluid",
