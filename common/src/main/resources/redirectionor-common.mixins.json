@@ -7,9 +7,6 @@
     "conformVisibility": true
   },
   "refmap": "redirectionor-common-refmap.json",
-  "injectors": {
-    "defaultRequire": 1
-  },
   "mixins": [
     "global.down.InCanSurvive",
     "global.down.InGetStateForPlacement",
