@@ -22,14 +22,12 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
     }
 
     @Shadow protected abstract boolean suffocatesAt(BlockPos pPos);
-
     @Redirect(method = "drop", at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;DOWN:Lnet/minecraft/util/Direction;"))
     private Direction implDown() {
         return Redirectionor.DOWN;
     }
 
-    @Unique
-    private static final Direction[] redirectionor$directions = new Direction[]{Redirectionor.WEST, Redirectionor.EAST, Redirectionor.NORTH, Redirectionor.SOUTH};
+    @Unique private static final Direction[] redirectionor$directions = new Direction[]{Redirectionor.WEST, Redirectionor.EAST, Redirectionor.NORTH, Redirectionor.SOUTH};
 
     /**
      * @author Kasualix

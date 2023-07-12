@@ -4,9 +4,6 @@
   "package": "com.teampotato.redirectionor.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "redirectionor-refmap.json",
-  "injectors": {
-    "defaultRequire": 1
-  },
   "overwrites": {
     "conformVisibility": true
   },
