@@ -9,8 +9,9 @@ architectury {
 
 loom {
     forge {
-        mixinConfig "redirectionor-common.mixins.json"
+        mixinConfig "redirectionor.mixins.json"
     }
+    mixin.defaultRefmapName = "redirectionor-refmap.json"
 }
 
 configurations {

@@ -6,7 +6,7 @@
   "overwrites": {
     "conformVisibility": true
   },
-  "refmap": "redirectionor-common-refmap.json",
+  "refmap": "redirectionor-refmap.json",
   "mixins": [
     "global.down.InCanSurvive",
     "global.down.InGetStateForPlacement",
