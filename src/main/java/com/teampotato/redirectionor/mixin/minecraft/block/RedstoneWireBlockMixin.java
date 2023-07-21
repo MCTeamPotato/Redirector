@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(RedstoneWireBlock.class)
+@Mixin(value = RedstoneWireBlock.class, priority = 2000)
 public abstract class RedstoneWireBlockMixin {
     @Redirect(method = "onRemove", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Direction;values()[Lnet/minecraft/util/Direction;"))
     private Direction[] implOpt() {
@@ -19,7 +19,7 @@ public abstract class RedstoneWireBlockMixin {
         return Redirectionor.DOWN;
     }
 
-    @Redirect(method = {"getSignal", "updateIndirectNeighbourShapes", "canSurviveOn"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"))
+    @Redirect(method = {"getSignal", "updateIndirectNeighbourShapes", "canSurviveOn"}, at = @At(value = "FIELD", target = "Lnet/minecraft/util/Direction;UP:Lnet/minecraft/util/Direction;"), require = 0)
     private Direction implUp2() {
         return Redirectionor.UP;
     }
