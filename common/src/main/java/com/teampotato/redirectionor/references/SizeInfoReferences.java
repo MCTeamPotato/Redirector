@@ -2,7 +2,7 @@ package com.teampotato.redirectionor.references;
 
 import net.minecraft.client.renderer.block.ModelBlockRenderer.SizeInfo;
 
-public class SizeInfoR {
+public class SizeInfoReferences {
     public static final SizeInfo DOWN = SizeInfo.DOWN;
     public static final SizeInfo UP = SizeInfo.UP;
     public static final SizeInfo NORTH = SizeInfo.NORTH;
