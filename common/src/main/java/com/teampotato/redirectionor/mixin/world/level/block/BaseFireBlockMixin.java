@@ -1,6 +1,6 @@
 package com.teampotato.redirectionor.mixin.world.level.block;
 
-import com.teampotato.redirectionor.references.DirectionR;
+import com.teampotato.redirectionor.references.DirectionReferences;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.BaseFireBlock;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class BaseFireBlockMixin {
     @Redirect(method = "isPortal", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
     private static Direction[] redirectDirectionValues() {
-        return DirectionR.DIRECTIONS;
+        return DirectionReferences.DIRECTIONS;
     }
 }

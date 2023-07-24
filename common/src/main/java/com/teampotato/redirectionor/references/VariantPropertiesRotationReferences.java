@@ -1,10 +1,10 @@
 package com.teampotato.redirectionor.references;
 
-import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.data.models.blockstates.VariantProperties.Rotation;
 
 public class VariantPropertiesRotationReferences {
-    public static final VariantProperties.Rotation R0 = VariantProperties.Rotation.R0;
-    public static final VariantProperties.Rotation R90 = VariantProperties.Rotation.R90;
-    public static final VariantProperties.Rotation R180 = VariantProperties.Rotation.R180;
-    public static final VariantProperties.Rotation R270 = VariantProperties.Rotation.R270;
+    public static final Rotation R0 = Rotation.R0;
+    public static final Rotation R90 = Rotation.R90;
+    public static final Rotation R180 = Rotation.R180;
+    public static final Rotation R270 = Rotation.R270;
 }

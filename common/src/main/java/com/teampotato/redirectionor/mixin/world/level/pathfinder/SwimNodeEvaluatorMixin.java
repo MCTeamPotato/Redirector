@@ -1,6 +1,6 @@
 package com.teampotato.redirectionor.mixin.world.level.pathfinder;
 
-import com.teampotato.redirectionor.references.DirectionR;
+import com.teampotato.redirectionor.references.DirectionReferences;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.pathfinder.SwimNodeEvaluator;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class SwimNodeEvaluatorMixin {
     @Redirect(method = "getNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
     private Direction[] redirectDirectionValues() {
-        return DirectionR.DIRECTIONS;
+        return DirectionReferences.DIRECTIONS;
     }
 }
