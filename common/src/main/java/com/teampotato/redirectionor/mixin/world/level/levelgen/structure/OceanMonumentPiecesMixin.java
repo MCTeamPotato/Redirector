@@ -12,7 +12,7 @@ public class OceanMonumentPiecesMixin {
     public abstract static class FitMixin {
         @Redirect(method = "fits", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
         private int redirectDirectionGet3DDataValue(Direction instance) {
-            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.get(instance);
+            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.getInt(instance);
         }
     }
 
@@ -20,7 +20,7 @@ public class OceanMonumentPiecesMixin {
     public abstract static class CreateMixin {
         @Redirect(method = "create", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
         private int redirectDirectionGet3DDataValue(Direction instance) {
-            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.get(instance);
+            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.getInt(instance);
         }
     }
 
@@ -28,7 +28,7 @@ public class OceanMonumentPiecesMixin {
     public abstract static class PostProcessMixin {
         @Redirect(method = "postProcess", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
         private int redirectDirectionGet3DDataValue(Direction instance) {
-            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.get(instance);
+            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.getInt(instance);
         }
     }
 
@@ -41,7 +41,7 @@ public class OceanMonumentPiecesMixin {
 
         @Redirect(method = "generateRoomGraph", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
         private int redirectDirectionGet3DDataValue(Direction instance) {
-            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.get(instance);
+            return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.getInt(instance);
         }
     }
 }

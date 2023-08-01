@@ -16,6 +16,6 @@ public abstract class ModelBlockRendererMixin {
 
     @Redirect(method = "calculateShape", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
     private int redirectDirectionGet3DDataValue(Direction instance) {
-        return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.get(instance);
+        return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.getInt(instance);
     }
 }

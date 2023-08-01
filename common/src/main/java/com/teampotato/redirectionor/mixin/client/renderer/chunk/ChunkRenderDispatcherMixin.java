@@ -19,7 +19,7 @@ public class ChunkRenderDispatcherMixin {
 
         @Redirect(method = "hasAllNeighbors", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;ordinal()I"))
         private int redirectDirectionOrdinal(Direction instance) {
-            return DirectionReferences.OrdinalReferences.ORDINAL_MAP.get(instance);
+            return DirectionReferences.OrdinalReferences.ORDINAL_MAP.getInt(instance);
         }
     }
 

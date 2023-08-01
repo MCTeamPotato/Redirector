@@ -13,4 +13,9 @@ public abstract class BaseFireBlockMixin {
     private static Direction[] redirectDirectionValues() {
         return DirectionReferences.DIRECTIONS;
     }
+
+    @Redirect(method = "isPortal", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction$Plane;HORIZONTAL:Lnet/minecraft/core/Direction$Plane;"))
+    private static Direction.Plane redirectPlaneHORIZONTAL() {
+        return DirectionReferences.PlaneReferences.HORIZONTAL;
+    }
 }

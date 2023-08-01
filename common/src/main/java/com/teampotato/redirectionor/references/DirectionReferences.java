@@ -1,6 +1,7 @@
 package com.teampotato.redirectionor.references;
 
 import it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap;
 import net.minecraft.core.Direction;
 
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class DirectionReferences {
         public static final int UP_ORDINAL = UP.ordinal();
         public static final int DOWN_ORDINAL = DOWN.ordinal();
 
-        public static final Map<Direction, Integer> ORDINAL_MAP = new Object2IntLinkedOpenHashMap<>();
+        public static final Object2IntLinkedOpenHashMap<Direction> ORDINAL_MAP = new Object2IntLinkedOpenHashMap<>();
 
         static {
             ORDINAL_MAP.put(EAST, EAST_ORDINAL);
@@ -42,6 +43,14 @@ public final class DirectionReferences {
     public static final class PlaneReferences {
         public static final Direction.Plane HORIZONTAL = Direction.Plane.HORIZONTAL;
         public static final Direction.Plane VERTICAL = Direction.Plane.VERTICAL;
+
+        public static final Map<Direction.Axis, Direction.Plane> PLANE_MAP = new Object2ObjectLinkedOpenHashMap<>();
+
+        static {
+            PLANE_MAP.put(AxisReferences.X, HORIZONTAL);
+            PLANE_MAP.put(AxisReferences.Z, HORIZONTAL);
+            PLANE_MAP.put(AxisReferences.Y, VERTICAL);
+        }
     }
 
     public static final class DataValueReferences {
@@ -52,7 +61,7 @@ public final class DirectionReferences {
         public static final int UP_3D_DATA_VALUE = UP.get3DDataValue();
         public static final int DOWN_3D_DATA_VALUE = DOWN.get3DDataValue();
 
-        public static final Map<Direction, Integer> DATA_VALUE_MAP = new Object2IntLinkedOpenHashMap<>();
+        public static final Object2IntLinkedOpenHashMap<Direction> DATA_VALUE_MAP = new Object2IntLinkedOpenHashMap<>();
 
         static {
             DATA_VALUE_MAP.put(EAST, EAST_3D_DATA_VALUE);

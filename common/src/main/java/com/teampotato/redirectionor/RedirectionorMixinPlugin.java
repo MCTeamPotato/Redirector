@@ -14,8 +14,9 @@ public class RedirectionorMixinPlugin implements IMixinConfigPlugin {
 
     public RedirectionorMixinPlugin() {
         LOGGER.warn("Redirectionor is going to load.");
-        LOGGER.warn("It is possible that you will see some mixin applying failures during the game loading.");
+        LOGGER.warn("It's possible that you'll see some mixin applying failures during the game loading in this log.");
         LOGGER.warn("But you don't really need to care much about them as it is normal behavior for the best compatibility.");
+        LOGGER.warn("And they should never crash your game, certainly.");
     }
 
     @Override

@@ -13,4 +13,14 @@ public abstract class RedStoneWireBlockMixin {
     private Direction[] redirectDirectionValues() {
         return DirectionReferences.DIRECTIONS;
     }
+
+    @Redirect(method = {"calculateShape", "getMissingConnections", "updateIndirectNeighbourShapes", "calculateTargetStrength", "updateNeighborsOfNeighboringWires", "animateTick", "updatesOnShapeChange"}, at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction$Plane;HORIZONTAL:Lnet/minecraft/core/Direction$Plane;"))
+    private Direction.Plane redirectPlaneHORIZONTAL() {
+        return DirectionReferences.PlaneReferences.HORIZONTAL;
+    }
+
+    @Redirect(method = "onPlace", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction$Plane;VERTICAL:Lnet/minecraft/core/Direction$Plane;"))
+    private Direction.Plane redirectPlaneVERTICAL() {
+        return DirectionReferences.PlaneReferences.VERTICAL;
+    }
 }
