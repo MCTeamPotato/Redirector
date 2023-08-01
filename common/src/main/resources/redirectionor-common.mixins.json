@@ -1,7 +1,6 @@
 {
   "required": false,
   "package": "com.teampotato.redirectionor.mixin",
-  "plugin": "com.teampotato.redirectionor.RedirectionorMixinPlugin",
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.8",
   "overwrites": {
@@ -20,6 +19,9 @@
     "world.entity.projectile.ThrownPotionMixin",
     "world.item.BoneMealItemMixin",
     "world.level.LevelMixin",
+    "world.level.TickListMixin",
+    "world.level.TickNextTickDataMixin",
+    "world.level.TickPriorityMixin",
     "world.level.block.BaseCoralPlantTypeBlockMixin",
     "world.level.block.BaseFireBlockMixin",
     "world.level.block.BlockRenderShapeMixin$EntityBlockAnimated",
@@ -28,6 +30,7 @@
     "world.level.block.CactusBlockMixin",
     "world.level.block.ChorusFlowerBlockMixin",
     "world.level.block.ChorusPlantBlockMixin",
+    "world.level.block.ComparatorBlockMixin",
     "world.level.block.ConcretePowderBlockMixin",
     "world.level.block.CoralBlockMixin",
     "world.level.block.DiodeBlockMixin",
@@ -54,6 +57,7 @@
     "world.level.block.piston.PistonStructureResolverMixin",
     "world.level.block.state.pattern.BlockPatternMixin",
     "world.level.chunk.UpgradeDataMixin",
+    "world.level.chunk.storage.IOWorkerMixin",
     "world.level.dimension.end.EndDragonFightMixin",
     "world.level.levelgen.carver.UnderwaterCaveWorldCarverMixin",
     "world.level.levelgen.feature.BlueIceFeatureMixin",
