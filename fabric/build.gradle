@@ -7,10 +7,6 @@ architectury {
     fabric()
 }
 
-loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
-}
-
 configurations {
     common
     shadowCommon 
@@ -64,6 +60,4 @@ publishing {
             from components.java
         }
     }
-
-    repositories {}
 }
