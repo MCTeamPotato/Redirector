@@ -158,12 +158,12 @@ public abstract class BlockModelGeneratorsMixin {
         return DoorHingeSideReferences.RIGHT;
     }
 
-    @Redirect(method = "createDoor(Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/data/models/blockstates/BlockStateGenerator;", at = @At(value = "FIELD", target = "Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;UPPER:Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;"))
+    @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;UPPER:Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;"))
     private static DoubleBlockHalf redirectDoubleBlockHalfUPPERStatic() {
         return DoubleBlockHalfReferences.UPPER;
     }
 
-    @Redirect(method = "createDoor(Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/data/models/blockstates/BlockStateGenerator;", at = @At(value = "FIELD", target = "Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;LOWER:Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;"))
+    @Redirect(method = "*", at = @At(value = "FIELD", target = "Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;LOWER:Lnet/minecraft/world/level/block/state/properties/DoubleBlockHalf;"))
     private static DoubleBlockHalf redirectDoubleBlockHalfLOWERStatic() {
         return DoubleBlockHalfReferences.LOWER;
     }

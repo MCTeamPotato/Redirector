@@ -9,11 +9,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(ModelBlockRenderer.class)
 public abstract class ModelBlockRendererMixin {
-    @Redirect(method = {"tesselateWithoutAO", "tesselateWithAO", "calculateShape", "renderModel"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] redirectDirectionValues() {
-        return DirectionReferences.DIRECTIONS;
-    }
-
     @Redirect(method = "calculateShape", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
     private int redirectDirectionGet3DDataValue(Direction instance) {
         return DirectionReferences.DataValueReferences.DATA_VALUE_MAP.getInt(instance);

@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(TreeFeature.class)
 public abstract class TreeFeatureMixin {
     @Redirect(method = "updateLeaves", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
-    private Direction[] redirectDirectionValues() {
+    private static Direction[] redirectDirectionValues() {
         return DirectionReferences.DIRECTIONS;
     }
 }

@@ -1,6 +1,7 @@
 package com.teampotato.redirectionor.references;
 
-import net.minecraft.world.level.TickPriority;
+
+import net.minecraft.world.ticks.TickPriority;
 
 public class TickPriorityReferences {
     public static final TickPriority[] TICK_PRIORITIES = TickPriority.values();

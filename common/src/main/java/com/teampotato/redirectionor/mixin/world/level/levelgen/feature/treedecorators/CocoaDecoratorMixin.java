@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(CocoaDecorator.class)
 public abstract class CocoaDecoratorMixin {
     @Redirect(method = "method_23466", at = @At(value = "FIELD", target = "Lnet/minecraft/core/Direction$Plane;HORIZONTAL:Lnet/minecraft/core/Direction$Plane;"))
-    private Direction.Plane redirectPlaneHORIZONTAL() {
+    private static Direction.Plane redirectPlaneHORIZONTAL() {
         return DirectionReferences.PlaneReferences.HORIZONTAL;
     }
 }
