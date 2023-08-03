@@ -27,7 +27,7 @@ public abstract class UpgradeDataMixin {
         return BlockFixersReferences.DEFAULT;
     }
 
-    @Redirect(method = "<init>(Lnet/minecraft/nbt/CompoundTag;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction8;values()[Lnet/minecraft/core/Direction8;"))
+    @Redirect(method = "<init>(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/LevelHeightAccessor;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction8;values()[Lnet/minecraft/core/Direction8;"))
     private Direction8[] redirectDirection8Values() {
         return Direction8References.DIRECTION_8_S;
     }

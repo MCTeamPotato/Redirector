@@ -40,6 +40,7 @@ public final class DirectionReferences {
             ORDINAL_MAP.put(DOWN, DOWN_ORDINAL);
         }
     }
+
     public static final class PlaneReferences {
         public static final Direction.Plane HORIZONTAL = Direction.Plane.HORIZONTAL;
         public static final Direction.Plane VERTICAL = Direction.Plane.VERTICAL;

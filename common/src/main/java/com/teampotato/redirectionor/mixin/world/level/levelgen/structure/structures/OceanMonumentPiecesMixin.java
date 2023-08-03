@@ -1,14 +1,14 @@
-package com.teampotato.redirectionor.mixin.world.level.levelgen.structure;
+package com.teampotato.redirectionor.mixin.world.level.levelgen.structure.structures;
 
 import com.teampotato.redirectionor.references.DirectionReferences;
 import net.minecraft.core.Direction;
-import net.minecraft.world.level.levelgen.structure.OceanMonumentPieces;
+import net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 public class OceanMonumentPiecesMixin {
-    @Mixin(targets = {"net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleYZRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleXYRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleZRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleYRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleXRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitSimpleTopRoom"})
+    @Mixin(targets = {"net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleYZRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleXYRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleZRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleYRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleXRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitSimpleTopRoom"})
     public abstract static class FitMixin {
         @Redirect(method = "fits", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
         private int redirectDirectionGet3DDataValue(Direction instance) {
@@ -16,7 +16,7 @@ public class OceanMonumentPiecesMixin {
         }
     }
 
-    @Mixin(targets = {"net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleYZRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleXYRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleZRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleXRoom", "net.minecraft.world.level.levelgen.structure.OceanMonumentPieces$FitDoubleYRoom"})
+    @Mixin(targets = {"net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleYZRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleXYRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleZRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleXRoom", "net.minecraft.world.level.levelgen.structure.structures.OceanMonumentPieces$FitDoubleYRoom"})
     public abstract static class CreateMixin {
         @Redirect(method = "create", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;get3DDataValue()I"))
         private int redirectDirectionGet3DDataValue(Direction instance) {
