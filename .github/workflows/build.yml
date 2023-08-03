@@ -1,0 +1,37 @@
+name: Build
+
+on: [ pull_request, push, workflow_dispatch ]
+
+jobs:
+  Build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 8
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            .gradle
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', 'build.gradle') }}
+      - name: Build with Gradle
+        run: |
+          chmod +x gradlew
+          ./gradlew build
+      - name: Upload artifacts (forge)
+        uses: actions/upload-artifact@v3
+        with:
+          name: 1.16.5-forge
+          path: ${{ github.workspace }}/forge/build/libs
+      - name: Upload artifacts (fabric)
+        uses: actions/upload-artifact@v3
+        with:
+          name: 1.16.5-fabric
+          path: ${{ github.workspace }}/fabric/build/libs
