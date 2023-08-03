@@ -17,6 +17,7 @@ public class RedirectionorMixinPlugin implements IMixinConfigPlugin {
         LOGGER.warn("Redirectionor is going to load.");
         LOGGER.warn("It's possible that you will see some mixin applying failures or skipping in this log");
         LOGGER.warn("But you don't really need to care much about them as they're normal things existing for the best compatibility.");
+        LOGGER.warn("If you encounter any problem, report it in my issue tracker: https://github.com/MCTeamPotato/Kasualix-Issue-Tracker/issues");
     }
 
     @Override
