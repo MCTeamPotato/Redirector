@@ -6,7 +6,7 @@
   "overwrites": {
     "conformVisibility": true
   },
-  "mixinPriority": 10000,
+  "mixinPriority": 10,
   "refmap": "redirectionor-common-refmap.json",
   "mixins": [
     "BlockUtilMixin",
