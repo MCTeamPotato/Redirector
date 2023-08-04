@@ -8,8 +8,11 @@
   },
   "mixinPriority": 10,
   "refmap": "redirectionor-common-refmap.json",
+  "plugin": "com.teampotato.redirectionor.RedirectionorMixinPlugin",
   "mixins": [
     "BlockUtilMixin",
+    "ChatFormattingMixin",
+    "advancements.FrameTypeMixin",
     "core.DirectionMixin$AxisMixin",
     "data.models.BlockModelGeneratorsMixin",
     "gametest.framework.StructureUtilsMixin",
@@ -101,6 +104,7 @@
     "world.phys.shapes.VoxelShapeMixin"
   ],
   "client": [
+    "client.AmbientOcclusionStatusMixin",
     "client.GraphicsStatusMixin",
     "client.MinecraftMixin",
     "client.OptionsMixin",
