@@ -44,7 +44,7 @@ remapJar {
     injectAccessWidener = true
     input.set shadowJar.archiveFile
     dependsOn shadowJar
-    classifier null
+    classifier "fabric"
 }
 
 jar {
@@ -64,6 +64,4 @@ publishing {
             from components.java
         }
     }
-
-    repositories {}
 }
