@@ -50,7 +50,6 @@
     "world.level.block.RespawnAnchorBlockMixin",
     "world.level.block.RotationMixin",
     "world.level.block.ScaffoldingBlockMixin",
-    "world.level.block.SpongeBlockMixin",
     "world.level.block.StemBlockMixin",
     "world.level.block.SugarCaneBlockMixin",
     "world.level.block.VineBlockMixin",
