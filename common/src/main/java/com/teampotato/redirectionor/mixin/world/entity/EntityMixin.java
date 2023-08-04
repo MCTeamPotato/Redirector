@@ -4,7 +4,6 @@ import com.teampotato.redirectionor.references.DirectionReferences;
 import com.teampotato.redirectionor.references.RenderShapeReferences;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.RenderShape;
@@ -13,6 +12,8 @@ import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+import java.util.Random;
+
 @Mixin(value = Entity.class, priority = 2000)
 public abstract class EntityMixin {
     @Shadow public abstract Vec3 getDeltaMovement();
@@ -20,7 +21,7 @@ public abstract class EntityMixin {
 
     @Shadow public Level level;
 
-    @Shadow @Final protected RandomSource random;
+    @Shadow @Final protected Random random;
 
     @Redirect(method = "spawnSprintParticle", at = @At(value = "FIELD", target = "Lnet/minecraft/world/level/block/RenderShape;INVISIBLE:Lnet/minecraft/world/level/block/RenderShape;"))
     private RenderShape redirectRenderShapeINVISIBLE() {
