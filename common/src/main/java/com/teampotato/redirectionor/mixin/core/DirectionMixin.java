@@ -1,21 +1,15 @@
 package com.teampotato.redirectionor.mixin.core;
 
-import com.teampotato.redirectionor.references.DirectionReferences;
+import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
-public class DirectionMixin {
-    @Mixin(Direction.Axis.class)
-    public abstract static class AxisMixin {
-        /**
-         * @author Kasualix
-         * @reason use faster impl
-         */
-        @Overwrite
-        @SuppressWarnings("DataFlowIssue")
-        public Direction.Plane getPlane() {
-            return DirectionReferences.PlaneReferences.PLANE_MAP.get((Direction.Axis) (Object) this);
-        }
+@Mixin(Direction.class)
+public abstract class DirectionMixin {
+    @Redirect(method = "allShuffled", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
+    private static Direction[] redirectDirection() {
+        return Redirectionor.DIRECTIONS;
     }
 }
