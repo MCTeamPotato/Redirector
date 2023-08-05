@@ -68,7 +68,6 @@
     "world.level.block.piston.PistonStructureResolverMixin",
     "world.level.block.state.BlockBehaviourMixin",
     "world.level.block.state.pattern.BlockPatternMixin",
-    "world.level.block.state.properties.DirectionPropertyMixin",
     "world.level.chunk.ChunkGeneratorMixin",
     "world.level.chunk.LevelChunkMixin",
     "world.level.chunk.UpgradeDataMixin",
