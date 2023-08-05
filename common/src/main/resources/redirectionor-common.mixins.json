@@ -84,7 +84,6 @@
     "world.level.levelgen.feature.VinesFeatureMixin",
     "world.level.levelgen.structure.structures.BuriedTreasurePieceMixin",
     "world.level.levelgen.structure.structures.MineshaftPiecesMineShaftCorridorMixin",
-    "world.level.levelgen.structure.structures.MineshaftStructureTypeMixin",
     "world.level.levelgen.structure.structures.OceanMonumentPiecesMonumentBuildingMixin",
     "world.level.levelgen.structure.structures.RuinedPortalStructureMixin",
     "world.level.levelgen.structure.templatesystem.BlockAgeProcessorMixin",

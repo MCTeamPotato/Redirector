@@ -38,7 +38,6 @@ import net.minecraft.world.level.chunk.storage.IOWorker;
 import net.minecraft.world.level.levelgen.DensityFunctions;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.levelgen.structure.structures.MineshaftStructure;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -91,7 +90,6 @@ public class Redirectionor {
     public static final DensityFunctions.TwoArgumentSimpleFunction.Type[] DENSITY_FUNCTIONS_TWO_ARGUMENT_SIMPLE_FUNCTION_TYPES = DensityFunctions.TwoArgumentSimpleFunction.Type.values();
     public static final DensityFunctions.Marker.Type[] DENSITY_FUNCTIONS_MARKER_TYPES = DensityFunctions.Marker.Type.values();
     public static final DensityFunctions.Mapped.Type[] DENSITY_FUNCTIONS_MAPPED_TYPES = DensityFunctions.Mapped.Type.values();
-    public static final MineshaftStructure.Type[] MINESHAFT_STRUCTURE_TYPES = MineshaftStructure.Type.values();
     public static final Half[] HALVES = Half.values();
     public static final BlockPathTypes[] BLOCK_PATH_TYPES = BlockPathTypes.values();
     public static final MapDecoration.Type[] MAP_DECORARION_TYPE = MapDecoration.Type.values();
