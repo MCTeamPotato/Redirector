@@ -51,7 +51,6 @@ public class RedirectionorMixinConfig {
         this.addMixinRule("server.commands", true);
         this.addMixinRule("server.level", true);
         this.addMixinRule("server.packs", true);
-        this.addMixinRule("stats", true);
         this.addMixinRule("util", true);
         this.addMixinRule("world", true);
         this.addMixinRule("world.entity", true);

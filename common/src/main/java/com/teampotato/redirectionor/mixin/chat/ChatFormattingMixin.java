@@ -1,4 +1,4 @@
-package com.teampotato.redirectionor.mixin;
+package com.teampotato.redirectionor.mixin.chat;
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.ChatFormatting;
