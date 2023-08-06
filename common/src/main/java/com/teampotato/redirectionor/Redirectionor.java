@@ -85,9 +85,7 @@ public class Redirectionor {
     public static final Direction8[] DIRECTION_8_S = Direction8.values();
     public static final GenerationStep.Carving[] GENERATION_STEP_CARVINGS = GenerationStep.Carving.values();
     public static final IOWorker.Priority[] PRIORITIES = IOWorker.Priority.values();
-    public static final DensityFunctions.TwoArgumentSimpleFunction.Type[] DENSITY_FUNCTIONS_TWO_ARGUMENT_SIMPLE_FUNCTION_TYPES = DensityFunctions.TwoArgumentSimpleFunction.Type.values();
     public static final DensityFunctions.Marker.Type[] DENSITY_FUNCTIONS_MARKER_TYPES = DensityFunctions.Marker.Type.values();
-    public static final DensityFunctions.Mapped.Type[] DENSITY_FUNCTIONS_MAPPED_TYPES = DensityFunctions.Mapped.Type.values();
     public static final Half[] HALVES = Half.values();
     public static final BlockPathTypes[] BLOCK_PATH_TYPES = BlockPathTypes.values();
     public static final MapDecoration.Type[] MAP_DECORARION_TYPE = MapDecoration.Type.values();
