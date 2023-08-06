@@ -37,7 +37,7 @@ shadowJar {
     exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
+    classifier "fabric-dev-shadow"
 }
 
 remapJar {
@@ -64,6 +64,4 @@ publishing {
             from components.java
         }
     }
-
-    repositories {}
 }
