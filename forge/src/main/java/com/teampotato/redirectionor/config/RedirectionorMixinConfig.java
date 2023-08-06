@@ -17,7 +17,6 @@ public class RedirectionorMixinConfig {
         this.addMixinRule("advancements", true);
         this.addMixinRule("chat", true);
         this.addMixinRule("client", true);
-        this.addMixinRule("client.", true);
         this.addMixinRule("client.gui", true);
         this.addMixinRule("client.gui.components", true);
         this.addMixinRule("client.gui.screens", true);
