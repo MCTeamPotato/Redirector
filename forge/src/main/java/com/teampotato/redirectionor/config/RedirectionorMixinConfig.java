@@ -39,7 +39,7 @@ public class RedirectionorMixinConfig {
         this.addMixinRule("commands.arguments.selector.options", true);
         this.addMixinRule("compat", true);
         this.addMixinRule("compat.modernfix", isNotLoaded("modernfix"));
-        this.addMixinRule("compat.lithium", isNotLoaded("lithium") && isNotLoaded("roadrunner") && isNotLoaded("canary"));
+        this.addMixinRule("compat.lithium", isNotLoaded("lithium") && isNotLoaded("roadrunner") && isNotLoaded("canary") && isNotLoaded("radium"));
         this.addMixinRule("compat.nicerportals", isNotLoaded("nicerportals"));
         this.addMixinRule("compat.sodium", isNotLoaded("sodium") && isNotLoaded("rubidium") && isNotLoaded("magnesium") && isNotLoaded("chlorine"));
         this.addMixinRule("core", true);
@@ -64,7 +64,6 @@ public class RedirectionorMixinConfig {
         this.addMixinRule("world.level", true);
         this.addMixinRule("world.level.block", true);
         this.addMixinRule("world.level.block.entity", true);
-        this.addMixinRule("world.level.block.piston", isNotLoaded("canary") && isNotLoaded("roadrunner"));
         this.addMixinRule("world.level.block.state.pattern", true);
         this.addMixinRule("world.level.chunk", true);
         this.addMixinRule("world.level.chunk.storage", true);
