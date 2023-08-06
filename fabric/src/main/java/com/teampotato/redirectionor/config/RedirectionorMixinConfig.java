@@ -67,8 +67,6 @@ public class RedirectionorMixinConfig {
         this.addMixinRule("world.level", true);
         this.addMixinRule("world.level.block", true);
         this.addMixinRule("world.level.block.entity", true);
-        this.addMixinRule("world.level.block.piston", isNotLoaded("canary") && isNotLoaded("roadrunner"));
-        this.addMixinRule("world.level.block.state", true);
         this.addMixinRule("world.level.block.state.pattern", true);
         this.addMixinRule("world.level.chunk", true);
         this.addMixinRule("world.level.chunk.storage", true);

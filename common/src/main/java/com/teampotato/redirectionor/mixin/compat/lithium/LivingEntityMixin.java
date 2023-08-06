@@ -1,4 +1,4 @@
-package com.teampotato.redirectionor.mixin.world.entity;
+package com.teampotato.redirectionor.mixin.compat.lithium;
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.world.InteractionHand;
