@@ -22,7 +22,6 @@
     "redirectionor-common.mixins.json"
   ],
   "depends": {
-    "fabric": "*",
     "minecraft": "*"
   }
 }
