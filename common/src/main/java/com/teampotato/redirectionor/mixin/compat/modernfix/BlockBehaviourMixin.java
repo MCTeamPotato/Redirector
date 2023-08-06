@@ -1,4 +1,4 @@
-package com.teampotato.redirectionor.mixin.world.level.block.state;
+package com.teampotato.redirectionor.mixin.compat.modernfix;
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;

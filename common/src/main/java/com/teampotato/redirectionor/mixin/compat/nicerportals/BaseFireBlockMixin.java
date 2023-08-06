@@ -1,4 +1,4 @@
-package com.teampotato.redirectionor.mixin.world.level.block;
+package com.teampotato.redirectionor.mixin.compat.nicerportals;
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.core.Direction;

@@ -1,4 +1,4 @@
-package com.teampotato.redirectionor.mixin.client.renderer.entity;
+package com.teampotato.redirectionor.mixin.compat.sodium;
 
 import com.teampotato.redirectionor.Redirectionor;
 import net.minecraft.client.renderer.entity.ItemRenderer;
