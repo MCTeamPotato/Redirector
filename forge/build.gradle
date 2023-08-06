@@ -44,7 +44,7 @@ shadowJar {
     exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
+    classifier "forge-dev-shadow"
 }
 
 remapJar {
