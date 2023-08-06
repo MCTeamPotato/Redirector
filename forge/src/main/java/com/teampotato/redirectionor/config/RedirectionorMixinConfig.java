@@ -38,8 +38,8 @@ public class RedirectionorMixinConfig {
         this.addMixinRule("commands.arguments.selector.options", true);
         this.addMixinRule("compat", true);
         this.addMixinRule("compat.modernfix", isNotLoaded("modernfix"));
-        this.addMixinRule("compat.lithium", isNotLoaded("lithium") && isNotLoaded("roadrunner") && isNotLoaded("canary"));
         this.addMixinRule("compat.nicerportals", isNotLoaded("nicerportals"));
+        this.addMixinRule("compat.lithium", isNotLoaded("lithium") && isNotLoaded("roadrunner") && isNotLoaded("canary") && isNotLoaded("radium"));
         this.addMixinRule("compat.sodium", isNotLoaded("sodium") && isNotLoaded("rubidium") && isNotLoaded("magnesium") && isNotLoaded("chlorine"));
         this.addMixinRule("core", true);
         this.addMixinRule("data", true);
