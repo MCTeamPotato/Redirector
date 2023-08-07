@@ -15,7 +15,6 @@ import net.minecraft.world.entity.animal.Panda;
 import net.minecraft.world.entity.animal.horse.Markings;
 import net.minecraft.world.entity.animal.horse.Variant;
 import net.minecraft.world.entity.monster.SpellcasterIllager;
-import net.minecraft.world.entity.player.PlayerModelPart;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.GameType;
@@ -39,7 +38,6 @@ public class Redirectionor {
     public static final FrameType[] FRAME_TYPES = FrameType.values();
     public static final InteractionHand[] INTERACTION_HANDS = InteractionHand.values();
     public static final SoundSource[] SOUND_SOURCES = SoundSource.values();
-    public static final PlayerModelPart[] PLAYER_MODEL_PARTS = PlayerModelPart.values();
     public static final Heightmap.Types[] HEIGHTMAP_TYPES = Heightmap.Types.values();
     public static final MobCategory[] MOB_CATEGORIES = MobCategory.values();
     public static final Difficulty[] DIFFICULTIES = Difficulty.values();
