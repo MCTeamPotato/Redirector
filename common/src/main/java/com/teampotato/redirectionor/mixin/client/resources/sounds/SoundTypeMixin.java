@@ -8,8 +8,9 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(Sound.Type.class)
 public abstract class SoundTypeMixin {
+    private static final Sound.Type[] SOUND_TYPES = Sound.Type.values();
     @Redirect(method = "getByName", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/resources/sounds/Sound$Type;values()[Lnet/minecraft/client/resources/sounds/Sound$Type;"))
     private static Sound.Type[] redirectSoundType() {
-        return Redirectionor.SOUND_TYPES;
+        return SOUND_TYPES;
     }
 }
