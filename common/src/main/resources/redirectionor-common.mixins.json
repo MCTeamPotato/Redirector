@@ -70,7 +70,6 @@
     "world.level.chunk.storage.ChunkSerializerMixin",
     "world.level.chunk.storage.IOWorkerMixin",
     "world.level.gameevent.vibrations.VibrationSystemListenerMixin",
-    "world.level.levelgen.DensityFunctionsMixin",
     "world.level.levelgen.blending.BlenderMixin",
     "world.level.levelgen.blending.BlendingDataMixin",
     "world.level.levelgen.feature.BlueIceFeatureMixin",

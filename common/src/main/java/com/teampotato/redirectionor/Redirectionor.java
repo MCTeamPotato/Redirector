@@ -39,7 +39,6 @@ import net.minecraft.world.level.block.entity.JigsawBlockEntity;
 import net.minecraft.world.level.block.state.properties.DripstoneThickness;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.chunk.storage.IOWorker;
-import net.minecraft.world.level.levelgen.DensityFunctions;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
@@ -88,7 +87,6 @@ public class Redirectionor {
     public static final Direction8[] DIRECTION_8_S = Direction8.values();
     public static final GenerationStep.Carving[] GENERATION_STEP_CARVINGS = GenerationStep.Carving.values();
     public static final IOWorker.Priority[] PRIORITIES = IOWorker.Priority.values();
-    public static final DensityFunctions.Marker.Type[] DENSITY_FUNCTIONS_MARKER_TYPES = DensityFunctions.Marker.Type.values();
     public static final Half[] HALVES = Half.values();
     public static final MapDecoration.Type[] MAP_DECORARION_TYPE = MapDecoration.Type.values();
     public static final LootContext.EntityTarget[] LOOT_CONTEXT_ENTITY_TARGETS = LootContext.EntityTarget.values();
