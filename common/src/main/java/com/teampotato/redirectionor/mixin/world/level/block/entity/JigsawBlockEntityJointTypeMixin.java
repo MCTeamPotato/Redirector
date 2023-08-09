@@ -1,15 +1,20 @@
 package com.teampotato.redirectionor.mixin.world.level.block.entity;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.common.Maps;
 import net.minecraft.world.level.block.entity.JigsawBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.Overwrite;
+
+import java.util.Optional;
 
 @Mixin(JigsawBlockEntity.JointType.class)
 public abstract class JigsawBlockEntityJointTypeMixin {
-    @Redirect(method = "byName", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/entity/JigsawBlockEntity$JointType;values()[Lnet/minecraft/world/level/block/entity/JigsawBlockEntity$JointType;"))
-    private static JigsawBlockEntity.JointType[] redirectJigsawBlockEntityJointType() {
-        return Redirectionor.JIGSAW_BLOCK_ENTITY_JOINT_TYPES;
+    /**
+     * @author Kasualix
+     * @reason use faster map impl
+     */
+    @Overwrite
+    public static Optional<JigsawBlockEntity.JointType> byName(String string) {
+        return Optional.ofNullable(Maps.STRING_JOINT_TYPE_MAP.get(string));
     }
 }

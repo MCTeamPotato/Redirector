@@ -1,6 +1,6 @@
 package com.teampotato.redirectionor.mixin.compat.lithium;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.common.Values;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,12 +12,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class LivingEntityMixin {
     @Redirect(method = "collectEquipmentChanges", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/EquipmentSlot;values()[Lnet/minecraft/world/entity/EquipmentSlot;"))
     private EquipmentSlot[] redirectEquipmentSlot() {
-        return Redirectionor.EQUIPMENT_SLOTS;
+        return Values.EQUIPMENT_SLOTS;
     }
 
     @Redirect(method = "checkTotemDeathProtection", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/InteractionHand;values()[Lnet/minecraft/world/InteractionHand;"))
     private InteractionHand[] redirectInteractionHand() {
-        return Redirectionor.INTERACTION_HANDS;
+        return Values.INTERACTION_HANDS;
     }
 
 }

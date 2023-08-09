@@ -108,6 +108,7 @@
     "client.gui.screens.reporting.ReasonSelectionListMixin",
     "client.model.geom.LayerDefinitionsMixin",
     "client.multiplayer.ClientPacketListenerMixin",
+    "client.player.LocalPlayerMixin",
     "client.renderer.LevelRendererMixin",
     "client.renderer.block.model.FaceBakeryMixin",
     "client.renderer.block.model.GuiLightMixin",

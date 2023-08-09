@@ -1,16 +1,21 @@
 package com.teampotato.redirectionor.mixin.client.resources.sounds;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.client.ClientMaps;
 import net.minecraft.client.resources.sounds.Sound;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(Sound.Type.class)
 public abstract class SoundTypeMixin {
-    private static final Sound.Type[] SOUND_TYPES = Sound.Type.values();
-    @Redirect(method = "getByName", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/resources/sounds/Sound$Type;values()[Lnet/minecraft/client/resources/sounds/Sound$Type;"))
-    private static Sound.Type[] redirectSoundType() {
-        return SOUND_TYPES;
+
+    /**
+     * @author Kasualix
+     * @reason use faster map impl
+     */
+    @Overwrite
+    @Nullable
+    public static Sound.Type getByName(String string) {
+        return ClientMaps.STRING_TYPE_MAP.get(string);
     }
 }

@@ -1,6 +1,6 @@
 package com.teampotato.redirectionor.mixin.client.renderer.entity;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.common.Values;
 import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.world.entity.vehicle.Boat;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class BoatRendererMixin {
     @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/vehicle/Boat$Type;values()[Lnet/minecraft/world/entity/vehicle/Boat$Type;"))
     private Boat.Type[] redirectBoatType() {
-        return Redirectionor.BOAT_TYPES;
+        return Values.BOAT_TYPES;
     }
 }

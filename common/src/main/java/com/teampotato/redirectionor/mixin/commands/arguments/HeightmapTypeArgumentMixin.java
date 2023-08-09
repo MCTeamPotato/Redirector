@@ -1,6 +1,6 @@
 package com.teampotato.redirectionor.mixin.commands.arguments;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.common.Values;
 import net.minecraft.commands.arguments.HeightmapTypeArgument;
 import net.minecraft.world.level.levelgen.Heightmap;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class HeightmapTypeArgumentMixin {
     @Redirect(method = "keptTypes", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/levelgen/Heightmap$Types;values()[Lnet/minecraft/world/level/levelgen/Heightmap$Types;"))
     private static Heightmap.Types[] redirectHeightmapTypes() {
-        return Redirectionor.HEIGHTMAP_TYPES;
+        return Values.HEIGHTMAP_TYPES;
     }
 }

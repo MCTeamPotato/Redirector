@@ -1,6 +1,6 @@
 package com.teampotato.redirectionor.mixin.server.commands;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.common.Values;
 import net.minecraft.server.commands.StopSoundCommand;
 import net.minecraft.sounds.SoundSource;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class StopSoundCommandMixin {
     @Redirect(method = "register", at = @At(value = "INVOKE", target = "Lnet/minecraft/sounds/SoundSource;values()[Lnet/minecraft/sounds/SoundSource;"))
     private static SoundSource[] redirectSoundSource() {
-        return Redirectionor.SOUND_SOURCES;
+        return Values.SOUND_SOURCES;
     }
 }

@@ -1,17 +1,20 @@
 package com.teampotato.redirectionor.mixin.client.tutorial;
 
+import com.teampotato.redirectionor.client.ClientMaps;
 import net.minecraft.client.tutorial.TutorialSteps;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(TutorialSteps.class)
 public abstract class TutorialStepsMixin {
-    @Unique
-    private static final TutorialSteps[] TUTORIAL_STEPS = TutorialSteps.values();
-    @Redirect(method = "getByName", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/tutorial/TutorialSteps;values()[Lnet/minecraft/client/tutorial/TutorialSteps;"))
-    private static TutorialSteps[] redirectTutorialSteps() {
-        return TUTORIAL_STEPS;
+    /**
+     * @author Kasualix
+     * @reason use faster map impl
+     */
+    @Overwrite
+    public static TutorialSteps getByName(String string) {
+        TutorialSteps tutorialSteps = ClientMaps.STRING_TUTORIAL_STEPS_MAP.get(string);
+        if (tutorialSteps == null) return TutorialSteps.NONE;
+        return tutorialSteps;
     }
 }

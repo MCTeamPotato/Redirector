@@ -1,6 +1,6 @@
 package com.teampotato.redirectionor.mixin.data.model;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.common.Values;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.world.level.block.state.properties.DripstoneThickness;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class BlockModelGeneratorsMixin {
     @Redirect(method = "createPointedDripstone", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/properties/DripstoneThickness;values()[Lnet/minecraft/world/level/block/state/properties/DripstoneThickness;"))
     private DripstoneThickness[] redirectDripstoneThickness() {
-        return Redirectionor.DRIPSTONE_THICKNESSES;
+        return Values.DRIPSTONE_THICKNESSES;
     }
 }

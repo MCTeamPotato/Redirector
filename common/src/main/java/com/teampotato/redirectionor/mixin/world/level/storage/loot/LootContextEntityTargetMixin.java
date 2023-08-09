@@ -1,15 +1,18 @@
 package com.teampotato.redirectionor.mixin.world.level.storage.loot;
 
-import com.teampotato.redirectionor.Redirectionor;
+import com.teampotato.redirectionor.common.Maps;
 import net.minecraft.world.level.storage.loot.LootContext;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(LootContext.EntityTarget.class)
 public abstract class LootContextEntityTargetMixin {
-    @Redirect(method = "getByName", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;values()[Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;"))
-    private static LootContext.EntityTarget[] redirectLootContextEntityTarget() {
-        return Redirectionor.LOOT_CONTEXT_ENTITY_TARGETS;
+    /**
+     * @author Kasualix
+     * @reason use faster map impl
+     */
+    @Overwrite
+    public static LootContext.EntityTarget getByName(String string) {
+        return Maps.STRING_ENTITY_TARGET_MAP.get(string);
     }
 }
