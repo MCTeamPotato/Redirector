@@ -19,7 +19,6 @@ import net.minecraft.world.ticks.TickPriority;
 import java.util.Map;
 
 import static net.minecraft.core.Direction.*;
-import static net.minecraft.world.level.chunk.storage.IOWorker.Priority.*;
 
 public final class Maps {
     public static final Map<String, FrameType> STRING_FRAME_TYPE_MAP = new Object2ObjectOpenHashMap<>();
@@ -43,6 +42,14 @@ public final class Maps {
     public static final Map<String, CopyNbtFunction.MergeStrategy> STRING_MERGE_STRATEGY_MAP = new Object2ObjectOpenHashMap<>();
     
     public static final Int2ObjectOpenHashMap<TickPriority> INTEGER_TICK_PRIORITY_MAP = new Int2ObjectOpenHashMap<>();
+
+    public static final Object2IntOpenHashMap<IOWorker.Priority> PRIORITY_ORDINAL_MAP = new Object2IntOpenHashMap<>();
+
+    public static final Map<Direction.Axis, Direction.Plane> PLANE_MAP = new Object2ObjectOpenHashMap<>();
+
+    public static final Object2IntOpenHashMap<Direction> DIRECTION_ORDINAL_MAP = new Object2IntOpenHashMap<>();
+
+    public static final Object2IntOpenHashMap<Direction> DIRECTION_DATA_VALUE_MAP = new Object2IntOpenHashMap<>();
 
     static {
         for (FrameType frameType : Values.FRAME_TYPES) {
@@ -111,63 +118,29 @@ public final class Maps {
         }
     }
 
-    public static final int EAST_3D_DATA_VALUE = EAST.get3DDataValue();
-    public static final int SOUTH_3D_DATA_VALUE = SOUTH.get3DDataValue();
-    public static final int NORTH_3D_DATA_VALUE = NORTH.get3DDataValue();
-    public static final int WEST_3D_DATA_VALUE = WEST.get3DDataValue();
-    public static final int UP_3D_DATA_VALUE = UP.get3DDataValue();
-    public static final int DOWN_3D_DATA_VALUE = DOWN.get3DDataValue();
-
-    public static final Object2IntOpenHashMap<Direction> DIRECTION_DATA_VALUE_MAP = new Object2IntOpenHashMap<>();
-
     static {
-        DIRECTION_DATA_VALUE_MAP.put(EAST, EAST_3D_DATA_VALUE);
-        DIRECTION_DATA_VALUE_MAP.put(SOUTH, SOUTH_3D_DATA_VALUE);
-        DIRECTION_DATA_VALUE_MAP.put(NORTH, NORTH_3D_DATA_VALUE);
-        DIRECTION_DATA_VALUE_MAP.put(WEST, WEST_3D_DATA_VALUE);
-        DIRECTION_DATA_VALUE_MAP.put(UP, UP_3D_DATA_VALUE);
-        DIRECTION_DATA_VALUE_MAP.put(DOWN, DOWN_3D_DATA_VALUE);
+        for (Direction direction : Values.DIRECTIONS) {
+            DIRECTION_DATA_VALUE_MAP.put(direction, direction.get3DDataValue());
+        }
     }
 
-    public static final int WEST_ORDINAL = WEST.ordinal();
-    public static final int NORTH_ORDINAL = NORTH.ordinal();
-    public static final int EAST_ORDINAL = EAST.ordinal();
-    public static final int SOUTH_ORDINAL = SOUTH.ordinal();
-    public static final int UP_ORDINAL = UP.ordinal();
-    public static final int DOWN_ORDINAL = DOWN.ordinal();
-
-    public static final Object2IntOpenHashMap<Direction> DIRECTION_ORDINAL_MAP = new Object2IntOpenHashMap<>();
-
     static {
-        DIRECTION_ORDINAL_MAP.put(EAST, EAST_ORDINAL);
-        DIRECTION_ORDINAL_MAP.put(SOUTH, SOUTH_ORDINAL);
-        DIRECTION_ORDINAL_MAP.put(NORTH, NORTH_ORDINAL);
-        DIRECTION_ORDINAL_MAP.put(WEST, WEST_ORDINAL);
-        DIRECTION_ORDINAL_MAP.put(UP, UP_ORDINAL);
-        DIRECTION_ORDINAL_MAP.put(DOWN, DOWN_ORDINAL);
-    }
-
-    public static final Direction.Plane HORIZONTAL = Direction.Plane.HORIZONTAL;
-    public static final Direction.Plane VERTICAL = Direction.Plane.VERTICAL;
-
-    public static final Map<Direction.Axis, Direction.Plane> PLANE_MAP = new Object2ObjectOpenHashMap<>();
-
-    static {
-        PLANE_MAP.put(Axis.X, HORIZONTAL);
-        PLANE_MAP.put(Axis.Z, HORIZONTAL);
-        PLANE_MAP.put(Axis.Y, VERTICAL);
+        for (Direction direction : Values.DIRECTIONS) {
+            DIRECTION_ORDINAL_MAP.put(direction, direction.ordinal());
+        }
     }
 
 
-    public static final int FOREGROUND_ORDINAL = FOREGROUND.ordinal();
-    public static final int BACKGROUND_ORDINAL = BACKGROUND.ordinal();
-    public static final int SHUTDOWN_ORDINAL = SHUTDOWN.ordinal();
+    static {
+        PLANE_MAP.put(Axis.X, Direction.Plane.HORIZONTAL);
+        PLANE_MAP.put(Axis.Z, Direction.Plane.HORIZONTAL);
+        PLANE_MAP.put(Axis.Y, Direction.Plane.VERTICAL);
+    }
 
-    public static final Object2IntOpenHashMap<IOWorker.Priority> PRIORITY_ORDINAL_MAP = new Object2IntOpenHashMap<>();
 
     static {
-        PRIORITY_ORDINAL_MAP.put(FOREGROUND, FOREGROUND_ORDINAL);
-        PRIORITY_ORDINAL_MAP.put(BACKGROUND, BACKGROUND_ORDINAL);
-        PRIORITY_ORDINAL_MAP.put(SHUTDOWN, SHUTDOWN_ORDINAL);
+        for (IOWorker.Priority priority : Values.IO_WORKER_PRIORITIES) {
+            PRIORITY_ORDINAL_MAP.put(priority, priority.ordinal());
+        }
     }
 }

@@ -108,4 +108,5 @@ public final class Values {
     public static final Half[] HALVES = Half.values();
     
     public static final MapDecoration.Type[] MAP_DECORARION_TYPE = MapDecoration.Type.values();
+    public static final IOWorker.Priority[] IO_WORKER_PRIORITIES = IOWorker.Priority.values();
 }
