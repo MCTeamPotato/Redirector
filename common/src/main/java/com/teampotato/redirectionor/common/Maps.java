@@ -16,36 +16,34 @@ import net.minecraft.world.level.storage.loot.functions.CopyNameFunction;
 import net.minecraft.world.level.storage.loot.functions.CopyNbtFunction;
 import net.minecraft.world.ticks.TickPriority;
 
-import java.util.Map;
-
-import static net.minecraft.core.Direction.*;
+import static net.minecraft.core.Direction.Axis;
 
 public final class Maps {
-    public static final Map<String, FrameType> STRING_FRAME_TYPE_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, FrameType> STRING_FRAME_TYPE_MAP = new Object2ObjectOpenHashMap<>();
     public static final Int2ObjectOpenHashMap<ChatFormatting> INTEGER_CHAT_FORMATTING_MAP = new Int2ObjectOpenHashMap<>();
     public static final Char2ObjectOpenHashMap<ChatFormatting> CHARACTER_CHAT_FORMATTING_MAP = new Char2ObjectOpenHashMap<>();
     
-    public static final Map<String, BossEvent.BossBarColor> STRING_BOSS_BAR_COLOR_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, BossEvent.BossBarColor> STRING_BOSS_BAR_COLOR_MAP = new Object2ObjectOpenHashMap<>();
     
-    public static final Map<String, BossEvent.BossBarOverlay> STRING_BOSS_BAR_OVERLAY_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, BossEvent.BossBarOverlay> STRING_BOSS_BAR_OVERLAY_MAP = new Object2ObjectOpenHashMap<>();
     
-    public static final Map<String, EquipmentSlot> STRING_EQUIPMENT_SLOT_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, EquipmentSlot> STRING_EQUIPMENT_SLOT_MAP = new Object2ObjectOpenHashMap<>();
     
-    public static final Map<EquipmentSlot.Type, EquipmentSlot> TYPE_EQUIPMENT_SLOT_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<EquipmentSlot.Type, EquipmentSlot> TYPE_EQUIPMENT_SLOT_MAP = new Object2ObjectOpenHashMap<>();
     
-    public static final Map<String, JigsawBlockEntity.JointType> STRING_JOINT_TYPE_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, JigsawBlockEntity.JointType> STRING_JOINT_TYPE_MAP = new Object2ObjectOpenHashMap<>();
     
-    public static final Map<String, LootContext.EntityTarget> STRING_ENTITY_TARGET_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, LootContext.EntityTarget> STRING_ENTITY_TARGET_MAP = new Object2ObjectOpenHashMap<>();
     
-    public static final Map<String, CopyNameFunction.NameSource> STRING_NAME_SOURCE_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, CopyNameFunction.NameSource> STRING_NAME_SOURCE_MAP = new Object2ObjectOpenHashMap<>();
     
-    public static final Map<String, CopyNbtFunction.MergeStrategy> STRING_MERGE_STRATEGY_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<String, CopyNbtFunction.MergeStrategy> STRING_MERGE_STRATEGY_MAP = new Object2ObjectOpenHashMap<>();
     
     public static final Int2ObjectOpenHashMap<TickPriority> INTEGER_TICK_PRIORITY_MAP = new Int2ObjectOpenHashMap<>();
 
     public static final Object2IntOpenHashMap<IOWorker.Priority> PRIORITY_ORDINAL_MAP = new Object2IntOpenHashMap<>();
 
-    public static final Map<Direction.Axis, Direction.Plane> PLANE_MAP = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<Direction.Axis, Direction.Plane> PLANE_MAP = new Object2ObjectOpenHashMap<>();
 
     public static final Object2IntOpenHashMap<Direction> DIRECTION_ORDINAL_MAP = new Object2IntOpenHashMap<>();
 
@@ -129,7 +127,6 @@ public final class Maps {
             DIRECTION_ORDINAL_MAP.put(direction, direction.ordinal());
         }
     }
-
 
     static {
         PLANE_MAP.put(Axis.X, Direction.Plane.HORIZONTAL);
