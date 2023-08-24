@@ -8,7 +8,8 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+    accessWidenerPath = file("src/main/resources/redirectionor.accesswidener")
+    mixin.defaultRefmapName.set("redirectionor.refmap.json")
 }
 
 configurations {
@@ -34,14 +35,11 @@ processResources {
 }
 
 shadowJar {
-    exclude "architectury.common.json"
-
     configurations = [project.configurations.shadowCommon]
     classifier "fabric-dev-shadow"
 }
 
 remapJar {
-    injectAccessWidener = true
     input.set shadowJar.archiveFile
     dependsOn shadowJar
     classifier "fabric"
@@ -54,14 +52,5 @@ jar {
 components.java {
     withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
         skip()
-    }
-}
-
-publishing {
-    publications {
-        mavenFabric(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
-            from components.java
-        }
     }
 }
