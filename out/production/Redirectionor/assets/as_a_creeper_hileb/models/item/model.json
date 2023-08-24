@@ -1,0 +1,52 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [8, 8],
+	"textures": {
+		"1": "minecraft:blocks/tnt_bottom",
+		"2": "minecraft:blocks/tnt_side",
+		"3": "minecraft:blocks/tnt_top",
+		"4": "as_a_creeper_hileb:creeper32",
+		"particle": "as_a_creeper_hileb:creeper32"
+	},
+	"elements": [
+		{
+			"name": "tnt",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [4, 14, 4],
+			"to": [12, 22, 12],
+			"faces": {
+				"north": {"uv": [0, 4, 4, 8], "texture": "#4"},
+				"east": {"uv": [4, 4, 8, 8], "texture": "#4"},
+				"south": {"uv": [8, 4, 12, 8], "texture": "#4"},
+				"west": {"uv": [12, 4, 16, 8], "texture": "#4"},
+				"up": {"uv": [8, 4, 4, 0], "texture": "#4"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#4"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "tnt",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0]
+		},
+		{
+			"name": "creeper",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [1]
+		}
+	]
+}
