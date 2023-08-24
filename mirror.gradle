@@ -1,0 +1,154 @@
+
+buildscript {
+    repositories {
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url "https://${mirror_maven_url}" }
+    }
+    dependencies {
+        classpath "net.minecraftforge.gradle:ForgeGradle:2.3.4"
+    }
+}
+
+import net.minecraftforge.gradle.common.BasePlugin
+import net.minecraftforge.gradle.common.Constants
+import net.minecraftforge.gradle.tasks.DownloadAssetsTask
+import net.minecraftforge.gradle.user.patcherUser.forge.ForgePlugin
+import net.minecraftforge.gradle.util.json.version.Library
+import sun.misc.SharedSecrets
+import sun.misc.Unsafe
+
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
+
+// initialize the constant pool and force to load strings so that strings can be replaced
+void initConstantPool(Class<?> clazz) {
+    if (clazz != null && !clazz.interface) {
+        initConstantPool clazz.superclass
+
+        def constantPool = SharedSecrets.javaLangAccess.getConstantPool clazz
+        for (i in 0..constantPool.size) {
+            try {
+                constantPool.getStringAt i
+            } catch (def ignored) {}
+        }
+    }
+}
+
+// replace string values in constant pools
+void replaceString(String str1, String str2) {
+    String.class.getDeclaredField "value" with {
+        it.setAccessible true
+        it.set str1, str2.toCharArray()
+    }
+}
+
+// ForgeGradle does not support redirecting when downloading files, but BMCLAPI requires it, so we should redirect it manually
+String redirectUrl(String url) {
+    def con = new URL(url).openConnection()
+    con.setInstanceFollowRedirects true
+    con.connect()
+    if (String.valueOf(con.getResponseCode()).startsWith("3")) {
+        def newUrl = con.getHeaderField "Location"
+        if (newUrl != null) url = redirectUrl newUrl
+    }
+    return url
+}
+
+// ForgeGradle hardcoded some urls in these classes, we should modify them to mirror urls via some hacky ways
+// https://github.com/MinecraftForge/ForgeGradle/blob/FG_2.3/src/main/java/net/minecraftforge/gradle/common/Constants.java#L123-L126
+// https://github.com/MinecraftForge/ForgeGradle/blob/FG_2.3/src/main/java/net/minecraftforge/gradle/tasks/DownloadAssetsTask.java#L189
+// https://github.com/MinecraftForge/ForgeGradle/blob/FG_2.3/src/main/java/net/minecraftforge/gradle/common/BasePlugin.java#L174-L176
+// https://github.com/MinecraftForge/ForgeGradle/blob/FG_2.3/src/main/java/net/minecraftforge/gradle/common/BasePlugin.java#L231
+// https://github.com/MinecraftForge/ForgeGradle/blob/FG_2.3/src/main/java/net/minecraftforge/gradle/util/json/version/Library.java#L72
+def classToInit = [Constants.class, DownloadAssetsTask.GetAssetTask.class, ForgePlugin.class, Library.class]
+for (clazz in classToInit) {
+    initConstantPool Unsafe.theUnsafe.allocateInstance(clazz).class
+}
+
+replaceString "https://launchermeta.mojang.com/mc/game/version_manifest.json", redirectUrl("https://${mirror_assets_url}/mc/game/version_manifest.json")
+replaceString "http://resources.download.minecraft.net/", "https://download.mcbbs.net/assets/" // use MCBBS mirror due to there"s no way to hook http 302 response when downloading assets
+replaceString "https://libraries.minecraft.net/", "https://${mirror_maven_url}"
+replaceString "https://maven.minecraftforge.net", "https://${mirror_maven_url}"
+replaceString "https://maven.minecraftforge.net/de/oceanlabs/mcp/versions.json", redirectUrl("https://${mirror_maven_url}/de/oceanlabs/mcp/versions.json")
+
+tasks.whenTaskAdded {
+    if (it.name == "getVersionJson") it.dependsOn mirrorManifest
+    if (it.name == "getVersionJson" || it.name == "extractUserdev") it.finalizedBy mirrorVersionJson
+}
+
+// this task is to replace urls in version manifest json (https://launchermeta.mojang.com/mc/game/version_manifest.json)
+task mirrorManifest {
+    doLast {
+        ForgePlugin forge = project.plugins.findPlugin ForgePlugin.class
+        BasePlugin.class.getDeclaredField "mcManifest" with {
+            it.setAccessible true
+            it
+        } get forge get forge.extension.version with {
+            if (it.url != null) it.url = redirectUrl it.url.replace("launchermeta.mojang.com", mirror_assets_url)
+        }
+    }
+}
+
+// this task is to replace urls in version json (https://launchermeta.mojang.com/v1/packages/6e69e85d0f85f4f4b9e12dd99d102092a6e15918/1.12.2.json)
+task mirrorVersionJson {
+    doLast {
+        ForgePlugin forge = project.plugins.findPlugin ForgePlugin.class
+        BasePlugin.class.getDeclaredField "mcVersionJson" with {
+            it.setAccessible true
+            it
+        } get forge with {
+            it.assetIndex.url = redirectUrl it.assetIndex.url.replace("launchermeta.mojang.com", mirror_assets_url)
+            it.downloads.values().each {
+                if (it.url != null) it.url = redirectUrl it.url.replace("launcher.mojang.com", mirror_assets_url)
+            }
+        }
+    }
+}
+
+afterEvaluate {
+    ForgePlugin forge = project.plugins.findPlugin ForgePlugin.class
+
+    def mcpName = forge.delayedString("mcp_${Constants.REPLACE_MCP_CHANNEL}").call()
+    def mcpVersion = forge.delayedString("${Constants.REPLACE_MCP_VERSION}-${Constants.REPLACE_MCP_MCVERSION}").call()
+    def mcpBasePath = "/de/oceanlabs/mcp/${mcpName}/${mcpVersion}/${mcpName}-${mcpVersion}."
+    def mcpBaseUrl = "https://${mirror_maven_url}${mcpBasePath}"
+    new URL("${mcpBaseUrl}zip").withInputStream { is ->
+        Files.copy(is, file("${projectDir}/.gradle/local-repo${mcpBasePath}zip").toPath().with { path ->
+            Files.createDirectories(path.parent)
+            path
+        }, StandardCopyOption.REPLACE_EXISTING)
+    }
+    file("${projectDir}/.gradle/local-repo${mcpBasePath}pom").withWriter { writer ->
+        writer.write("""\
+            <?xml version="1.0" encoding="UTF-8"?>
+            <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <modelVersion>4.0.0</modelVersion>
+                <groupId>de.oceanlabs.mcp</groupId>
+                <artifactId>${mcpName}</artifactId>
+                <version>${mcpVersion}</version>
+                <packaging>zip</packaging>
+            </project>
+            """.stripIndent())
+    }
+
+    def mcVersion = forge.delayedString("${Constants.REPLACE_MC_VERSION}").call()
+    def mcBasePath = "/de/oceanlabs/mcp/mcp/${mcVersion}/mcp-${mcVersion}"
+    def mcBaseUrl = "https://${mirror_maven_url}${mcBasePath}"
+    new URL("${mcBaseUrl}-srg.zip").withInputStream { is ->
+        Files.copy(is, file("${projectDir}/.gradle/local-repo${mcBasePath}-srg.zip").toPath().with { path ->
+            Files.createDirectories(path.parent)
+            path
+        }, StandardCopyOption.REPLACE_EXISTING)
+    }
+    file("${projectDir}/.gradle/local-repo${mcBasePath}.pom").withWriter { writer ->
+        writer.write("""\
+            <?xml version="1.0" encoding="UTF-8"?>
+            <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <modelVersion>4.0.0</modelVersion>
+                <groupId>de.oceanlabs.mcp</groupId>
+                <artifactId>mcp</artifactId>
+                <version>${mcVersion}</version>
+            </project>
+            """.stripIndent())
+    }
+}

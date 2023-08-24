@@ -1,0 +1,784 @@
+Unsupposrted library path: E:\project\MC MOD\UnusuallyProjectPack\AsACreeper\AsACreeper\build\classes\java\api
+Unsupposrted library path: E:\project\MC MOD\UnusuallyProjectPack\AsACreeper\AsACreeper\build\resources\api
+Symbol range map extraction starting
+Processing 9 files
+startProcessing "com/Hileb/as_a_creeper_hileb/AACHModMain.java" md5: 6bafe2db6b0ab463a219672a5b2bec99
+@|com/Hileb/as_a_creeper_hileb/AACHModMain.java|8|36|com.Hileb.as_a_creeper_hileb|package|com.Hileb.as_a_creeper_hileb|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.AACHModMain
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|429|432|Mod|class|net.minecraftforge.fml.common.Mod|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|433|438|modid|method|net.minecraftforge.fml.common.Mod|modid|()Ljava/lang/String;
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|441|452|AACHModMain|class|com.Hileb.as_a_creeper_hileb.AACHModMain|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|453|458|MODID|field|com.Hileb.as_a_creeper_hileb.AACHModMain|MODID
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|460|464|name|method|net.minecraftforge.fml.common.Mod|name|()Ljava/lang/String;
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|467|478|AACHModMain|class|com.Hileb.as_a_creeper_hileb.AACHModMain|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|479|483|NAME|field|com.Hileb.as_a_creeper_hileb.AACHModMain|NAME
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|485|492|version|method|net.minecraftforge.fml.common.Mod|version|()Ljava/lang/String;
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|495|506|AACHModMain|class|com.Hileb.as_a_creeper_hileb.AACHModMain|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|507|514|VERSION|field|com.Hileb.as_a_creeper_hileb.AACHModMain|VERSION
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|585|596|AACHModMain|class|com.Hileb.as_a_creeper_hileb.AACHModMain|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|624|630|String|class|java.lang.String|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|624|630|String|class|java.lang.String|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|631|636|MODID|field|com.Hileb.as_a_creeper_hileb.AACHModMain|MODID|
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|693|699|String|class|java.lang.String|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|693|699|String|class|java.lang.String|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|700|704|NAME|field|com.Hileb.as_a_creeper_hileb.AACHModMain|NAME|
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|748|754|String|class|java.lang.String|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|748|754|String|class|java.lang.String|false
+   @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|755|762|VERSION|field|com.Hileb.as_a_creeper_hileb.AACHModMain|VERSION|
+   Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|844|849|event|param|com.Hileb.as_a_creeper_hileb.AACHModMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|782|798|Mod.EventHandler|class|net.minecraftforge.fml.common.Mod.EventHandler|false
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|816|820|init|method|com.Hileb.as_a_creeper_hileb.AACHModMain|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|821|843|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent|false
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|866|872|Loader|class|net.minecraftforge.fml.common.Loader|false
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|873|884|isModLoaded|method|net.minecraftforge.fml.common.Loader|isModLoaded|(Ljava/lang/String;)Z
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|885|896|ConfettiMod|class|com.sr2610.creeperconfetti.ConfettiMod|false
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|897|903|MOD_ID|field|com.sr2610.creeperconfetti.ConfettiMod|MOD_ID
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|920|936|AACHInterfaceCCF|class|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|false
+      @|com/Hileb/as_a_creeper_hileb/AACHModMain.java|937|941|init|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|init|()V
+   Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+Class End  : com.Hileb.as_a_creeper_hileb.AACHModMain
+endProcessing "com/Hileb/as_a_creeper_hileb/AACHModMain.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java" md5: ef6abeeac0de69ae848a7c6dbac17999
+@|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|8|43|com.Hileb.as_a_creeper_hileb.client|package|com.Hileb.as_a_creeper_hileb.client|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer
+   @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|746|751|Mixin|class|org.spongepowered.asm.mixin.Mixin|false
+   @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|752|764|RenderPlayer|class|net.minecraft.client.renderer.entity.RenderPlayer|false
+   @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|795|812|ExtraRenderPlayer|class|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|false
+   Method Start: onGetColorMultiplier(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|955|973|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|entitylivingbaseIn|0
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|981|996|lightBrightness|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|lightBrightness|1
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1004|1019|partialTickTime|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|partialTickTime|2
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1053|1057|call|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|call|3
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|822|828|Inject|class|org.spongepowered.asm.mixin.injection.Inject|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|829|835|method|method|org.spongepowered.asm.mixin.injection.Inject|method|()[Ljava/lang/String;
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|859|861|at|method|org.spongepowered.asm.mixin.injection.Inject|at|()[Lorg/spongepowered/asm/mixin/injection/At;
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|865|867|At|class|org.spongepowered.asm.mixin.injection.At|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|876|887|cancellable|method|org.spongepowered.asm.mixin.injection.Inject|cancellable|()Z
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|913|933|onGetColorMultiplier|method|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|934|954|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1021|1043|CallbackInfoReturnable|class|org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1044|1051|Integer|class|java.lang.Integer|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1082|1105|ExtraRenderPlayerStatic|class|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1106|1124|getColorMultiplier|method|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1125|1143|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|entitylivingbaseIn|0
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1144|1159|lightBrightness|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|lightBrightness|1
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1160|1175|partialTickTime|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|partialTickTime|2
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1211|1215|call|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|onGetColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V|call|3
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1216|1230|setReturnValue|method|org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable|setReturnValue|(Ljava/lang/Object;)V
+   Method End: onGetColorMultiplier(Lnet/minecraft/client/entity/AbstractClientPlayer;FFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+   Method Start: preRenderCallback(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1426|1444|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|preRenderCallback|(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V|entitylivingbaseIn|0
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1452|1467|partialTickTime|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|preRenderCallback|(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V|partialTickTime|1
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1482|1484|ci|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|preRenderCallback|(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V|ci|2
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1261|1267|Inject|class|org.spongepowered.asm.mixin.injection.Inject|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1268|1274|method|method|org.spongepowered.asm.mixin.injection.Inject|method|()[Ljava/lang/String;
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1351|1353|at|method|org.spongepowered.asm.mixin.injection.Inject|at|()[Lorg/spongepowered/asm/mixin/injection/At;
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1358|1360|At|class|org.spongepowered.asm.mixin.injection.At|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1387|1404|preRenderCallback|method|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|preRenderCallback|(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1405|1425|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1469|1481|CallbackInfo|class|org.spongepowered.asm.mixin.injection.callback.CallbackInfo|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1502|1525|ExtraRenderPlayerStatic|class|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1526|1543|preRenderCallback|method|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1545|1557|RenderPlayer|class|net.minecraft.client.renderer.entity.RenderPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1559|1565|Object|class|java.lang.Object|false
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1571|1589|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|preRenderCallback|(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V|entitylivingbaseIn|0
+      @|com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java|1590|1605|partialTickTime|param|com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer|preRenderCallback|(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V|partialTickTime|1
+   Method End: preRenderCallback(Lnet/minecraft/client/entity/AbstractClientPlayer;FLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+Class End  : com.Hileb.as_a_creeper_hileb.client.ExtraRenderPlayer
+endProcessing "com/Hileb/as_a_creeper_hileb/client/ExtraRenderPlayer.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java" md5: 29a3fffa68d1bb617fb3076bdd3b68ee
+@|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|8|41|com.Hileb.as_a_creeper_hileb.core|package|com.Hileb.as_a_creeper_hileb.core|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.core.AACHMixinCore
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|451|478|IFMLLoadingPlugin.MCVersion|class|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion|false
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|479|491|ForgeVersion|class|net.minecraftforge.common.ForgeVersion|false
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|492|501|mcVersion|field|net.minecraftforge.common.ForgeVersion|mcVersion
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|505|527|IFMLLoadingPlugin.Name|class|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.Name|false
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|528|539|AACHModMain|class|com.Hileb.as_a_creeper_hileb.AACHModMain|false
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|540|544|NAME|field|com.Hileb.as_a_creeper_hileb.AACHModMain|NAME
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|560|573|AACHMixinCore|class|com.Hileb.as_a_creeper_hileb.core.AACHMixinCore|false
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|585|602|IEarlyMixinLoader|class|zone.rong.mixinbooter.IEarlyMixinLoader|false
+   @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|605|622|IFMLLoadingPlugin|class|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|false
+   Method Start: getMixinConfigs()Ljava/util/List;
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|631|639|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|652|656|List|class|java.util.List|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|657|663|String|class|java.lang.String|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|665|680|getMixinConfigs|method|zone.rong.mixinbooter.IEarlyMixinLoader|getMixinConfigs|()Ljava/util/List;
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|701|712|Collections|class|java.util.Collections|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|713|726|singletonList|method|java.util.Collections|singletonList|(Ljava/lang/Object;)Ljava/util/List;
+   Method End: getMixinConfigs()Ljava/util/List;
+   Method Start: getASMTransformerClass()[Ljava/lang/String;
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|768|776|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|789|795|String|class|java.lang.String|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|798|820|getASMTransformerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getASMTransformerClass|()[Ljava/lang/String;
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|845|851|String|class|java.lang.String|false
+   Method End: getASMTransformerClass()[Ljava/lang/String;
+   Method Start: getModContainerClass()Ljava/lang/String;
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|871|879|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|892|898|String|class|java.lang.String|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|899|919|getModContainerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getModContainerClass|()Ljava/lang/String;
+   Method End: getModContainerClass()Ljava/lang/String;
+   Method Start: getSetupClass()Ljava/lang/String;
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|961|969|Nullable|class|javax.annotation.Nullable|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|976|984|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|997|1003|String|class|java.lang.String|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1004|1017|getSetupClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getSetupClass|()Ljava/lang/String;
+   Method End: getSetupClass()Ljava/lang/String;
+   Method Start: injectData(Ljava/util/Map;)V
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1116|1120|data|param|com.Hileb.as_a_creeper_hileb.core.AACHMixinCore|injectData|(Ljava/util/Map;)V|data|0
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1059|1067|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1085|1095|injectData|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|injectData|(Ljava/util/Map;)V
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1096|1099|Map|class|java.util.Map|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1100|1106|String|class|java.lang.String|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1108|1114|Object|class|java.lang.Object|false
+   Method End: injectData(Ljava/util/Map;)V
+   Method Start: getAccessTransformerClass()Ljava/lang/String;
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1141|1149|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1162|1168|String|class|java.lang.String|false
+      @|com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java|1169|1194|getAccessTransformerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getAccessTransformerClass|()Ljava/lang/String;
+   Method End: getAccessTransformerClass()Ljava/lang/String;
+Class End  : com.Hileb.as_a_creeper_hileb.core.AACHMixinCore
+endProcessing "com/Hileb/as_a_creeper_hileb/core/AACHMixinCore.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java" md5: 4ca3c2232d3bbf9be9025026de7438bd
+@|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|8|44|com.Hileb.as_a_creeper_hileb.handler|package|com.Hileb.as_a_creeper_hileb.handler|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic
+   @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|415|438|ExtraRenderPlayerStatic|class|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|false
+   Method Start: getColorMultiplier(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|506|524|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I|entitylivingbaseIn|0
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|532|547|lightBrightness|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I|lightBrightness|1
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|555|570|partialTickTime|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I|partialTickTime|2
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|466|484|getColorMultiplier|method|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|485|505|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|610|623|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|624|641|isPlayerUsingItem|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isPlayerUsingItem|(Lnet/minecraft/entity/player/EntityPlayer;)Z
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|642|660|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I|entitylivingbaseIn|0
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|687|705|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I|entitylivingbaseIn|0
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|706|723|getItemInUseCount|method|net.minecraft.entity.EntityLivingBase|getItemInUseCount|()I
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|726|741|partialTickTime|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|getColorMultiplier|(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I|partialTickTime|2
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|950|960|MathHelper|class|net.minecraft.util.math.MathHelper|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|961|966|clamp|method|net.minecraft.util.math.MathHelper|clamp|(III)I
+   Method End: getColorMultiplier(Lnet/minecraft/client/entity/AbstractClientPlayer;FF)I
+   Method Start: preRenderCallback(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1127|1139|renderPlayer|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V|renderPlayer|0
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1161|1179|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V|entitylivingbaseIn|1
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1187|1202|partialTickTime|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V|partialTickTime|2
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1096|1113|preRenderCallback|method|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1114|1126|RenderPlayer|class|net.minecraft.client.renderer.entity.RenderPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1140|1160|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1220|1234|GlStateManager|class|net.minecraft.client.renderer.GlStateManager|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1235|1240|scale|method|net.minecraft.client.renderer.GlStateManager|scale|(FFF)V
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1282|1295|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1296|1313|isPlayerUsingItem|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isPlayerUsingItem|(Lnet/minecraft/entity/player/EntityPlayer;)Z
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1314|1332|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V|entitylivingbaseIn|1
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1358|1371|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1372|1395|getPlayerFlashIntensity|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getPlayerFlashIntensity|(Lnet/minecraft/entity/player/EntityPlayer;F)F
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1396|1414|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V|entitylivingbaseIn|1
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1415|1430|partialTickTime|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V|partialTickTime|2
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1464|1474|MathHelper|class|net.minecraft.util.math.MathHelper|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1475|1478|sin|method|net.minecraft.util.math.MathHelper|sin|(F)F
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1512|1522|MathHelper|class|net.minecraft.util.math.MathHelper|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1523|1528|clamp|method|net.minecraft.util.math.MathHelper|clamp|(FFF)F
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1702|1716|GlStateManager|class|net.minecraft.client.renderer.GlStateManager|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1717|1722|scale|method|net.minecraft.client.renderer.GlStateManager|scale|(FFF)V
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1753|1771|entitylivingbaseIn|param|com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic|preRenderCallback|(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V|entitylivingbaseIn|1
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1772|1777|world|field|net.minecraft.entity.Entity|world
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1778|1795|getTotalWorldTime|method|net.minecraft.world.World|getTotalWorldTime|()J
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1822|1836|GlStateManager|class|net.minecraft.client.renderer.GlStateManager|false
+      @|com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java|1837|1842|color|method|net.minecraft.client.renderer.GlStateManager|color|(FFF)V
+   Method End: preRenderCallback(Lnet/minecraft/client/renderer/entity/RenderPlayer;Lnet/minecraft/client/entity/AbstractClientPlayer;F)V
+Class End  : com.Hileb.as_a_creeper_hileb.handler.ExtraRenderPlayerStatic
+endProcessing "com/Hileb/as_a_creeper_hileb/handler/ExtraRenderPlayerStatic.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java" md5: 4d547afab240662f7777c49512c334bd
+@|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8|41|com.Hileb.as_a_creeper_hileb.item|package|com.Hileb.as_a_creeper_hileb.item|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|1743|1765|Mod.EventBusSubscriber|class|net.minecraftforge.fml.common.Mod.EventBusSubscriber|false
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|1780|1793|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|1802|1806|Item|class|net.minecraft.item.Item|false
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|1836|1843|RETURNS|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|RETURNS|
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2663|2676|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2663|2676|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2677|2681|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM|
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2686|2699|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+   Method Start: ItemSkullBoom()V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2716|2729|ItemSkullBoom|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ItemSkullBoom|()V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2760|2778|setUnlocalizedName|method|net.minecraft.item.Item|setUnlocalizedName|(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2802|2817|setRegistryName|method|net.minecraftforge.registries.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;)Lnet/minecraftforge/registries/IForgeRegistryEntry;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2836|2850|setCreativeTab|method|net.minecraft.item.Item|setCreativeTab|(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2851|2863|CreativeTabs|class|net.minecraft.creativetab.CreativeTabs|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2864|2869|TOOLS|field|net.minecraft.creativetab.CreativeTabs|TOOLS
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2881|2896|setMaxStackSize|method|net.minecraft.item.Item|setMaxStackSize|(I)Lnet/minecraft/item/Item;
+   Method End: ItemSkullBoom()V
+   Method Start: getMaxItemUseDuration(Lnet/minecraft/item/ItemStack;)I
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2974|2979|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getMaxItemUseDuration|(Lnet/minecraft/item/ItemStack;)I|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2917|2925|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2942|2963|getMaxItemUseDuration|method|net.minecraft.item.Item|getMaxItemUseDuration|(Lnet/minecraft/item/ItemStack;)I
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|2964|2973|ItemStack|class|net.minecraft.item.ItemStack|false
+   Method End: getMaxItemUseDuration(Lnet/minecraft/item/ItemStack;)I
+   Method Start: isCharged(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3057|3062|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3037|3046|isCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3047|3056|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3078|3083|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3084|3091|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3095|3099|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3104|3109|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3110|3117|isEmpty|method|net.minecraft.item.ItemStack|isEmpty|()Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3135|3149|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3154|3159|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3160|3174|getTagCompound|method|net.minecraft.item.ItemStack|getTagCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3213|3219|hasKey|method|net.minecraft.nbt.NBTTagCompound|hasKey|(Ljava/lang/String;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3269|3279|getBoolean|method|net.minecraft.nbt.NBTTagCompound|getBoolean|(Ljava/lang/String;)Z
+   Method End: isCharged(Lnet/minecraft/item/ItemStack;)Z
+   Method Start: charge(Lnet/minecraft/item/ItemStack;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3397|3402|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3380|3386|charge|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3387|3396|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3419|3424|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3425|3432|isEmpty|method|net.minecraft.item.ItemStack|isEmpty|()Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3455|3460|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3461|3475|getTagCompound|method|net.minecraft.item.ItemStack|getTagCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3484|3489|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3490|3504|setTagCompound|method|net.minecraft.item.ItemStack|setTagCompound|(Lnet/minecraft/nbt/NBTTagCompound;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3509|3523|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3541|3555|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3560|3565|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3566|3580|getTagCompound|method|net.minecraft.item.ItemStack|getTagCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3601|3611|setBoolean|method|net.minecraft.nbt.NBTTagCompound|setBoolean|(Ljava/lang/String;Z)V
+   Method End: charge(Lnet/minecraft/item/ItemStack;)V
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3674|3683|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3674|3683|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3684|3694|BASE_PROXY|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|BASE_PROXY|
+   @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3699|3708|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+   Anon Class Start: com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1
+      Method Start: canHandler(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3777|3782|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|stack|0
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3790|3797|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|worldIn|1
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3816|3828|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3723|3731|Override|class|java.lang.Override|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3756|3766|canHandler|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3767|3776|ItemStack|class|net.minecraft.item.ItemStack|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3784|3789|World|class|net.minecraft.world.World|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3799|3815|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+      Method End: canHandler(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+      Method Start: run(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3930|3935|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3943|3950|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3969|3981|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3881|3889|Override|class|java.lang.Override|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3906|3915|ItemStack|class|net.minecraft.item.ItemStack|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3916|3919|run|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3920|3929|ItemStack|class|net.minecraft.item.ItemStack|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3937|3942|World|class|net.minecraft.world.World|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|3952|3968|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4003|4010|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4011|4019|isRemote|field|net.minecraft.world.World|isRemote
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4054|4096|net.minecraftforge.event.ForgeEventFactory|class|net.minecraftforge.event.ForgeEventFactory|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4097|4116|getMobGriefingEvent|method|net.minecraftforge.event.ForgeEventFactory|getMobGriefingEvent|(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;)Z
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4117|4124|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4126|4138|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4176|4185|isCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4186|4191|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4254|4261|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4262|4277|createExplosion|method|net.minecraft.world.World|createExplosion|(Lnet/minecraft/entity/Entity;DDDFZ)Lnet/minecraft/world/Explosion;
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4278|4290|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4292|4304|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4305|4309|posX|field|net.minecraft.entity.Entity|posX
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4311|4323|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4324|4328|posY|field|net.minecraft.entity.Entity|posY
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4330|4342|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4343|4347|posZ|field|net.minecraft.entity.Entity|posZ
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4387|4399|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4411|4423|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4429|4441|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4442|4454|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4456|4468|capabilities|field|net.minecraft.entity.player.EntityPlayer|capabilities
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4469|4483|isCreativeMode|field|net.minecraft.entity.player.PlayerCapabilities|isCreativeMode
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4508|4513|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4514|4520|shrink|method|net.minecraft.item.ItemStack|shrink|(I)V
+         @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4579|4584|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      Method End: run(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+   Anon Class End: com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom$1
+   Method Start: onItemUseFinish(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4670|4675|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4683|4690|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4709|4721|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4613|4621|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4634|4643|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4644|4659|onItemUseFinish|method|net.minecraft.item.Item|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4660|4669|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4677|4682|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4692|4708|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4734|4755|AACHEvents.ProxyEvent|class|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4766|4787|AACHEvents.ProxyEvent|class|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4813|4827|MinecraftForge|class|net.minecraftforge.common.MinecraftForge|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4828|4837|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4838|4842|post|method|net.minecraftforge.fml.common.eventhandler.EventBus|post|(Lnet/minecraftforge/fml/common/eventhandler/Event;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4876|4881|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4896|4905|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4922|4928|proxys|field|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|proxys
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4958|4968|canHandler|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4969|4974|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4975|4982|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|4983|4995|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5033|5036|run|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5037|5042|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5043|5050|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5051|5063|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5108|5118|BASE_PROXY|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|BASE_PROXY
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5119|5122|run|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5123|5128|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5129|5136|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5137|5149|entityLiving|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemUseFinish|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+   Method End: onItemUseFinish(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+   Method Start: isPlayerUsingItem(Lnet/minecraft/entity/player/EntityPlayer;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5219|5225|player|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isPlayerUsingItem|(Lnet/minecraft/entity/player/EntityPlayer;)Z|player|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5188|5205|isPlayerUsingItem|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isPlayerUsingItem|(Lnet/minecraft/entity/player/EntityPlayer;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5206|5218|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5241|5247|player|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isPlayerUsingItem|(Lnet/minecraft/entity/player/EntityPlayer;)Z|player|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5248|5260|isHandActive|method|net.minecraft.entity.EntityLivingBase|isHandActive|()Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5278|5287|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5294|5300|player|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isPlayerUsingItem|(Lnet/minecraft/entity/player/EntityPlayer;)Z|player|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5301|5319|getActiveItemStack|method|net.minecraft.entity.EntityLivingBase|getActiveItemStack|()Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5340|5353|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5354|5358|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5366|5373|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+   Method End: isPlayerUsingItem(Lnet/minecraft/entity/player/EntityPlayer;)Z
+   Method Start: getPlayerFlashIntensity(Lnet/minecraft/entity/player/EntityPlayer;F)F
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5526|5532|player|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getPlayerFlashIntensity|(Lnet/minecraft/entity/player/EntityPlayer;F)F|player|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5539|5540|f|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getPlayerFlashIntensity|(Lnet/minecraft/entity/player/EntityPlayer;F)F|f|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5489|5512|getPlayerFlashIntensity|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getPlayerFlashIntensity|(Lnet/minecraft/entity/player/EntityPlayer;F)F
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5513|5525|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5565|5571|player|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getPlayerFlashIntensity|(Lnet/minecraft/entity/player/EntityPlayer;F)F|player|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5572|5589|getItemInUseCount|method|net.minecraft.entity.EntityLivingBase|getItemInUseCount|()I
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5592|5593|f|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getPlayerFlashIntensity|(Lnet/minecraft/entity/player/EntityPlayer;F)F|f|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5660|5667|RETURNS|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|RETURNS
+   Method End: getPlayerFlashIntensity(Lnet/minecraft/entity/player/EntityPlayer;F)F
+   Method Start: onItemRightClick(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5758|5765|worldIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|worldIn|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5780|5788|playerIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|playerIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5799|5805|handIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|handIn|2
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5690|5698|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5711|5723|ActionResult|class|net.minecraft.util.ActionResult|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5724|5733|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5735|5751|onItemRightClick|method|net.minecraft.item.Item|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5752|5757|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5767|5779|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5790|5798|EnumHand|class|net.minecraft.util.EnumHand|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5818|5827|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5840|5848|playerIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|playerIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5849|5860|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|(Lnet/minecraft/util/EnumHand;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5861|5867|handIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|handIn|2
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5879|5887|playerIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|playerIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5888|5901|setActiveHand|method|net.minecraft.entity.EntityLivingBase|setActiveHand|(Lnet/minecraft/util/EnumHand;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5902|5908|handIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|handIn|2
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5920|5928|playerIn|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onItemRightClick|(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;|playerIn|1
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5929|5938|playSound|method|net.minecraft.entity.Entity|playSound|(Lnet/minecraft/util/SoundEvent;FF)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5939|5950|SoundEvents|class|net.minecraft.init.SoundEvents|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|5951|5972|ENTITY_CREEPER_PRIMED|field|net.minecraft.init.SoundEvents|ENTITY_CREEPER_PRIMED
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6007|6019|ActionResult|class|net.minecraft.util.ActionResult|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6020|6029|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6031|6047|EnumActionResult|class|net.minecraft.util.EnumActionResult|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6048|6055|SUCCESS|field|net.minecraft.util.EnumActionResult|SUCCESS
+   Method End: onItemRightClick(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)Lnet/minecraft/util/ActionResult;
+   Method Start: hasEffect(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6161|6166|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|hasEffect|(Lnet/minecraft/item/ItemStack;)Z|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6084|6092|SideOnly|class|net.minecraftforge.fml.relauncher.SideOnly|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6093|6097|Side|class|net.minecraftforge.fml.relauncher.Side|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6098|6104|CLIENT|field|net.minecraftforge.fml.relauncher.Side|CLIENT
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6112|6120|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6141|6150|hasEffect|method|net.minecraft.item.Item|hasEffect|(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6151|6160|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6186|6195|isCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6196|6201|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|hasEffect|(Lnet/minecraft/item/ItemStack;)Z|stack|0
+   Method End: hasEffect(Lnet/minecraft/item/ItemStack;)Z
+   Method Start: getRarity(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6269|6274|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getRarity|(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6217|6225|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6238|6248|EnumRarity|class|net.minecraft.item.EnumRarity|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6249|6258|getRarity|method|net.minecraft.item.Item|getRarity|(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6259|6268|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6299|6304|stack|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|getRarity|(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6305|6316|getMetadata|method|net.minecraft.item.ItemStack|getMetadata|()I
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6326|6336|EnumRarity|class|net.minecraft.item.EnumRarity|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6337|6341|RARE|field|net.minecraft.item.EnumRarity|RARE
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6344|6354|EnumRarity|class|net.minecraft.item.EnumRarity|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6355|6359|EPIC|field|net.minecraft.item.EnumRarity|EPIC
+   Method End: getRarity(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;
+   Method Start: onRegister(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6487|6492|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onRegister|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6408|6422|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6447|6457|onRegister|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onRegister|(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6458|6480|RegistryEvent.Register|class|net.minecraftforge.event.RegistryEvent.Register|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6481|6485|Item|class|net.minecraft.item.Item|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6504|6509|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onRegister|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6510|6521|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6524|6532|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6533|6537|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+   Method End: onRegister(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+   Method Start: onRecipeRegister(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6641|6646|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onRecipeRegister|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6553|6567|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6592|6608|onRecipeRegister|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onRecipeRegister|(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6609|6631|RegistryEvent.Register|class|net.minecraftforge.event.RegistryEvent.Register|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6632|6639|IRecipe|class|net.minecraft.item.crafting.IRecipe|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6658|6663|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onRecipeRegister|(Lnet/minecraftforge/event/RegistryEvent$Register;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6664|6675|getRegistry|method|net.minecraftforge.event.RegistryEvent.Register|getRegistry|()Lnet/minecraftforge/registries/IForgeRegistry;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6678|6686|register|method|net.minecraftforge.registries.IForgeRegistry|register|(Lnet/minecraftforge/registries/IForgeRegistryEntry;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6691|6709|ShapelessOreRecipe|class|net.minecraftforge.oredict.ShapelessOreRecipe|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6732|6748|ResourceLocation|class|net.minecraft.util.ResourceLocation|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6749|6760|AACHModMain|class|com.Hileb.as_a_creeper_hileb.AACHModMain|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6761|6766|MODID|field|com.Hileb.as_a_creeper_hileb.AACHModMain|MODID
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6799|6808|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6809|6813|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6837|6846|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6847|6852|Items|class|net.minecraft.init.Items|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6853|6858|SKULL|field|net.minecraft.init.Items|SKULL
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6882|6888|Blocks|class|net.minecraft.init.Blocks|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6889|6892|TNT|field|net.minecraft.init.Blocks|TNT
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6904|6919|setRegistryName|method|net.minecraftforge.registries.IForgeRegistryEntry.Impl|setRegistryName|(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraftforge/registries/IForgeRegistryEntry;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6920|6931|AACHModMain|class|com.Hileb.as_a_creeper_hileb.AACHModMain|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6932|6939|VERSION|field|com.Hileb.as_a_creeper_hileb.AACHModMain|VERSION
+   Method End: onRecipeRegister(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+   Method Start: onModelRegister(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7067|7072|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onModelRegister|(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6965|6973|SideOnly|class|net.minecraftforge.fml.relauncher.SideOnly|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6974|6978|Side|class|net.minecraftforge.fml.relauncher.Side|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6979|6985|CLIENT|field|net.minecraftforge.fml.relauncher.Side|CLIENT
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|6993|7007|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7032|7047|onModelRegister|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onModelRegister|(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7048|7066|ModelRegistryEvent|class|net.minecraftforge.client.event.ModelRegistryEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7085|7096|ModelLoader|class|net.minecraftforge.client.model.ModelLoader|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7097|7127|setCustomModelResourceLocation|method|net.minecraftforge.client.model.ModelLoader|setCustomModelResourceLocation|(Lnet/minecraft/item/Item;ILnet/minecraft/client/renderer/block/model/ModelResourceLocation;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7128|7132|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7141|7162|ModelResourceLocation|class|net.minecraft.client.renderer.block.model.ModelResourceLocation|false
+   Method End: onModelRegister(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V
+   Method Start: onLightCharged(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7289|7294|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7219|7233|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7258|7272|onLightCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7273|7288|LivingHurtEvent|class|net.minecraftforge.event.entity.living.LivingHurtEvent|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7306|7311|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7318|7323|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7324|7333|getEntity|method|net.minecraftforge.event.entity.EntityEvent|getEntity|()Lnet/minecraft/entity/Entity;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7336|7341|world|field|net.minecraft.entity.Entity|world
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7363|7371|isRemote|field|net.minecraft.world.World|isRemote
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7391|7396|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7397|7406|getSource|method|net.minecraftforge.event.entity.living.LivingHurtEvent|getSource|()Lnet/minecraft/util/DamageSource;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7410|7424|LIGHTNING_BOLT|field|net.minecraft.util.DamageSource|LIGHTNING_BOLT
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7444|7460|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7468|7473|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7474|7489|getEntityLiving|method|net.minecraftforge.event.entity.living.LivingEvent|getEntityLiving|()Lnet/minecraft/entity/EntityLivingBase;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7532|7542|IInventory|class|net.minecraft.inventory.IInventory|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7566|7576|IInventory|class|net.minecraft.inventory.IInventory|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7582|7592|IInventory|class|net.minecraft.inventory.IInventory|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7641|7657|getSizeInventory|method|net.minecraft.inventory.IInventory|getSizeInventory|()I
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7691|7700|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7711|7725|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7765|7772|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7776|7780|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7785|7794|isCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7833|7839|charge|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7877|7882|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7883|7892|setAmount|method|net.minecraftforge.event.entity.living.LivingHurtEvent|setAmount|(F)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|7987|7997|EnumFacing|class|net.minecraft.util.EnumFacing|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8005|8015|EnumFacing|class|net.minecraft.util.EnumFacing|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8016|8022|values|method|net.minecraft.util.EnumFacing|values|()[Lnet/minecraft/util/EnumFacing;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8059|8072|hasCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|hasCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8073|8094|CapabilityItemHandler|class|net.minecraftforge.items.CapabilityItemHandler|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8095|8118|ITEM_HANDLER_CAPABILITY|field|net.minecraftforge.items.CapabilityItemHandler|ITEM_HANDLER_CAPABILITY
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8154|8166|IItemHandler|class|net.minecraftforge.items.IItemHandler|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8178|8191|getCapability|method|net.minecraftforge.common.capabilities.ICapabilityProvider|getCapability|(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8192|8213|CapabilityItemHandler|class|net.minecraftforge.items.CapabilityItemHandler|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8214|8237|ITEM_HANDLER_CAPABILITY|field|net.minecraftforge.items.CapabilityItemHandler|ITEM_HANDLER_CAPABILITY
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8291|8299|getSlots|method|net.minecraftforge.items.IItemHandler|getSlots|()I
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8337|8346|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8357|8371|getStackInSlot|method|net.minecraftforge.items.IItemHandler|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8415|8422|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8426|8430|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8435|8444|isCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8487|8493|charge|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8535|8540|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8541|8550|setAmount|method|net.minecraftforge.event.entity.living.LivingHurtEvent|setAmount|(F)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8694|8706|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8730|8742|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8751|8763|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8794|8804|IInventory|class|net.minecraft.inventory.IInventory|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8816|8825|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8866|8882|getSizeInventory|method|net.minecraft.inventory.IInventory|getSizeInventory|()I
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8916|8925|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8936|8950|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|8990|8997|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|9001|9005|ITEM|field|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|ITEM
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|9010|9019|isCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|9058|9064|charge|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|charge|(Lnet/minecraft/item/ItemStack;)V
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|9102|9107|event|param|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|onLightCharged|(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java|9108|9117|setAmount|method|net.minecraftforge.event.entity.living.LivingHurtEvent|setAmount|(F)V
+   Method End: onLightCharged(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V
+Class End  : com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom
+endProcessing "com/Hileb/as_a_creeper_hileb/item/ItemSkullBoom.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java" md5: 8629fe860680bc2f99bb43deeec91807
+@|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|8|57|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti|package|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF
+   @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|753|769|AACHInterfaceCCF|class|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|false
+   @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|778|787|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+   Method Start: init()V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|814|818|init|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|init|()V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|831|845|MinecraftForge|class|net.minecraftforge.common.MinecraftForge|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|846|855|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|856|864|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|869|885|AACHInterfaceCCF|class|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|false
+   Method End: init()V
+   Method Start: AACHInterfaceCCF()V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|909|925|AACHInterfaceCCF|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|AACHInterfaceCCF|()V
+   Method End: AACHInterfaceCCF()V
+   Method Start: onRegister(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents$ProxyEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1001|1006|event|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|onRegister|(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents$ProxyEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|936|950|SubscribeEvent|class|net.minecraftforge.fml.common.eventhandler.SubscribeEvent|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|968|978|onRegister|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|onRegister|(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents$ProxyEvent;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|979|1000|AACHEvents.ProxyEvent|class|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1018|1023|event|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|onRegister|(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents$ProxyEvent;)V|event|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1024|1032|register|method|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|register|(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy;)V
+   Method End: onRegister(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents$ProxyEvent;)V
+   Method Start: canHandler(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1105|1110|stack|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|stack|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1118|1125|worldIn|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1144|1156|entityLiving|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1055|1063|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1084|1094|canHandler|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1095|1104|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1112|1117|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1127|1143|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1176|1182|Loader|class|net.minecraftforge.fml.common.Loader|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1183|1194|isModLoaded|method|net.minecraftforge.fml.common.Loader|isModLoaded|(Ljava/lang/String;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1195|1206|ConfettiMod|class|com.sr2610.creeperconfetti.ConfettiMod|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1207|1213|MOD_ID|field|com.sr2610.creeperconfetti.ConfettiMod|MOD_ID
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1218|1230|entityLiving|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1242|1254|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+   Method End: canHandler(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+   Method Start: run(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1316|1321|stack|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1329|1336|worldIn|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1355|1367|entityLiving|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1271|1279|Override|class|java.lang.Override|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1292|1301|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1302|1305|run|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1306|1315|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1323|1328|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1338|1354|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1380|1399|OpenConfettiHandler|class|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1400|1419|creeperExplodeEvent|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1421|1433|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1434|1446|entityLiving|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1463|1470|worldIn|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1471|1479|isRemote|field|net.minecraft.world.World|isRemote
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1486|1498|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1499|1511|entityLiving|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1513|1525|capabilities|field|net.minecraft.entity.player.EntityPlayer|capabilities
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1526|1540|isCreativeMode|field|net.minecraft.entity.player.PlayerCapabilities|isCreativeMode
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1556|1561|stack|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1562|1568|shrink|method|net.minecraft.item.ItemStack|shrink|(I)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java|1600|1605|stack|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+   Method End: run(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+Class End  : com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.AACHInterfaceCCF
+endProcessing "com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/AACHInterfaceCCF.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java" md5: 420f9d4ad877aa0bbaf7dd83c26d4e8f
+@|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|8|57|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti|package|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler
+   @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|966|985|OpenConfettiHandler|class|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|false
+   Method Start: creeperExplodeEvent(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1047|1053|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1014|1033|creeperExplodeEvent|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1034|1046|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1070|1091|willExplodeToConfetti|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|willExplodeToConfetti|()Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1109|1114|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1121|1127|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1128|1133|world|field|net.minecraft.entity.Entity|world
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1154|1163|playSound|method|net.minecraft.world.World|playSound|(Lnet/minecraft/entity/player/EntityPlayer;DDDLnet/minecraft/util/SoundEvent;Lnet/minecraft/util/SoundCategory;FF)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1164|1170|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1171|1177|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1178|1182|posX|field|net.minecraft.entity.Entity|posX
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1183|1189|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1190|1194|posY|field|net.minecraft.entity.Entity|posY
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1195|1201|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1202|1206|posZ|field|net.minecraft.entity.Entity|posZ
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1207|1218|SoundEvents|class|net.minecraft.init.SoundEvents|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1219|1242|ENTITY_FIREWORK_TWINKLE|field|net.minecraft.init.SoundEvents|ENTITY_FIREWORK_TWINKLE
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1243|1256|SoundCategory|class|net.minecraft.util.SoundCategory|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1257|1263|BLOCKS|field|net.minecraft.util.SoundCategory|BLOCKS
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1285|1289|rand|field|net.minecraft.world.World|rand
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1290|1299|nextFloat|method|java.util.Random|nextFloat|()F
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1310|1314|rand|field|net.minecraft.world.World|rand
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1315|1324|nextFloat|method|java.util.Random|nextFloat|()F
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1368|1376|isRemote|field|net.minecraft.world.World|isRemote
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1397|1411|spawnParticles|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|spawnParticles|(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1412|1418|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1453|1466|ConfigHandler|class|com.sr2610.creeperconfetti.ConfigHandler|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1467|1481|damagesPlayers|field|com.sr2610.creeperconfetti.ConfigHandler|damagesPlayers
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1502|1515|damagePlayers|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1516|1522|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|creeperExplodeEvent|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+   Method End: creeperExplodeEvent(Lnet/minecraft/entity/player/EntityPlayer;)V
+   Method Start: willExplodeToConfetti()Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1588|1609|willExplodeToConfetti|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|willExplodeToConfetti|()Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1623|1629|Random|class|java.util.Random|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1641|1647|Random|class|java.util.Random|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1672|1679|nextInt|method|java.util.Random|nextInt|(I)I
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1687|1700|ConfigHandler|class|com.sr2610.creeperconfetti.ConfigHandler|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1701|1715|confettiChance|field|com.sr2610.creeperconfetti.ConfigHandler|confettiChance
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1719|1732|ConfigHandler|class|com.sr2610.creeperconfetti.ConfigHandler|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1733|1747|confettiChance|field|com.sr2610.creeperconfetti.ConfigHandler|confettiChance
+   Method End: willExplodeToConfetti()Z
+   Method Start: damagePlayers(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1814|1820|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1787|1800|damagePlayers|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1801|1813|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1833|1842|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1849|1855|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1856|1867|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|(Lnet/minecraft/util/EnumHand;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1868|1874|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1875|1888|getActiveHand|method|net.minecraft.entity.EntityLivingBase|getActiveHand|()Lnet/minecraft/util/EnumHand;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1928|1941|ItemSkullBoom|class|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1942|1951|isCharged|method|com.Hileb.as_a_creeper_hileb.item.ItemSkullBoom|isCharged|(Lnet/minecraft/item/ItemStack;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|1983|1992|Explosion|class|net.minecraft.world.Explosion|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2009|2018|Explosion|class|net.minecraft.world.Explosion|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2019|2025|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2026|2031|world|field|net.minecraft.entity.Entity|world
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2033|2039|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2040|2046|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2047|2051|posX|field|net.minecraft.entity.Entity|posX
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2053|2059|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2060|2064|posY|field|net.minecraft.entity.Entity|posY
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2066|2072|player|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|damagePlayers|(Lnet/minecraft/entity/player/EntityPlayer;)V|player|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2073|2077|posZ|field|net.minecraft.entity.Entity|posZ
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2139|2151|doExplosionA|method|net.minecraft.world.Explosion|doExplosionA|()V
+   Method End: damagePlayers(Lnet/minecraft/entity/player/EntityPlayer;)V
+   Method Start: spawnParticles(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2244|2251|creeper|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|spawnParticles|(Lnet/minecraft/entity/player/EntityPlayer;)V|creeper|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2170|2178|SideOnly|class|net.minecraftforge.fml.relauncher.SideOnly|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2179|2183|Side|class|net.minecraftforge.fml.relauncher.Side|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2184|2190|CLIENT|field|net.minecraftforge.fml.relauncher.Side|CLIENT
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2216|2230|spawnParticles|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|spawnParticles|(Lnet/minecraft/entity/player/EntityPlayer;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2231|2243|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2264|2273|Minecraft|class|net.minecraft.client.Minecraft|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2274|2286|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2289|2303|effectRenderer|field|net.minecraft.client.Minecraft|effectRenderer
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2304|2313|addEffect|method|net.minecraft.client.particle.ParticleManager|addEffect|(Lnet/minecraft/client/particle/Particle;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2318|2342|ParticleFirework.Starter|class|net.minecraft.client.particle.ParticleFirework.Starter|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2343|2350|creeper|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|spawnParticles|(Lnet/minecraft/entity/player/EntityPlayer;)V|creeper|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2351|2365|getEntityWorld|method|net.minecraft.command.ICommandSender|getEntityWorld|()Lnet/minecraft/world/World;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2369|2376|creeper|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|spawnParticles|(Lnet/minecraft/entity/player/EntityPlayer;)V|creeper|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2377|2381|posX|field|net.minecraft.entity.Entity|posX
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2383|2390|creeper|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|spawnParticles|(Lnet/minecraft/entity/player/EntityPlayer;)V|creeper|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2391|2395|posY|field|net.minecraft.entity.Entity|posY
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2403|2410|creeper|param|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|spawnParticles|(Lnet/minecraft/entity/player/EntityPlayer;)V|creeper|0
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2411|2415|posZ|field|net.minecraft.entity.Entity|posZ
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2432|2441|Minecraft|class|net.minecraft.client.Minecraft|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2442|2454|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2457|2471|effectRenderer|field|net.minecraft.client.Minecraft|effectRenderer
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2473|2484|generateTag|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|generateTag|()Lnet/minecraft/nbt/NBTTagCompound;
+   Method End: spawnParticles(Lnet/minecraft/entity/player/EntityPlayer;)V
+   Method Start: generateTag()Lnet/minecraft/nbt/NBTTagCompound;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2518|2532|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2533|2544|generateTag|method|com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler|generateTag|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2558|2572|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2591|2605|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2622|2636|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2649|2663|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2686|2700|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2717|2731|NBTTagCompound|class|net.minecraft.nbt.NBTTagCompound|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2744|2754|NBTTagList|class|net.minecraft.nbt.NBTTagList|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2772|2782|NBTTagList|class|net.minecraft.nbt.NBTTagList|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2799|2809|NBTTagList|class|net.minecraft.nbt.NBTTagList|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2822|2826|List|class|java.util.List|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2827|2834|Integer|class|java.lang.Integer|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2843|2848|Lists|class|com.google.common.collect.Lists|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2849|2861|newArrayList|method|com.google.common.collect.Lists|newArrayList|()Ljava/util/ArrayList;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2874|2880|Random|class|java.util.Random|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2892|2898|Random|class|java.util.Random|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2916|2919|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2920|2927|ItemDye|class|net.minecraft.item.ItemDye|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2928|2938|DYE_COLORS|field|net.minecraft.item.ItemDye|DYE_COLORS
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2958|2961|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2962|2969|ItemDye|class|net.minecraft.item.ItemDye|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|2970|2980|DYE_COLORS|field|net.minecraft.item.ItemDye|DYE_COLORS
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3001|3004|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3005|3012|ItemDye|class|net.minecraft.item.ItemDye|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3013|3023|DYE_COLORS|field|net.minecraft.item.ItemDye|DYE_COLORS
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3064|3071|nextInt|method|java.util.Random|nextInt|(I)I
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3105|3108|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3109|3116|ItemDye|class|net.minecraft.item.ItemDye|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3117|3127|DYE_COLORS|field|net.minecraft.item.ItemDye|DYE_COLORS
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3133|3140|nextInt|method|java.util.Random|nextInt|(I)I
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3199|3203|size|method|java.util.Collection|size|()I
+      Field: Array Length, skipping
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3288|3295|Integer|class|java.lang.Integer|false
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3301|3304|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3343|3354|setIntArray|method|net.minecraft.nbt.NBTTagCompound|setIntArray|(Ljava/lang/String;[I)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3396|3406|setBoolean|method|net.minecraft.nbt.NBTTagCompound|setBoolean|(Ljava/lang/String;Z)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3446|3453|setByte|method|net.minecraft.nbt.NBTTagCompound|setByte|(Ljava/lang/String;B)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3492|3501|appendTag|method|net.minecraft.nbt.NBTTagList|appendTag|(Lnet/minecraft/nbt/NBTBase;)V
+      @|com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java|3541|3547|setTag|method|net.minecraft.nbt.NBTTagCompound|setTag|(Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V
+   Method End: generateTag()Lnet/minecraft/nbt/NBTTagCompound;
+Class End  : com.Hileb.as_a_creeper_hileb.mods.creeperconfetti.OpenConfettiHandler
+endProcessing "com/Hileb/as_a_creeper_hileb/mods/creeperconfetti/OpenConfettiHandler.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java" md5: 1b5515e55232959bf4126014297671ab
+@|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|8|47|com.Hileb.as_a_creeper_hileb.mods.proxy|package|com.Hileb.as_a_creeper_hileb.mods.proxy|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents
+   @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|259|269|AACHEvents|class|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents|false
+   Class Start: com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|297|307|ProxyEvent|class|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|316|321|Event|class|net.minecraftforge.fml.common.eventhandler.Event|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|344|353|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|339|343|List|class|java.util.List|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|339|343|List|class|java.util.List|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|344|353|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|355|361|proxys|field|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|proxys|
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|366|375|ArrayList|class|java.util.ArrayList|false
+      Method Start: register(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy;)V
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|421|430|boomProxy|param|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|register|(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy;)V|boomProxy|0
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|402|410|register|method|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|register|(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy;)V
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|411|420|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|446|452|proxys|field|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|proxys
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|453|456|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|457|466|boomProxy|param|com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent|register|(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy;)V|boomProxy|0
+      Method End: register(Lcom/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy;)V
+      Method Start: isCancelable()Z
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|492|500|Override|class|java.lang.Override|false
+         @|com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java|525|537|isCancelable|method|net.minecraftforge.fml.common.eventhandler.Event|isCancelable|()Z
+      Method End: isCancelable()Z
+   Class End  : com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents.ProxyEvent
+Class End  : com.Hileb.as_a_creeper_hileb.mods.proxy.AACHEvents
+endProcessing "com/Hileb/as_a_creeper_hileb/mods/proxy/AACHEvents.java"
+
+startProcessing "com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java" md5: 283d0cf0e1c1dbae3c6fc40c59b071cd
+@|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|8|47|com.Hileb.as_a_creeper_hileb.mods.proxy|package|com.Hileb.as_a_creeper_hileb.mods.proxy|(file)
+Class Start: com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy
+   @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|325|334|BoomProxy|class|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|false
+   Method Start: canHandler(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|387|392|stack|param|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|stack|0
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|400|407|worldIn|param|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|426|438|entityLiving|param|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|366|376|canHandler|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|canHandler|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|377|386|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|394|399|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|409|425|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+   Method End: canHandler(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Z
+   Method Start: run(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|486|491|stack|param|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|stack|0
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|499|506|worldIn|param|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|worldIn|1
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|525|537|entityLiving|param|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;|entityLiving|2
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|462|471|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|472|475|run|method|com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy|run|(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|476|485|ItemStack|class|net.minecraft.item.ItemStack|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|493|498|World|class|net.minecraft.world.World|false
+      @|com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java|508|524|EntityLivingBase|class|net.minecraft.entity.EntityLivingBase|false
+   Method End: run(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;
+Class End  : com.Hileb.as_a_creeper_hileb.mods.proxy.BoomProxy
+endProcessing "com/Hileb/as_a_creeper_hileb/mods/proxy/BoomProxy.java"
+
