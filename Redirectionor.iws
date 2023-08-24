@@ -85,7 +85,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "project.structure.last.edited": "库",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.objectweb.asm.idea.plugin.config.PluginConfig"
   }
 }]]></component>
   <component name="RunManager" selected="应用程序.Minecraft Client">
@@ -110,9 +111,11 @@
       <Port>5050</Port>
     </configuration>
     <configuration name="Minecraft Client" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="GradleStart" />
-      <module name="Redirectionor_main" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
+      <module name="Redirectionor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -217,5 +220,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

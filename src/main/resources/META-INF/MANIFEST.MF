@@ -1,3 +1,2 @@
 Manifest-Version: 1.0
-FMLCorePlugin: com.Hileb.as_a_creeper_hileb.core.AACHMixinCore
-FMLCorePluginContainsFMLMod: true
+FMLCorePlugin: com.Hileb.teampotato.redirectionor.Redirectionor

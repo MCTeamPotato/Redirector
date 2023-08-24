@@ -1,11 +1,9 @@
 package com.Hileb.teampotato.redirectionor;
 
 import jdk.internal.org.objectweb.asm.ClassReader;
-import jdk.internal.org.objectweb.asm.tree.ClassNode;
-import jdk.internal.org.objectweb.asm.tree.MethodNode;
+import jdk.internal.org.objectweb.asm.Opcodes;
+import jdk.internal.org.objectweb.asm.tree.*;
 import net.minecraft.launchwrapper.IClassTransformer;
-
-import java.lang.reflect.Method;
 
 /**
  * @Project Redirectionor
@@ -13,10 +11,6 @@ import java.lang.reflect.Method;
  * @Date 2023/8/24 12:31
  **/
 public class RedirectionorTansformer implements IClassTransformer {
-    public static RedirectionorTansformer[] VALUESA;
-    public static RedirectionorTansformer[] values(){
-        return VALUESA;
-    }
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         ClassReader classReader=new ClassReader(basicClass);
@@ -26,9 +20,11 @@ public class RedirectionorTansformer implements IClassTransformer {
             for(MethodNode mn:cn.methods){
                 if ("values".equals(mn.name)){
                     if (mn.desc.contains("()")){
-                        mn.getClass();
-
-
+                        String classPath= classReader.getClassName();
+                        InsnList il=mn.instructions;
+                        il.clear();
+                        il.add(new FieldInsnNode(Opcodes.GETSTATIC,classPath,"$VALUES","[L"+classPath+";"));
+                        il.add(new InsnNode(Opcodes.RETURN));
 
                     }
                 }

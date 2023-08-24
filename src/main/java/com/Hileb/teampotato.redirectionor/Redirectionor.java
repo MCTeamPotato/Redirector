@@ -12,7 +12,7 @@ public class Redirectionor implements IFMLLoadingPlugin {
     @Override
     public String[] getASMTransformerClass() {
         return new String[]{
-                ""
+                "com.Hileb.teampotato.redirectionor.RedirectionorTansformer"
         };
     }
 
