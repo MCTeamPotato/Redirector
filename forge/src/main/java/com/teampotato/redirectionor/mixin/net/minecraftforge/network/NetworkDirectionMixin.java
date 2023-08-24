@@ -8,8 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(value = NetworkDirection.class, remap = false)
 public abstract class NetworkDirectionMixin {
-    @Unique
-  private static final NetworkDirection[] NETWORK_DIRECTIONS = NetworkDirection.values();
+    @Unique private static final NetworkDirection[] NETWORK_DIRECTIONS = NetworkDirection.values();
 
     @Redirect(method = "reply", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/network/NetworkDirection;values()[Lnet/minecraftforge/network/NetworkDirection;"))
     private NetworkDirection[] redirectNetworkDirectionValues() {

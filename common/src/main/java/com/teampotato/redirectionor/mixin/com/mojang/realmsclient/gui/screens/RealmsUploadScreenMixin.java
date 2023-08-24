@@ -10,8 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(value = RealmsUploadScreen.class, remap = false)
 public abstract class RealmsUploadScreenMixin {
-    @Unique
-  private static final Unit[] redirectionor$UNITS = Unit.values();
+    @Unique private static final Unit[] redirectionor$UNITS = Unit.values();
     @Dynamic
     @Redirect(method = {"method_22106", "m_90131_"}, at = @At(value = "INVOKE", target = "Lcom/mojang/realmsclient/Unit;values()[Lcom/mojang/realmsclient/Unit;"))
     private Unit[] redirectUnitValues() {

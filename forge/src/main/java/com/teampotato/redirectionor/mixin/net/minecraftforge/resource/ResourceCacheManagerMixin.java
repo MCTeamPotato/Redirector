@@ -10,8 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @SuppressWarnings("UnstableApiUsage")
 @Mixin(value = ResourceCacheManager.class, remap = false)
 public abstract class ResourceCacheManagerMixin {
-    @Unique
-  private static final PackType[] PACK_TYPES = PackType.values();
+    @Unique private static final PackType[] PACK_TYPES = PackType.values();
     @Redirect(method = "index", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/packs/PackType;values()[Lnet/minecraft/server/packs/PackType;"))
     private PackType[] redirectPackTypeValues() {
         return PACK_TYPES;

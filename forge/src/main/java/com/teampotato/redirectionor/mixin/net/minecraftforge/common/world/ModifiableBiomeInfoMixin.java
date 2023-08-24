@@ -9,8 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(value = ModifiableBiomeInfo.class, remap = false)
 public abstract class ModifiableBiomeInfoMixin {
-    @Unique
-  private static final BiomeModifier.Phase[] redirectionor$PHASES = BiomeModifier.Phase.values();
+    @Unique private static final BiomeModifier.Phase[] redirectionor$PHASES = BiomeModifier.Phase.values();
 
     @Redirect(method = "applyBiomeModifiers", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/common/world/BiomeModifier$Phase;values()[Lnet/minecraftforge/common/world/BiomeModifier$Phase;"))
     private BiomeModifier.Phase[] redirectBiomeModifierPhase() {

@@ -29,11 +29,7 @@ public abstract class ReportReasonMixin {
 
     static {
         for (ReportReason reportReason : ReportReason.values()) {
-            try {
-                REPORT_REASON_ID_MAP.put(reportReason.id, reportReason);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
+            REPORT_REASON_ID_MAP.put(reportReason.id, reportReason);
         }
     }
 }

@@ -29,13 +29,18 @@ public abstract class ChatFormattingMixin {
 
     static {
         for (ChatFormatting chatFormatting : CHAT_FORMATTINGS) {
-            if (chatFormatting.isColor()) COLORFUL_CHAT_FORMATTINGS.add(chatFormatting.getName());
-            if (chatFormatting.isFormat()) FANCY_CHAT_FORMATTINGS.add(chatFormatting.getName());
+            String name = chatFormatting.getName();
+            if (chatFormatting.isColor()) {
+                COLORFUL_CHAT_FORMATTINGS.add(name);
+                FANCY_AND_COLORFUL_CHAT_FORMATTINGS.add(name);
+            }
+            if (chatFormatting.isFormat()) {
+                FANCY_CHAT_FORMATTINGS.add(name);
+                FANCY_AND_COLORFUL_CHAT_FORMATTINGS.add(name);
+            }
             CHAT_FORMATTING_CODE_MAP.put(chatFormatting.getChar(), chatFormatting);
             CHAT_FORMATTING_ID_MAP.put(chatFormatting.getId(), chatFormatting);
         }
-        FANCY_AND_COLORFUL_CHAT_FORMATTINGS.addAll(COLORFUL_CHAT_FORMATTINGS);
-        FANCY_AND_COLORFUL_CHAT_FORMATTINGS.addAll(FANCY_CHAT_FORMATTINGS);
     }
 
     /**

@@ -13,6 +13,4 @@ public abstract class ModelBuilderMixin {
     private Direction[] redirectDirectionValues() {
         return Redirectionor.DIRECTIONS;
     }
-
-
 }
