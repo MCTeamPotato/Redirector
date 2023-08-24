@@ -124,5 +124,8 @@
     "net.minecraft.client.resources.sounds.SoundTypeMixin",
     "net.minecraft.client.tutorial.TutorialStepsMixin",
     "net.minecraft.compat.sodium.ItemRendererMixin"
-  ]
+  ],
+  "overwrites": {
+    "conformVisibility": true
+  }
 }
