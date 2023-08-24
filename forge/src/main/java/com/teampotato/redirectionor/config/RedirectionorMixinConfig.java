@@ -5,22 +5,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("CanBeFinal")
 public class RedirectionorMixinConfig {
     public static final Logger LOGGER = LogManager.getLogger("Redirectionor");
     private final Map<String, Option> options = new HashMap<>();
     public RedirectionorMixinConfig() {
-        this.addMixinRule("com.mojang.", true);
+        this.addMixinRule("com.mojang", true);
         this.addMixinRule("com.mojang.blaze3d.platform", true);
         this.addMixinRule("com.mojang.math", true);
         this.addMixinRule("com.mojang.realmsclient", true);
         this.addMixinRule("com.mojang.realmsclient.client", true);
         this.addMixinRule("com.mojang.realmsclient.gui.screens", true);
         this.addMixinRule("net.minecraft.advancements", true);
+        this.addMixinRule("net.minecraft", true);
         this.addMixinRule("net.minecraft.chat", true);
         this.addMixinRule("net.minecraft.client", true);
         this.addMixinRule("net.minecraft.client.gui", true);
@@ -177,9 +177,8 @@ public class RedirectionorMixinConfig {
             writer.write("# The following options can be enabled or disabled if there is a compatibility issue.\n");
             writer.write("# Add a line mixin.example_name=true/false without the # sign to enable/disable a rule.\n");
             writer.write("# All the mixins: \n");
-            for(String line : this.options.keySet()) {
-                writer.write("# " + line + "\n");
-            }
+            Set<String> options = this.options.keySet().stream().sorted().collect(Collectors.toCollection(LinkedHashSet::new));
+            for(String line : options) writer.write("# " + line + "\n");
             for (Map.Entry<Object, Object> entry : props.entrySet()) {
                 String key = (String) entry.getKey();
                 String value = (String) entry.getValue();

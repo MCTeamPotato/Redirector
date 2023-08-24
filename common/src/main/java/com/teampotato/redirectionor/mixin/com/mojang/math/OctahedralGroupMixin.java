@@ -10,8 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(value = OctahedralGroup.class, remap = false)
 public abstract class OctahedralGroupMixin {
-    @Unique
-  private static final Direction.Axis[] redirectionor$AXES = Direction.Axis.values();
+    @Unique private static final Direction.Axis[] redirectionor$AXES = Direction.Axis.values();
 
     @Redirect(method = "rotate(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction;values()[Lnet/minecraft/core/Direction;"))
     private Direction[] redirectDirectionValues() {

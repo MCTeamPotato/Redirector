@@ -1,17 +1,30 @@
 package com.teampotato.redirectionor.mixin.net.minecraft.world.entity.animal;
 
+import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.world.entity.animal.Panda;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.Overwrite;
+
+import java.util.Map;
 
 @Mixin(Panda.Gene.class)
 public abstract class PandaGeneMixin {
-    @Unique
-  private static final Panda.Gene[] PANDA_GENES = Panda.Gene.values();
-    @Redirect(method = "byName", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/animal/Panda$Gene;values()[Lnet/minecraft/world/entity/animal/Panda$Gene;"))
-    private static Panda.Gene[] redirectPandaGene() {
-        return PANDA_GENES;
+    /**
+     * @author Kasualix
+     * @reason use faster map impl
+     */
+    @Overwrite
+    public static Panda.Gene byName(String name) {
+        Panda.Gene gene = GENE_NAME_MAP.get(name);
+        if (gene == null) return Panda.Gene.NORMAL;
+        return gene;
+    }
+
+    private static final Map<String, Panda.Gene> GENE_NAME_MAP = new Object2ObjectOpenHashMap<>();
+
+    static {
+        for (Panda.Gene gene : Panda.Gene.values()) {
+            GENE_NAME_MAP.put(gene.getName(), gene);
+        }
     }
 }

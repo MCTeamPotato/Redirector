@@ -8,8 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(IOWorker.class)
 public abstract class IOWorkerMixin {
-    @Unique
-  private static final IOWorker.Priority[] redirectionor$PRIORITIES = IOWorker.Priority.values();
+    @Unique private static final IOWorker.Priority[] redirectionor$PRIORITIES = IOWorker.Priority.values();
     @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/chunk/storage/IOWorker$Priority;values()[Lnet/minecraft/world/level/chunk/storage/IOWorker$Priority;"))
     private IOWorker.Priority[] redirectIOWorkerPriority() {
         return redirectionor$PRIORITIES;

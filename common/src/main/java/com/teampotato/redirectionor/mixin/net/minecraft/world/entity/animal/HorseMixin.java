@@ -10,10 +10,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(Horse.class)
 public abstract class HorseMixin {
-    @Unique
-  private static final Variant[] redirectionor$VARIANTS = Variant.values();
-    @Unique
-  private static final Markings[] redirectionor$MARKINGS = Markings.values();
+    @Unique private static final Variant[] redirectionor$VARIANTS = Variant.values();
+    @Unique private static final Markings[] redirectionor$MARKINGS = Markings.values();
     @Redirect(method = {"getBreedOffspring", "finalizeSpawn"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/animal/horse/Variant;values()[Lnet/minecraft/world/entity/animal/horse/Variant;"))
     private Variant[] redirectVariant() {
         return redirectionor$VARIANTS;

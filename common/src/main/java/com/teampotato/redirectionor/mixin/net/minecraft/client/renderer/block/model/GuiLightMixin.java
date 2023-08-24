@@ -1,17 +1,29 @@
 package com.teampotato.redirectionor.mixin.net.minecraft.client.renderer.block.model;
 
+import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+
+import java.util.Map;
 
 @Mixin(BlockModel.GuiLight.class)
 public abstract class GuiLightMixin {
+    /**
+     * @author Kasualix
+     * @reason use faster map impl
+     */
+    @Overwrite
+    public static BlockModel.GuiLight getByName(String name) {
+        return GUI_LIGHT_NAME_MAP.get(name);
+    }
+
     @Unique
-    private static final BlockModel.GuiLight[] BLOCK_MODEL_GUI_LIGHTS = BlockModel.GuiLight.values();
-    @Redirect(method = "getByName", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/block/model/BlockModel$GuiLight;values()[Lnet/minecraft/client/renderer/block/model/BlockModel$GuiLight;"))
-    private static BlockModel.GuiLight[] redirectGuiLight() {
-        return BLOCK_MODEL_GUI_LIGHTS;
+    private static final Map<String, BlockModel.GuiLight> GUI_LIGHT_NAME_MAP = new Object2ObjectOpenHashMap<>();
+
+    static {
+        GUI_LIGHT_NAME_MAP.put("side", BlockModel.GuiLight.SIDE);
+        GUI_LIGHT_NAME_MAP.put("front", BlockModel.GuiLight.FRONT);
     }
 }

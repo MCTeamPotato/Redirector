@@ -14,13 +14,14 @@ public class RedirectionorMixinConfig {
     public static final Logger LOGGER = LogManager.getLogger("Redirectionor");
     private final Map<String, Option> options = new HashMap<>();
     public RedirectionorMixinConfig() {
-        this.addMixinRule("com.mojang.", true);
+        this.addMixinRule("com.mojang", true);
         this.addMixinRule("com.mojang.blaze3d.platform", true);
         this.addMixinRule("com.mojang.math", true);
         this.addMixinRule("com.mojang.realmsclient", true);
         this.addMixinRule("com.mojang.realmsclient.client", true);
         this.addMixinRule("com.mojang.realmsclient.gui.screens", true);
         this.addMixinRule("net.minecraft.advancements", true);
+        this.addMixinRule("net.minecraft", true);
         this.addMixinRule("net.minecraft.chat", true);
         this.addMixinRule("net.minecraft.client", true);
         this.addMixinRule("net.minecraft.client.gui", true);
