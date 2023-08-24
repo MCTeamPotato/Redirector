@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = ForgeHooks.class, remap = false)
 public abstract class ForgeHooksMixin {
     @Unique
-    static final PackType[] PACK_TYPES = PackType.values();
+  private static final PackType[] PACK_TYPES = PackType.values();
 
     @Redirect(method = "readTypedPackFormats", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/packs/PackType;values()[Lnet/minecraft/server/packs/PackType;"))
     private static PackType[] redirectPackTypeValues() {

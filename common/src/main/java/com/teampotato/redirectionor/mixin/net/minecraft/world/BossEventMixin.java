@@ -6,8 +6,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 public class BossEventMixin {
-    static final BossEvent.BossBarColor[] BOSS_EVENT_BOSS_BAR_COLORS = BossEvent.BossBarColor.values();
-    static final BossEvent.BossBarOverlay[] BOSS_EVENT_BOSS_BAR_OVERLAYS = BossEvent.BossBarOverlay.values();
+  private static final BossEvent.BossBarColor[] BOSS_EVENT_BOSS_BAR_COLORS = BossEvent.BossBarColor.values();
+  private static final BossEvent.BossBarOverlay[] BOSS_EVENT_BOSS_BAR_OVERLAYS = BossEvent.BossBarOverlay.values();
     @Mixin(BossEvent.BossBarColor.class)
     public abstract static class BossBarColorMixin {
         @Redirect(method = "byName", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/BossEvent$BossBarColor;values()[Lnet/minecraft/world/BossEvent$BossBarColor;"))

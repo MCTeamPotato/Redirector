@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(BlockAgeProcessor.class)
 public abstract class BlockAgeProcessorMixin {
     @Unique
-    static final Half[] redirectionor$HALVES = Half.values();
+  private static final Half[] redirectionor$HALVES = Half.values();
     @Redirect(method = "getRandomFacingStairs", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/properties/Half;values()[Lnet/minecraft/world/level/block/state/properties/Half;"))
     private static Half[] redirectHalf() {
         return redirectionor$HALVES;

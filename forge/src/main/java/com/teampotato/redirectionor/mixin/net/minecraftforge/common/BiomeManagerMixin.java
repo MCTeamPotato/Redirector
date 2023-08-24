@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = BiomeManager.class, remap = false)
 public abstract class BiomeManagerMixin {
     @Unique
-    static final BiomeManager.BiomeType[] BIOME_TYPES = BiomeManager.BiomeType.values();
+  private static final BiomeManager.BiomeType[] BIOME_TYPES = BiomeManager.BiomeType.values();
 
     @Redirect(method = "setupBiomes", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/common/BiomeManager$BiomeType;values()[Lnet/minecraftforge/common/BiomeManager$BiomeType;"))
     private static BiomeManager.BiomeType[] redirectBiomeManagerBiomeTypeValues() {

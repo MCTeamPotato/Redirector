@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(ScoreboardCommand.class)
 public abstract class ScoreboardCommandMixin {
     @Unique
-    static final ObjectiveCriteria.RenderType[] OBJECTIVE_CRITERIA_RENDER_TYPES = ObjectiveCriteria.RenderType.values();
+  private static final ObjectiveCriteria.RenderType[] OBJECTIVE_CRITERIA_RENDER_TYPES = ObjectiveCriteria.RenderType.values();
     @Redirect(method = "createRenderTypeModify", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/scores/criteria/ObjectiveCriteria$RenderType;values()[Lnet/minecraft/world/scores/criteria/ObjectiveCriteria$RenderType;"))
     private static ObjectiveCriteria.RenderType[] redirectObjectiveCriteriaRenderType() {
         return OBJECTIVE_CRITERIA_RENDER_TYPES;

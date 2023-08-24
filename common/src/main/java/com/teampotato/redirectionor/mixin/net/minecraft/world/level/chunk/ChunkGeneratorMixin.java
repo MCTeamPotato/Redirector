@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(ChunkGenerator.class)
 public abstract class ChunkGeneratorMixin {
     @Unique
-    static final GenerationStep.Decoration[] GENERATION_STEP_DECORATIONS = GenerationStep.Decoration.values();
+  private static final GenerationStep.Decoration[] GENERATION_STEP_DECORATIONS = GenerationStep.Decoration.values();
     @Redirect(method = "applyBiomeDecoration", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/levelgen/GenerationStep$Decoration;values()[Lnet/minecraft/world/level/levelgen/GenerationStep$Decoration;"))
     private GenerationStep.Decoration[] redirectGenerationStepDecoration() {
         return GENERATION_STEP_DECORATIONS;

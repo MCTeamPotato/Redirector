@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(BlockModelGenerators.class)
 public abstract class BlockModelGeneratorsMixin {
     @Unique
-    static final DripstoneThickness[] DRIPSTONE_THICKNESSES = DripstoneThickness.values();
+  private static final DripstoneThickness[] DRIPSTONE_THICKNESSES = DripstoneThickness.values();
     @Redirect(method = "createPointedDripstone", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/properties/DripstoneThickness;values()[Lnet/minecraft/world/level/block/state/properties/DripstoneThickness;"))
     private DripstoneThickness[] redirectDripstoneThickness() {
         return DRIPSTONE_THICKNESSES;

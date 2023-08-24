@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = ModListScreen.class, remap = false)
 public abstract class ModListScreenMixin {
     @Unique
-    static final ModListScreen.SortType[] SORT_TYPES = ModListScreen.SortType.values();
+  private static final ModListScreen.SortType[] SORT_TYPES = ModListScreen.SortType.values();
     @Redirect(method = "resortMods", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/client/gui/ModListScreen$SortType;values()[Lnet/minecraftforge/client/gui/ModListScreen$SortType;"))
     private ModListScreen.SortType[] redirectModListScreenSortType() {
         return SORT_TYPES;

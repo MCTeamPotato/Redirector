@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(StructureBlockEditScreen.class)
 public abstract class StructureBlockEditScreenMixin {
     @Unique
-    static final Mirror[] redirectionor$MIRRORS = Mirror.values();
+  private static final Mirror[] redirectionor$MIRRORS = Mirror.values();
     @Redirect(method = "init", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/Mirror;values()[Lnet/minecraft/world/level/block/Mirror;"))
     private Mirror[] redirectMirror() {
         return redirectionor$MIRRORS;

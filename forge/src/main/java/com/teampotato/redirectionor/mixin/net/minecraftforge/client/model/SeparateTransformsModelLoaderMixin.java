@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = SeparateTransformsModel.Loader.class, remap = false)
 public abstract class SeparateTransformsModelLoaderMixin {
     @Unique
-    static final ItemTransforms.TransformType[] TRANSFORM_TYPES = ItemTransforms.TransformType.values();
+  private static final ItemTransforms.TransformType[] TRANSFORM_TYPES = ItemTransforms.TransformType.values();
 
     @Redirect(method = "read(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraftforge/client/model/SeparateTransformsModel;", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/block/model/ItemTransforms$TransformType;values()[Lnet/minecraft/client/renderer/block/model/ItemTransforms$TransformType;"))
     private ItemTransforms.TransformType[] redirectTransformTypeValues() {
