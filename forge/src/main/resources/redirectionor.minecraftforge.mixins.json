@@ -27,5 +27,8 @@
     "items.wrapper.PlayerArmorInvWrapperMixin",
     "network.NetworkDirectionMixin",
     "resource.ResourceCacheManagerMixin"
-  ]
+  ],
+  "overwrites": {
+    "conformVisibility": true
+  }
 }
