@@ -7,6 +7,8 @@
   "plugin": "com.teampotato.redirectionor.mixin.RedirectionorMixinPlugin",
   "refmap": "redirectionor.refmap.json",
   "client": [
+    "client.model.geometry.UnbakedGeometryHelperMixin",
+    "client.settings.KeyMappingLookupMixin",
     "client.gui.ModListScreenMixin",
     "client.gui.overlay.GuiOverlayManagerMixin",
     "client.model.SeparateTransformsModelLoaderMixin",
@@ -14,8 +16,6 @@
     "client.model.generators.ModelBuilderMixin"
   ],
   "mixins": [
-    "client.model.geometry.UnbakedGeometryHelperMixin",
-    "client.settings.KeyMappingLookupMixin",
     "common.BiomeManagerMixin",
     "common.ForgeHooksMixin",
     "common.data.ForgeBlockTagsProviderMixin",

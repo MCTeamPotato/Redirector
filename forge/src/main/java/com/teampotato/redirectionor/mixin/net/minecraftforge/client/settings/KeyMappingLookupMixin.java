@@ -10,9 +10,10 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(value = KeyMappingLookup.class, remap = false)
 public abstract class KeyMappingLookupMixin {
     @Unique
-  private static final KeyModifier[] KEY_MODIFIERS = KeyModifier.values();
+    private static KeyModifier[] KEY_MODIFIERS = null;
     @Redirect(method = "<clinit>", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/client/settings/KeyModifier;values()[Lnet/minecraftforge/client/settings/KeyModifier;"))
     private static KeyModifier[] redirectKeyModifierValues() {
+        if (KEY_MODIFIERS == null) KEY_MODIFIERS = KeyModifier.values();
         return KEY_MODIFIERS;
     }
 }
