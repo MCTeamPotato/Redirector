@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c412b08-dacd-4106-a1a8-4acce10c7888" name="更改" comment="" />
+    <list default="true" id="9c412b08-dacd-4106-a1a8-4acce10c7888" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/workbench/1.6/Redirectionor.class.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workbench/1.6/RedirectionorTansformer.class.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workbench/1.7/Redirectionor.class.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workbench/1.7/RedirectionorTansformer.class.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redirectionor.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iws" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +90,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/project/MC MOD/UnusuallyProjectPack/github/Redirectionor/src/main/resources/META-INF",
+    "last_opened_file_path": "E:/project/MC MOD/UnusuallyProjectPack/github/tomato/Redirectionor/workbench/1.6",
     "project.structure.last.edited": "库",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -93,6 +99,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\workbench\1.6" />
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\workbench\1.7" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\Redirectionor\src\main\resources\META-INF" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\Redirectionor\src\main\java\com\Hileb\teampotato.redirectionor" />
     </key>
