@@ -1,0 +1,107 @@
+Unsupposrted library path: E:\project\MC MOD\UnusuallyProjectPack\github\Redirectionor\build\classes\java\api
+Unsupposrted library path: E:\project\MC MOD\UnusuallyProjectPack\github\Redirectionor\build\resources\api
+Symbol range map extraction starting
+Processing 2 files
+startProcessing "com/Hileb/teampotato.redirectionor/Redirectionor.java" md5: e1c7d2cee32b9cda14ea914e7e1083be
+@|com/Hileb/teampotato.redirectionor/Redirectionor.java|8|42|com.Hileb.teampotato.redirectionor|package|com.Hileb.teampotato.redirectionor|(file)
+Class Start: com.Hileb.teampotato.redirectionor.Redirectionor
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|373|395|IFMLLoadingPlugin.Name|class|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.Name|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|396|409|Redirectionor|class|com.Hileb.teampotato.redirectionor.Redirectionor|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|410|415|MODID|field|com.Hileb.teampotato.redirectionor.Redirectionor|MODID
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|431|444|Redirectionor|class|com.Hileb.teampotato.redirectionor.Redirectionor|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|456|473|IFMLLoadingPlugin|class|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|503|509|String|class|java.lang.String|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|503|509|String|class|java.lang.String|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|510|515|MODID|field|com.Hileb.teampotato.redirectionor.Redirectionor|MODID|
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|562|568|String|class|java.lang.String|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|562|568|String|class|java.lang.String|false
+   @|com/Hileb/teampotato.redirectionor/Redirectionor.java|569|585|TRANSFORMERCLASS|field|com.Hileb.teampotato.redirectionor.Redirectionor|TRANSFORMERCLASS|
+   Method Start: getASMTransformerClass()[Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|658|666|Override|class|java.lang.Override|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|679|685|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|688|710|getASMTransformerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getASMTransformerClass|()[Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|735|741|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|744|760|TRANSFORMERCLASS|field|com.Hileb.teampotato.redirectionor.Redirectionor|TRANSFORMERCLASS
+   Method End: getASMTransformerClass()[Ljava/lang/String;
+   Method Start: getModContainerClass()Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|778|786|Override|class|java.lang.Override|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|799|805|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|806|826|getModContainerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getModContainerClass|()Ljava/lang/String;
+   Method End: getModContainerClass()Ljava/lang/String;
+   Method Start: getSetupClass()Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|868|876|Nullable|class|javax.annotation.Nullable|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|883|891|Override|class|java.lang.Override|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|904|910|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|911|924|getSetupClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getSetupClass|()Ljava/lang/String;
+   Method End: getSetupClass()Ljava/lang/String;
+   Method Start: injectData(Ljava/util/Map;)V
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|1023|1027|data|param|com.Hileb.teampotato.redirectionor.Redirectionor|injectData|(Ljava/util/Map;)V|data|0
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|966|974|Override|class|java.lang.Override|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|992|1002|injectData|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|injectData|(Ljava/util/Map;)V
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|1003|1006|Map|class|java.util.Map|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|1007|1013|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|1015|1021|Object|class|java.lang.Object|false
+   Method End: injectData(Ljava/util/Map;)V
+   Method Start: getAccessTransformerClass()Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|1048|1056|Override|class|java.lang.Override|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|1069|1075|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/Redirectionor.java|1076|1101|getAccessTransformerClass|method|net.minecraftforge.fml.relauncher.IFMLLoadingPlugin|getAccessTransformerClass|()Ljava/lang/String;
+   Method End: getAccessTransformerClass()Ljava/lang/String;
+Class End  : com.Hileb.teampotato.redirectionor.Redirectionor
+endProcessing "com/Hileb/teampotato.redirectionor/Redirectionor.java"
+
+startProcessing "com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" md5: 6b93949b4114a28f392e41ca545f09e7
+@|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|8|42|com.Hileb.teampotato.redirectionor|package|com.Hileb.teampotato.redirectionor|(file)
+Class Start: com.Hileb.teampotato.redirectionor.RedirectionorTansformer
+   @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|346|369|RedirectionorTansformer|class|com.Hileb.teampotato.redirectionor.RedirectionorTansformer|false
+   @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|381|398|IClassTransformer|class|net.minecraft.launchwrapper.IClassTransformer|false
+   Method Start: transform(Ljava/lang/String;Ljava/lang/String;[B)[B
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|452|456|name|param|com.Hileb.teampotato.redirectionor.RedirectionorTansformer|transform|(Ljava/lang/String;Ljava/lang/String;[B)[B|name|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|465|480|transformedName|param|com.Hileb.teampotato.redirectionor.RedirectionorTansformer|transform|(Ljava/lang/String;Ljava/lang/String;[B)[B|transformedName|1
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|489|499|basicClass|param|com.Hileb.teampotato.redirectionor.RedirectionorTansformer|transform|(Ljava/lang/String;Ljava/lang/String;[B)[B|basicClass|2
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|407|415|Override|class|java.lang.Override|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|435|444|transform|method|net.minecraft.launchwrapper.IClassTransformer|transform|(Ljava/lang/String;Ljava/lang/String;[B)[B
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|445|451|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|458|464|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|512|523|ClassReader|class|org.objectweb.asm.ClassReader|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|540|551|ClassReader|class|org.objectweb.asm.ClassReader|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|552|562|basicClass|param|com.Hileb.teampotato.redirectionor.RedirectionorTansformer|transform|(Ljava/lang/String;Ljava/lang/String;[B)[B|basicClass|2
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|595|601|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|614|626|getSuperName|method|org.objectweb.asm.ClassReader|getSuperName|()Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|645|654|ClassNode|class|org.objectweb.asm.tree.ClassNode|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|662|671|ClassNode|class|org.objectweb.asm.tree.ClassNode|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|700|706|accept|method|org.objectweb.asm.ClassReader|accept|(Lorg/objectweb/asm/ClassVisitor;I)V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|731|741|MethodNode|class|org.objectweb.asm.tree.MethodNode|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|748|755|methods|field|org.objectweb.asm.tree.ClassNode|methods
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|788|794|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|798|802|name|field|org.objectweb.asm.tree.MethodNode|name
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|834|838|desc|field|org.objectweb.asm.tree.MethodNode|desc
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|839|847|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|881|887|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|911|923|getClassName|method|org.objectweb.asm.ClassReader|getClassName|()Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|952|958|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1695|1703|InsnList|class|org.objectweb.asm.tree.InsnList|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1710|1722|instructions|field|org.objectweb.asm.tree.MethodNode|instructions
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1752|1757|clear|method|org.objectweb.asm.tree.InsnList|clear|()V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1789|1792|add|method|org.objectweb.asm.tree.InsnList|add|(Lorg/objectweb/asm/tree/AbstractInsnNode;)V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1797|1810|FieldInsnNode|class|org.objectweb.asm.tree.FieldInsnNode|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1811|1818|Opcodes|class|org.objectweb.asm.Opcodes|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1819|1828|GETSTATIC|field|org.objectweb.asm.Opcodes|GETSTATIC
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1889|1892|add|method|org.objectweb.asm.tree.InsnList|add|(Lorg/objectweb/asm/tree/AbstractInsnNode;)V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1897|1905|InsnNode|class|org.objectweb.asm.tree.InsnNode|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1906|1913|Opcodes|class|org.objectweb.asm.Opcodes|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1914|1921|ARETURN|field|org.objectweb.asm.Opcodes|ARETURN
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1952|1958|System|class|java.lang.System|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1959|1962|out|field|java.lang.System|out
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|1963|1970|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|2065|2076|ClassWriter|class|org.objectweb.asm.ClassWriter|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|2093|2104|ClassWriter|class|org.objectweb.asm.ClassWriter|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|2117|2128|ClassWriter|class|org.objectweb.asm.ClassWriter|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|2129|2141|COMPUTE_MAXS|field|org.objectweb.asm.ClassWriter|COMPUTE_MAXS
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|2160|2166|accept|method|org.objectweb.asm.tree.ClassNode|accept|(Lorg/objectweb/asm/ClassVisitor;)V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|2213|2224|toByteArray|method|org.objectweb.asm.ClassWriter|toByteArray|()[B
+      @|com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java|2257|2267|basicClass|param|com.Hileb.teampotato.redirectionor.RedirectionorTansformer|transform|(Ljava/lang/String;Ljava/lang/String;[B)[B|basicClass|2
+   Method End: transform(Ljava/lang/String;Ljava/lang/String;[B)[B
+Class End  : com.Hileb.teampotato.redirectionor.RedirectionorTansformer
+endProcessing "com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java"
+
