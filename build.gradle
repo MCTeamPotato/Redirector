@@ -28,9 +28,9 @@ if (useMirror) apply from: "mirror.gradle"
 apply plugin: "net.minecraftforge.gradle.forge"
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-version = "1.0.0-1.12.2"
+version = "1.12.2-1.8.8"
 group = "com.ideallandframework.silent_assassin" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "as_a_creeper_hileb"
+archivesBaseName = "redirectionor"
 
 sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
 compileJava {
@@ -103,8 +103,7 @@ jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
         attributes([
-                "FMLCorePlugin": "com.Hileb.as_a_creeper_hileb.core.AACHMixinCore",
-                "FMLCorePluginContainsFMLMod": true
+                "FMLCorePlugin": "com.Hileb.teampotato.redirectionor.Redirectionor"
         ])
     }
 }

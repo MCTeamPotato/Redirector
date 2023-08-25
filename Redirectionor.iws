@@ -54,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -83,12 +84,19 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "E:/project/MC MOD/UnusuallyProjectPack/github/Redirectionor/src/main/resources/META-INF",
     "project.structure.last.edited": "库",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "org.objectweb.asm.idea.plugin.config.PluginConfig"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\Redirectionor\src\main\resources\META-INF" />
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\Redirectionor\src\main\java\com\Hileb\teampotato.redirectionor" />
+    </key>
+  </component>
   <component name="RunManager" selected="应用程序.Minecraft Client">
     <configuration default="true" factoryName="Applet" type="Applet">
       <module name="" />
