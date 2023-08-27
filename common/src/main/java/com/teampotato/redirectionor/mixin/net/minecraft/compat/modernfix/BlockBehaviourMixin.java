@@ -9,10 +9,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(targets = "net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase$Cache")
 public abstract class BlockBehaviourMixin {
-    @Unique
-  private static final Direction.Axis[] redirectionor$AXES = Direction.Axis.values();
-    @Unique
-  private static final SupportType[] SUPPORT_TYPES = SupportType.values();
+    @Unique private static final Direction.Axis[] redirectionor$AXES = Direction.Axis.values();
+    @Unique private static final SupportType[] SUPPORT_TYPES = SupportType.values();
     @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/Direction$Axis;values()[Lnet/minecraft/core/Direction$Axis;"))
     private Direction.Axis[] redirectDirection() {
         return redirectionor$AXES;

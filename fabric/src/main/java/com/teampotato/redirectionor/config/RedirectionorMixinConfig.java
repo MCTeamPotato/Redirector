@@ -71,7 +71,6 @@ public class RedirectionorMixinConfig {
         this.addMixinRule("net.minecraft.world.level", true);
         this.addMixinRule("net.minecraft.world.level.block", true);
         this.addMixinRule("net.minecraft.world.level.block.entity", true);
-        this.addMixinRule("net.minecraft.world.level.block.piston", isNotLoaded("canary") && isNotLoaded("roadrunner"));
         this.addMixinRule("net.minecraft.world.level.block.state.pattern", true);
         this.addMixinRule("net.minecraft.world.level.chunk", true);
         this.addMixinRule("net.minecraft.world.level.chunk.storage", true);
@@ -91,7 +90,7 @@ public class RedirectionorMixinConfig {
     }
 
     private static boolean isNotLoaded(String modID) {
-        return FabricLoader.getInstance().isModLoaded(modID);
+        return !FabricLoader.getInstance().isModLoaded(modID);
     }
 
     private void addMixinRule(String mixin, boolean applicable) {
