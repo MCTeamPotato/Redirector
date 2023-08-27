@@ -1,0 +1,18 @@
+accessWidener   v2  named
+
+accessible class net/minecraft/client/gui/screens/advancements/AdvancementTabType
+accessible class net/minecraft/world/entity/monster/SpellcasterIllager$IllagerSpell
+accessible class net/minecraft/world/level/chunk/storage/IOWorker$Priority
+accessible class net/minecraft/world/level/levelgen/DensityFunctions$TwoArgumentSimpleFunction
+accessible class net/minecraft/world/level/levelgen/DensityFunctions$Marker
+accessible class net/minecraft/world/level/levelgen/DensityFunctions$Marker$Type
+accessible class net/minecraft/world/level/levelgen/DensityFunctions$Mapped
+accessible class net/minecraft/world/level/levelgen/DensityFunctions$Mapped$Type
+accessible class net/minecraft/world/level/levelgen/OreVeinifier$VeinType
+accessible class com/mojang/realmsclient/client/Ping$Region
+accessible class net/minecraftforge/client/gui/ModListScreen$SortType
+accessible field net/minecraft/world/level/storage/loot/LootContext$EntityTarget name Ljava/lang/String;
+accessible field net/minecraft/world/level/storage/loot/functions/CopyNbtFunction$MergeStrategy name Ljava/lang/String;
+accessible field net/minecraft/world/entity/monster/SpellcasterIllager$IllagerSpell id I
+accessible field net/minecraft/client/resources/sounds/Sound$Type name Ljava/lang/String;
+accessible field net/minecraft/client/renderer/block/model/BlockModel$GuiLight name Ljava/lang/String;

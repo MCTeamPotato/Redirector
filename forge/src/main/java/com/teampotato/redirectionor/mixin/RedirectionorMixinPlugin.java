@@ -16,15 +16,18 @@ public class RedirectionorMixinPlugin implements IMixinConfigPlugin {
     private static final String MIXIN_PACKAGE_ROOT = "com.teampotato.redirectionor.mixin.";
     public static RedirectionorMixinConfig config;
     public static RedirectionorMixinPlugin instance;
+    private static boolean loaded = false;
 
     public RedirectionorMixinPlugin() {
         instance = this;
         this.onLoad(MIXIN_PACKAGE_ROOT);
+        if (loaded) return;
         LOGGER.info("Loaded configuration file for Redirectionor: {} options available, {} override(s) found", config.getOptionCount(), config.getOptionOverrideCount());
         LOGGER.warn("Redirectionor is going to load.");
         LOGGER.warn("It's possible that you will see some mixin applying failures or skipping in this log");
         LOGGER.warn("But you don't really need to care much about them as they're normal things existing for the best compatibility.");
         LOGGER.warn("If you encounter any problem, report it in my issue tracker: https://github.com/MCTeamPotato/Kasualix-Issue-Tracker/issues");
+        loaded = true;
     }
 
     @Override

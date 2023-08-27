@@ -19,7 +19,7 @@
     ]
   },
   "mixins": [
-    "redirectionor-common.mixins.json"
+    "redirectionor.mixins.json"
   ],
   "depends": {
     "fabric": "*",
