@@ -42,9 +42,8 @@ public abstract class EquipmentSlotMixin {
      */
     @Overwrite
     public static EquipmentSlot byTypeAndIndex(EquipmentSlot.Type slotType, int slotIndex) {
-        EquipmentSlot byType = EQUIPMENT_SLOT_TYPE_MAP.get(slotType);
-        EquipmentSlot byIndex = EQUIPMENT_SLOT_INDEX_MAP.get(slotIndex);
-        if (byType != byIndex) throw new IllegalArgumentException("Invalid slot '" + slotType + "': " + slotIndex);
-        return byIndex;
+        EquipmentSlot equipmentSlot = EQUIPMENT_SLOT_TYPE_MAP.get(slotType);
+        if (equipmentSlot != null && equipmentSlot.getIndex() == slotIndex) return equipmentSlot;
+        throw new IllegalArgumentException("Invalid slot '" + slotType + "': " + slotIndex);
     }
 }
