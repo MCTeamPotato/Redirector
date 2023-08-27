@@ -8,13 +8,15 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+    accessWidenerPath = file("src/main/resources/redirectionor.accesswidener")
     forge {
-        convertAccessWideners = true
-        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
-
-        mixinConfig "redirectionor-common.mixins.json"
+        convertAccessWideners.set(true)
+        mixinConfigs = [
+                "redirectionor.mixins.json",
+                "redirectionor.minecraftforge.mixins.json"
+        ]
     }
+    mixin.defaultRefmapName.set("redirectionor.minecraftforge.refmap.json")
 }
 
 configurations {
@@ -41,7 +43,6 @@ processResources {
 
 shadowJar {
     exclude "fabric.mod.json"
-    exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
     classifier "forge-dev-shadow"
@@ -61,15 +62,4 @@ components.java {
     withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
         skip()
     }
-}
-
-publishing {
-    publications {
-        mavenForge(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
-            from components.java
-        }
-    }
-
-    repositories {}
 }
