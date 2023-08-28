@@ -1,22 +1,3 @@
-/*
- * A Gradle plugin for the creation of Minecraft mods and MinecraftForge plugins.
- * Copyright (C) 2013-2019 Minecraft Forge
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301
- * USA
- */
 package net.minecraftforge.gradle.tweakers;
 
 import java.io.File;
@@ -28,7 +9,7 @@ import java.util.Map;
 import net.minecraft.launchwrapper.ITweaker;
 import net.minecraft.launchwrapper.Launch;
 import net.minecraft.launchwrapper.LaunchClassLoader;
-import net.minecraftforge.gradle.GradleForgeHacks;
+import net.minecraftforge.gradle.GradleStartCommon;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -37,20 +18,25 @@ import org.apache.logging.log4j.Logger;
 public class CoremodTweaker implements ITweaker
 {
     protected static final Logger LOGGER             = LogManager.getLogger("GradleStart");
-    private static final String   COREMOD_CLASS      = "net.minecraftforge.fml.relauncher.CoreModManager";
+    private static final String   COREMOD_CLASS      = "fml.relauncher.CoreModManager";
     private static final String   TWEAKER_SORT_FIELD = "tweakSorting";
 
     @Override
+    public void acceptOptions(List<String> args, File gameDir, File assetsDir, String profile)
+    {
+    }
+
     @SuppressWarnings("unchecked")
+    @Override
     public void injectIntoClassLoader(LaunchClassLoader classLoader)
     {
         try
         {
-            Field coreModList = Class.forName("net.minecraftforge.fml.relauncher.CoreModManager", true, classLoader).getDeclaredField("loadPlugins");
+            Field coreModList = GradleStartCommon.getFmlClass("fml.relauncher.CoreModManager", classLoader).getDeclaredField("loadPlugins");
             coreModList.setAccessible(true);
 
             // grab constructor.
-            Class<ITweaker> clazz = (Class<ITweaker>) Class.forName("net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper", true, classLoader);
+            Class<ITweaker> clazz = (Class<ITweaker>) GradleStartCommon.getFmlClass("fml.relauncher.CoreModManager$FMLPluginWrapper", classLoader);
             Constructor<ITweaker> construct = (Constructor<ITweaker>) clazz.getConstructors()[0];
             construct.setAccessible(true);
 
@@ -72,7 +58,7 @@ public class CoremodTweaker implements ITweaker
                 {
                     Object coreMod = pluginField.get(tweaker);
                     Object oldFile = fileField.get(tweaker);
-                    File newFile = GradleForgeHacks.coreMap.get(coreMod.getClass().getCanonicalName());
+                    File newFile = GradleStartCommon.coreMap.get(coreMod.getClass().getCanonicalName());
 
                     LOGGER.info("Injecting location in coremod {}", coreMod.getClass().getCanonicalName());
 
@@ -103,7 +89,7 @@ public class CoremodTweaker implements ITweaker
         // make sure its after the deobf tweaker
         try
         {
-            Field f = Class.forName(COREMOD_CLASS, true, classLoader).getDeclaredField(TWEAKER_SORT_FIELD);
+            Field f = GradleStartCommon.getFmlClass(COREMOD_CLASS, classLoader).getDeclaredField(TWEAKER_SORT_FIELD);
             f.setAccessible(true);
             ((Map<String, Integer>) f.get(null)).put(atTweaker, Integer.valueOf(1001));
         }
@@ -114,8 +100,17 @@ public class CoremodTweaker implements ITweaker
         }
     }
 
-    //@formatter:off
-    @Override public String getLaunchTarget() { return null;}
-    @Override public String[] getLaunchArguments() { return new String[0]; }
-    @Override public void acceptOptions(List<String> args, File gameDir, File assetsDir, String profile) { }
+    @Override
+    public String getLaunchTarget()
+    {
+        // if it gets here... something went terribly wrong..
+        return null;
+    }
+
+    @Override
+    public String[] getLaunchArguments()
+    {
+        // if it gets here... something went terribly wrong.
+        return new String[0];
+    }
 }

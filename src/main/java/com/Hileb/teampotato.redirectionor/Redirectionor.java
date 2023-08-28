@@ -1,10 +1,12 @@
 package com.Hileb.teampotato.redirectionor;
 
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+
+import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 
 import javax.annotation.Nullable;
 import java.util.Map;
 
+@IFMLLoadingPlugin.MCVersion("1.7.10")
 @IFMLLoadingPlugin.Name(Redirectionor.MODID)
 public class Redirectionor implements IFMLLoadingPlugin {
 
