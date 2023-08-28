@@ -12,18 +12,19 @@ import org.objectweb.asm.tree.*;
  * @Date 2023/8/24 12:31
  **/
 public class RedirectionorTansformer implements IClassTransformer {
-    boolean isDeBug=false;
+    boolean isDeBug=true;
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
-        ClassReader classReader=new ClassReader(basicClass);
-        if ("java/lang/Enum".equals(classReader.getSuperName())){
-            ClassNode cn=new ClassNode();
-            classReader.accept(cn,0);
-            for(MethodNode mn:cn.methods){
-                if ("values".equals(mn.name)){
-                    if (mn.desc.contains("()")){
-                        String classPath= classReader.getClassName();
-                        String typeName="[L"+classPath+";";
+        try{
+            ClassReader classReader=new ClassReader(basicClass);
+            if ("java/lang/Enum".equals(classReader.getSuperName())){
+                ClassNode cn=new ClassNode();
+                classReader.accept(cn,0);
+                for(MethodNode mn:cn.methods){
+                    if ("values".equals(mn.name)){
+                        if (mn.desc.contains("()")){
+                            String classPath= classReader.getClassName();
+                            String typeName="[L"+classPath+";";
                         /*
                         value function:
 
@@ -38,20 +39,22 @@ public class RedirectionorTansformer implements IClassTransformer {
                         MAXSTACK = 1
                         MAXLOCALS = 0
                         * */
-                        InsnList il=mn.instructions;
-                        il.clear();
-                        il.add(new FieldInsnNode(Opcodes.GETSTATIC,classPath,"$VALUES",typeName));
-                        il.add(new InsnNode(Opcodes.ARETURN));
+                            InsnList il=mn.instructions;
+                            il.clear();
+                            il.add(new FieldInsnNode(Opcodes.GETSTATIC,classPath,"$VALUES",typeName));
+                            il.add(new InsnNode(Opcodes.ARETURN));
 
-                        if (isDeBug)System.out.println("Redirect "+classPath);
+                            if (isDeBug)System.out.println("Redirect "+classPath);
+                        }
                     }
                 }
+                ClassWriter classWriter=new ClassWriter(classReader,ClassWriter.COMPUTE_MAXS);
+                cn.accept(classWriter);
+                return classWriter.toByteArray();
             }
-            ClassWriter classWriter=new ClassWriter(classReader,ClassWriter.COMPUTE_MAXS);
-            cn.accept(classWriter);
-            return classWriter.toByteArray();
+        }catch (Exception ignore){
+            return basicClass;
         }
-
         return basicClass;
     }
 }
