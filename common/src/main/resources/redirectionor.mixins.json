@@ -9,7 +9,6 @@
   "mixins": [
     "com.mojang.math.OctahedralGroupMixin",
     "net.minecraft.advancements.FrameTypeMixin",
-    "net.minecraft.chat.ChatFormattingMixin",
     "net.minecraft.commands.arguments.selector.options.EntitySelectorOptionsMixin",
     "net.minecraft.compat.lithium.LivingEntityMixin",
     "net.minecraft.compat.lithium.PistonBaseBlockMixin",
@@ -77,6 +76,7 @@
     "net.minecraft.world.level.TickPriorityMixin"
   ],
   "client": [
+    "net.minecraft.chat.ChatFormattingMixin",
     "com.mojang.blaze3d.platform.InputConstantsMixin",
     "com.mojang.realmsclient.client.PingMixin",
     "com.mojang.realmsclient.gui.screens.RealmsUploadScreenMixin",
