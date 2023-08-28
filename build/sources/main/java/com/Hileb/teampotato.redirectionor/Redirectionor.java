@@ -1,14 +1,8 @@
 package com.Hileb.teampotato.redirectionor;
 
-import net.minecraft.launchwrapper.ITweaker;
-import net.minecraft.launchwrapper.LaunchClassLoader;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 import javax.annotation.Nullable;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 @IFMLLoadingPlugin.Name(Redirectionor.MODID)
@@ -26,7 +20,7 @@ public class Redirectionor implements IFMLLoadingPlugin {
 
     @Override
     public String getModContainerClass() {
-        return null;
+        return "com.Hileb.teampotato.redirectionor.RedirectionorContainer";
     }
 
     @Nullable

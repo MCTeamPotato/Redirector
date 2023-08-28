@@ -1,10 +1,10 @@
 package com.Hileb.teampotato.redirectionor;
 
+import net.minecraft.launchwrapper.IClassTransformer;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.*;
-import net.minecraft.launchwrapper.IClassTransformer;
 
 /**
  * @Project Redirectionor
@@ -12,6 +12,7 @@ import net.minecraft.launchwrapper.IClassTransformer;
  * @Date 2023/8/24 12:31
  **/
 public class RedirectionorTansformer implements IClassTransformer {
+    boolean isDeBug=false;
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         ClassReader classReader=new ClassReader(basicClass);
@@ -42,7 +43,7 @@ public class RedirectionorTansformer implements IClassTransformer {
                         il.add(new FieldInsnNode(Opcodes.GETSTATIC,classPath,"$VALUES",typeName));
                         il.add(new InsnNode(Opcodes.ARETURN));
 
-                        System.out.println("Redirect "+classPath);
+                        if (isDeBug)System.out.println("Redirect "+classPath);
                     }
                 }
             }
