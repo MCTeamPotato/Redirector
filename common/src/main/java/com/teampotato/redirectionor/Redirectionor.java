@@ -7,7 +7,6 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.player.PlayerModelPart;
 import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.GameType;
@@ -20,7 +19,6 @@ import net.minecraft.world.level.pathfinder.BlockPathTypes;
 public class Redirectionor {
     public static final InteractionHand[] INTERACTION_HANDS = InteractionHand.values();
     public static final SoundSource[] SOUND_SOURCES = SoundSource.values();
-    public static final PlayerModelPart[] PLAYER_MODEL_PARTS = PlayerModelPart.values();
     public static final Heightmap.Types[] HEIGHTMAP_TYPES = Heightmap.Types.values();
     public static final MobCategory[] MOB_CATEGORIES = MobCategory.values();
     public static final Difficulty[] DIFFICULTIES = Difficulty.values();
