@@ -1,5 +1,6 @@
 package com.Hileb.teampotato.redirectionor;
 
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.launchwrapper.IClassTransformer;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
@@ -12,43 +13,31 @@ import org.objectweb.asm.tree.*;
  * @Date 2023/8/24 12:31
  **/
 public class RedirectionorTansformer implements IClassTransformer {
-    boolean isDeBug=true;
+    boolean isDeBug=false;
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         try{
+            String superClass=RedirectionorFastUtil.getSuperClass(basicClass);
+            if (!"java/lang/Enum".equals(superClass)){
+                return basicClass;
+            }
             ClassReader classReader=new ClassReader(basicClass);
             if ("java/lang/Enum".equals(classReader.getSuperName())){
                 ClassNode cn=new ClassNode();
                 classReader.accept(cn,0);
+                String classPath= classReader.getClassName();
+                String type="[L"+classPath+";";
+                String funcName="()"+type;
                 for(MethodNode mn:cn.methods){
-                    if ("values".equals(mn.name)){
-                        if (mn.desc.contains("()")){
-                            String classPath= classReader.getClassName();
-                            String typeName="[L"+classPath+";";
-                        /*
-                        value function:
-
-                        public static values()[Lcom/Hileb/teampotato/redirectionor/TestEnum;
-                        GETSTATIC com/Hileb/teampotato/redirectionor/TestEnum.$VALUES : [Lcom/Hileb/teampotato/redirectionor/TestEnum;
-
-                         //delete this:
-                         INVOKEVIRTUAL [Lcom/Hileb/teampotato/redirectionor/TestEnum;.clone ()Ljava/lang/Object;
-                        CHECKCAST [Lcom/Hileb/teampotato/redirectionor/TestEnum;
-
-                        ARETURN
-                        MAXSTACK = 1
-                        MAXLOCALS = 0
-                        * */
-                            InsnList il=mn.instructions;
-                            il.clear();
-                            il.add(new FieldInsnNode(Opcodes.GETSTATIC,classPath,"$VALUES",typeName));
-                            il.add(new InsnNode(Opcodes.ARETURN));
-
-                            if (isDeBug)System.out.println("Redirect "+classPath);
-                        }
+                    if ("values".equals(mn.name) || funcName.equals(mn.desc)){
+                        InsnList il=new InsnList();
+                        il.add(new FieldInsnNode(Opcodes.GETSTATIC,classPath,"$VALUES",type));
+                        il.add(new InsnNode(Opcodes.ARETURN));
+                        mn.instructions=il;
+                        if (isDeBug)System.out.println("Redirect "+transformedName);
                     }
                 }
-                ClassWriter classWriter=new ClassWriter(classReader,ClassWriter.COMPUTE_MAXS);
+                ClassWriter classWriter=new ClassWriter(classReader,ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
                 cn.accept(classWriter);
                 return classWriter.toByteArray();
             }
