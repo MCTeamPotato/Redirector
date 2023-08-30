@@ -7,6 +7,7 @@
     <list default="true" id="9c412b08-dacd-4106-a1a8-4acce10c7888" name="更改" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Redirectionor.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-2.log.gz" afterDir="false" />
