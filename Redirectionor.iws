@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -93,7 +94,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.datadog.showProjectSetup": "true",
-    "last_opened_file_path": "E:/project/MC MOD/UnusuallyProjectPack/github/tomato/Redirectionor",
+    "last_opened_file_path": "E:/project/MC MOD/UnusuallyProjectPack/github/tomato/Redirectionor/src/main/java/com/Hileb/teampotato.redirectionor",
     "project.structure.last.edited": "问题",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -102,6 +103,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\src\main\java\com\Hileb\teampotato.redirectionor" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\src\main\resources" />
     </key>

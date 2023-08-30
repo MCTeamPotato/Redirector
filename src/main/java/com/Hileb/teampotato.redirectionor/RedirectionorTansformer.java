@@ -12,10 +12,13 @@ import org.objectweb.asm.tree.*;
  * @Date 2023/8/28 11:52
  **/
 public class RedirectionorTansformer implements IClassTransformer {
-    boolean isDeBug=true;
+    boolean isDeBug=false;
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         try{
+            if (!"java/lang/Enum".equals(RedirectionorFastUtil.getSuperClass(basicClass))){
+                return basicClass;
+            }
             ClassReader classReader=new ClassReader(basicClass);
             if ("java/lang/Enum".equals(classReader.getSuperName())){
                 ClassNode cn=new ClassNode();
