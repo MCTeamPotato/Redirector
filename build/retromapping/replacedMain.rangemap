@@ -88,7 +88,7 @@ Class Start: com.Hileb.teampotato.redirectionor.RedirectionorContainer
 Class End  : com.Hileb.teampotato.redirectionor.RedirectionorContainer
 endProcessing "com/Hileb/teampotato.redirectionor/RedirectionorContainer.java"
 
-startProcessing "com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" md5: 6f98192fcd7ac30d49b011575b6ea275
+startProcessing "com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" md5: 94b4320e34faecd340627d5247e3187f
 @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|8|42|com.Hileb.teampotato.redirectionor|package|com.Hileb.teampotato.redirectionor|(file)
 Class Start: com.Hileb.teampotato.redirectionor.RedirectionorFastUtil
    @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|171|192|RedirectionorFastUtil|class|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|false
@@ -100,53 +100,57 @@ Class Start: com.Hileb.teampotato.redirectionor.RedirectionorFastUtil
       @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|267|274|Integer|class|java.lang.Integer|false
       @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|275|282|Integer|class|java.lang.Integer|false
       @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|292|299|HashMap|class|java.util.HashMap|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|314|321|HashMap|class|java.util.HashMap|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|322|329|Integer|class|java.lang.Integer|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|330|337|Integer|class|java.lang.Integer|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|349|356|HashMap|class|java.util.HashMap|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|390|407|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|408|413|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|535|540|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|965|982|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|983|988|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1071|1074|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1296|1313|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1314|1319|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1361|1364|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1588|1605|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1606|1611|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1649|1652|get|method|java.util.Map|get|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1688|1691|get|method|java.util.Map|get|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1725|1742|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1743|1748|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1781|1789|readUTF8|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1790|1795|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|300|307|Integer|class|java.lang.Integer|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|308|315|Integer|class|java.lang.Integer|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|329|336|HashMap|class|java.util.HashMap|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|337|344|Integer|class|java.lang.Integer|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|345|352|Integer|class|java.lang.Integer|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|364|371|HashMap|class|java.util.HashMap|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|372|379|Integer|class|java.lang.Integer|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|380|387|Integer|class|java.lang.Integer|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|420|437|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|438|443|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|565|570|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|995|1012|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1013|1018|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1101|1104|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1326|1343|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1344|1349|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1391|1394|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1618|1635|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1636|1641|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1679|1682|get|method|java.util.Map|get|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1718|1721|get|method|java.util.Map|get|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1755|1772|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1773|1778|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1811|1819|readUTF8|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1820|1825|clazz|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|getSuperClass|([B)Ljava/lang/String;|clazz|0
    Method End: getSuperClass([B)Ljava/lang/String;
    Method Start: readUnsignedShort([BI)I
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1873|1874|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|b|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1880|1885|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|index|1
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1848|1865|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1907|1908|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|b|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1909|1914|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|index|1
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1933|1934|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|b|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1935|1940|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|index|1
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1903|1904|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|b|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1910|1915|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|index|1
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1878|1895|readUnsignedShort|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1937|1938|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|b|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1939|1944|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|index|1
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1963|1964|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|b|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1965|1970|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUnsignedShort|([BI)I|index|1
    Method End: readUnsignedShort([BI)I
    Method Start: readUTF8([BII)Ljava/lang/String;
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2004|2005|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|b|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2010|2015|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|index|1
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2020|2026|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1981|1987|String|class|java.lang.String|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|1988|1996|readUTF8|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2038|2051|StringBuilder|class|java.lang.StringBuilder|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2064|2077|StringBuilder|class|java.lang.StringBuilder|false
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2078|2084|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2104|2113|setLength|method|java.lang.AbstractStringBuilder|setLength|(I)V
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2114|2120|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2146|2152|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2180|2189|setCharAt|method|java.lang.AbstractStringBuilder|setCharAt|(IC)V
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2199|2200|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|b|0
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2203|2208|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|index|1
-      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2248|2256|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2034|2035|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|b|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2040|2045|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|index|1
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2050|2056|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2011|2017|String|class|java.lang.String|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2018|2026|readUTF8|method|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2068|2081|StringBuilder|class|java.lang.StringBuilder|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2094|2107|StringBuilder|class|java.lang.StringBuilder|false
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2108|2114|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2134|2143|setLength|method|java.lang.AbstractStringBuilder|setLength|(I)V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2144|2150|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2176|2182|length|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|length|2
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2210|2219|setCharAt|method|java.lang.AbstractStringBuilder|setCharAt|(IC)V
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2229|2230|b|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|b|0
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2233|2238|index|param|com.Hileb.teampotato.redirectionor.RedirectionorFastUtil|readUTF8|([BII)Ljava/lang/String;|index|1
+      @|com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java|2278|2286|toString|method|java.lang.Object|toString|()Ljava/lang/String;
    Method End: readUTF8([BII)Ljava/lang/String;
 Class End  : com.Hileb.teampotato.redirectionor.RedirectionorFastUtil
 endProcessing "com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java"

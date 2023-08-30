@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c412b08-dacd-4106-a1a8-4acce10c7888" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" afterDir="false" />
+    <list default="true" id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileContent/annotation-processors.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Redirectionor.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-1.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-2.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-3.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-4.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-5.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-08-29-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-08-29-6.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +22,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
     <option name="REVERSE_PATCH" value="false" />
-  </component>
-  <component name="DatadogProjectSettings">
-    <option name="environmentAUserChoice" value="true" />
-    <option name="isEnvironmentAUserChoice" value="true" />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any converted="true">
@@ -74,8 +62,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -89,7 +77,7 @@
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
-  <component name="ProjectId" id="2UPpluTZ3eXrdE0v7jSrT5eMNxS" />
+  <component name="ProjectId" id="2Ub3ZQPaXnHvGFQlc6CE0wuGwkT" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state />
@@ -106,23 +94,18 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.datadog.showProjectSetup&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/project/MC MOD/UnusuallyProjectPack/github/tomato/Redirectionor/libs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project/MC MOD/UnusuallyProjectPack/github/tomato/Redirectionor/src/main/java/com/Hileb/teampotato.redirectionor&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;问题&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.analyzer&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\libs" />
-      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\run\mods" />
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\src\main\java\com\Hileb\teampotato.redirectionor" />
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\src\main\resources" />
-      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\workbench\1.6" />
-      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\workbench\1.7" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\libs" />
     </key>
   </component>
   <component name="RunManager" selected="应用程序.Minecraft Client">
@@ -149,8 +132,12 @@
     <configuration name="Minecraft Client" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="-Dfml.coreMods.load" value="com.Hileb.teampotato.redirectionor.Redirectionor" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="GradleStart" />
       <module name="Redirectionor" />
+      <option name="VM_PARAMETERS" value="-Xincgc -Xmx1024M -Xms1024M" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -161,52 +148,25 @@
     <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
       <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
       <option name="MAIN_CLASS_NAME" value="GradleStart" />
-      <option name="VM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" value="-Xincgc -Xmx1024M -Xms1024M" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\eclipse" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Redirectionor_main" />
+      <module name="Redirectionor.main" />
+      <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
-    <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
-      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
-      <option name="MAIN_CLASS_NAME" value="GradleStart" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Redirectionor_main" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
-    <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
-      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
-      <option name="MAIN_CLASS_NAME" value="GradleStart" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Redirectionor_main" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <method />
     </configuration>
     <configuration name="Minecraft Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="GradleStartServer" />
-      <module name="Redirectionor_main" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
+      <module name="Redirectionor.main" />
+      <option name="VM_PARAMETERS" value="-Xincgc -Dfml.ignoreInvalidMinecraftCertificates=true" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\eclipse" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -216,47 +176,19 @@
     <configuration default="false" factoryName="Application" name="Minecraft Server" type="Application">
       <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
       <option name="MAIN_CLASS_NAME" value="GradleStartServer" />
-      <option name="VM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" value="-Xincgc -Dfml.ignoreInvalidMinecraftCertificates=true" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\eclipse" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Redirectionor_main" />
+      <module name="Redirectionor.main" />
+      <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
-    <configuration default="false" factoryName="Application" name="Minecraft Server" type="Application">
-      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
-      <option name="MAIN_CLASS_NAME" value="GradleStartServer" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Redirectionor_main" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
-    <configuration default="false" factoryName="Application" name="Minecraft Server" type="Application">
-      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
-      <option name="MAIN_CLASS_NAME" value="GradleStartServer" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Redirectionor\run" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Redirectionor_main" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -288,6 +220,10 @@
         <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="应用程序.Minecraft Client" />
+      <item itemvalue="应用程序.Minecraft Server" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
@@ -306,19 +242,15 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9c412b08-dacd-4106-a1a8-4acce10c7888" name="更改" comment="" />
-      <created>1692851230647</created>
+      <changelist id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="" />
+      <created>1693194511300</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1692851230647</updated>
+      <updated>1693194511300</updated>
     </task>
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

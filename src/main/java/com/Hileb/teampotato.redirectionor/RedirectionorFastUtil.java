@@ -9,8 +9,8 @@ import java.util.HashMap;
  **/
 public class RedirectionorFastUtil {
     public static String getSuperClass(byte[] clazz){
-        HashMap<Integer,Integer> UTF=new HashMap<>();
-        HashMap<Integer,Integer> CLASS=new HashMap<>();
+        HashMap<Integer,Integer> UTF=new HashMap<Integer,Integer>();
+        HashMap<Integer,Integer> CLASS=new HashMap<Integer,Integer>();
         int constantsCount=readUnsignedShort(clazz,8);
         int passcount=10;
         for(int i=1;i<constantsCount;i++){
