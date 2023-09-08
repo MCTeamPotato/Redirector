@@ -70,7 +70,6 @@
     "net.minecraft.world.level.pathfinder.SwimNodeEvaluatorMixin",
     "net.minecraft.world.level.pathfinder.TargetMixin",
     "net.minecraft.world.level.saveddata.maps.MapDecorationTypeMixin",
-    "net.minecraft.world.level.storage.loot.LootContextEntityTargetMixin",
     "net.minecraft.world.level.storage.loot.functions.CopyNameFunctionNameSourceMixin",
     "net.minecraft.world.level.storage.loot.functions.CopyNbtFunctionMergeStrategyMixin",
     "net.minecraft.world.level.TickPriorityMixin"
