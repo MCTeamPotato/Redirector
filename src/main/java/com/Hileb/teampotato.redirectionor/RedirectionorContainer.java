@@ -8,7 +8,7 @@ import cpw.mods.fml.common.ModMetadata;
 /**
  * @Project Redirectionor
  * @Author Hileb
- * @Date 2023/8/28 11:51
+ * @Date 2023/8/28 10:05
  **/
 public class RedirectionorContainer extends DummyModContainer {
     public RedirectionorContainer(){
@@ -24,7 +24,6 @@ public class RedirectionorContainer extends DummyModContainer {
         metadata.authorList.add("Kasualix");
         metadata.authorList.add("Hileb");
     }
-
     @Override
     public boolean registerBus(EventBus bus, LoadController controller) {
         bus.register(this);

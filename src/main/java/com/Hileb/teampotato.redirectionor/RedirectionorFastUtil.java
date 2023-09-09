@@ -1,5 +1,6 @@
 package com.Hileb.teampotato.redirectionor;
 
+
 import java.util.HashMap;
 
 /**
@@ -60,11 +61,18 @@ public class RedirectionorFastUtil {
         return ((b[index] & 0xFF) << 8) | (b[index + 1] & 0xFF);
     }
     public static String readUTF8(byte[] b,int index,int length){
-        StringBuilder builder=new StringBuilder(length);
-        builder.setLength(length);
+        char[] str=new char[length];
         for(int i=0;i<length;i++){
-            builder.setCharAt(i,((char)b[i+index]));
+            str[i]= (char) b[i+index];
         }
-        return builder.toString();
+        return new String(str);
+    }
+    public static boolean isAvailable(String name){
+        for(String modid:RedirectionorConfig.instance.contains){
+            if (name.contains(modid)){
+                return !RedirectionorConfig.instance.isBlocking();
+            }
+        }
+        return RedirectionorConfig.instance.isBlocking();
     }
 }
