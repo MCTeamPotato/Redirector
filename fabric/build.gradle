@@ -8,13 +8,12 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/redirectionor.accesswidener")
-    mixin.defaultRefmapName.set("redirectionor.refmap.json")
+    accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
 configurations {
     common
-    shadowCommon 
+    shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
@@ -35,11 +34,14 @@ processResources {
 }
 
 shadowJar {
+    exclude "architectury.common.json"
+
     configurations = [project.configurations.shadowCommon]
-    classifier "fabric-dev-shadow"
+    classifier "fabric-shadow"
 }
 
 remapJar {
+    injectAccessWidener = true
     input.set shadowJar.archiveFile
     dependsOn shadowJar
     classifier "fabric"

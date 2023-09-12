@@ -1,0 +1,4 @@
+accessWidener   v2  named
+
+accessible class com/mojang/realmsclient/client/Ping$Region
+accessible class net/minecraft/client/gui/screens/advancements/AdvancementTabType

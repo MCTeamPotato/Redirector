@@ -3,8 +3,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/redirectionor.accesswidener")
-    mixin.defaultRefmapName.set("redirectionor.refmap.json")
+    accessWidenerPath = file("src/main/resources/redirector.accesswidener")
 }
 
 dependencies {
