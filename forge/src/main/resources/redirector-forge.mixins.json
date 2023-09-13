@@ -1,0 +1,15 @@
+{
+  "required": false,
+  "package": "com.teampotato.redirector.forge.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "mixinPriority": 10,
+  "refmap": "redirector-forge.refmap.json",
+  "overwrites": {
+    "conformVisibility": true
+  },
+  "client": [
+    "net.minecraft.client.renderer.block.model.BlockModelMixin",
+    "net.minecraft.client.renderer.block.model.ItemTransformsDeserializerMixin"
+  ]
+}

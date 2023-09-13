@@ -1,0 +1,50 @@
+{
+  "required": false,
+  "package": "com.teampotato.redirector.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "mixinPriority": 10,
+  "refmap": "redirector.refmap.json",
+  "overwrites": {
+    "conformVisibility": true
+  },
+  "client": [
+    "com.mojang.blaze3d.platform.InputConstantsMixin",
+    "com.mojang.realmsclient.client.PingMixin",
+    "com.mojang.realmsclient.gui.RealmsDataFetcherMixin",
+    "com.mojang.realmsclient.gui.screens.RealmsResetNormalWorldScreenMixin",
+    "com.mojang.realmsclient.gui.screens.RealmsUploadScreenMixin",
+    "net.minecraft.client.MinecraftMixin",
+    "net.minecraft.client.OptionsMixin",
+    "net.minecraft.client.gui.GuiMixin",
+    "net.minecraft.client.gui.components.DebugScreenOverlayMixin",
+    "net.minecraft.client.gui.screens.EditServerScreenMixin",
+    "net.minecraft.client.gui.screens.OptionsScreenMixin",
+    "net.minecraft.client.gui.screens.SkinCustomizationScreenMixin",
+    "net.minecraft.client.gui.screens.SoundOptionsScreenMixin",
+    "net.minecraft.client.gui.screens.advancements.AdvancementTabMixin",
+    "net.minecraft.client.gui.screens.inventory.CommandBlockEditScreenMixin",
+    "net.minecraft.client.gui.screens.inventory.JigsawBlockEditScreenMixin",
+    "net.minecraft.client.gui.screens.inventory.LoomScreenMixin",
+    "net.minecraft.client.gui.screens.inventory.StructureBlockEditScreenMixin",
+    "net.minecraft.client.gui.screens.worldselection.CreateWorldScreenMixin",
+    "net.minecraft.client.model.geom.LayerDefinitionsMixin",
+    "net.minecraft.client.multiplayer.ClientPacketListenerMixin",
+    "net.minecraft.client.renderer.block.model.BlockModelGuiLightMixin",
+    "net.minecraft.client.renderer.block.model.FaceBakeryMixin",
+    "net.minecraft.client.renderer.chunk.ChunkRenderDispatcherRenderChunkMixin",
+    "net.minecraft.client.renderer.entity.BoatRendererMixin",
+    "net.minecraft.client.renderer.entity.ItemRendererMixin",
+    "net.minecraft.client.renderer.entity.layers.SheepFurLayerMixin",
+    "net.minecraft.client.resources.model.SimpleBakedModelBuilderMixin",
+    "net.minecraft.client.resources.sounds.SoundTypeMixin",
+    "net.minecraft.client.tutorial.TutorialStepsMixin"
+  ],
+  "mixins": [
+    "com.mojang.math.OctahedralGroupMixin",
+    "net.minecraft.ChatFormattingMixin",
+    "net.minecraft.advancements.FrameTypeMixin",
+    "net.minecraft.commands.arguments.selector.options.EntitySelectorOptionsMixin",
+    "net.minecraft.data.models.BlockModelGeneratorsMixin"
+  ]
+}
