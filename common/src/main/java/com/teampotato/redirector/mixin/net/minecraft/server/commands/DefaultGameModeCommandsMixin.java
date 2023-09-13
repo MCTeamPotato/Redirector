@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.server.commands;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.server.commands.DefaultGameModeCommands;
 import net.minecraft.world.level.GameType;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.gui.screens.advancements;
 
-import com.teampotato.redirector.redirect.ClientValues;
+import com.teampotato.redirector.utils.values.ClientValues;
 import net.minecraft.client.gui.screens.advancements.AdvancementTab;
 import net.minecraft.client.gui.screens.advancements.AdvancementTabType;
 import org.spongepowered.asm.mixin.Mixin;

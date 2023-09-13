@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.gui.screens.inventory;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.client.gui.screens.inventory.JigsawBlockEditScreen;
 import net.minecraft.world.level.block.entity.JigsawBlockEntity;
 import org.spongepowered.asm.mixin.Dynamic;

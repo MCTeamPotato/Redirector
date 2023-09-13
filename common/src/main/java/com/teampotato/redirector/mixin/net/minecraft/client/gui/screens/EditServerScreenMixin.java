@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.gui.screens;
 
-import com.teampotato.redirector.redirect.ClientValues;
+import com.teampotato.redirector.utils.values.ClientValues;
 import net.minecraft.client.gui.screens.EditServerScreen;
 import net.minecraft.client.multiplayer.ServerData;
 import org.spongepowered.asm.mixin.Dynamic;

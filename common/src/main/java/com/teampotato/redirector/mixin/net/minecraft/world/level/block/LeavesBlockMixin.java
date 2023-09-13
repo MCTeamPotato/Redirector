@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.world.level.block;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.LeavesBlock;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,7 +1,7 @@
 package com.teampotato.redirector.mixin.net.minecraft.client;
 
-import com.teampotato.redirector.redirect.ClientValues;
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.ClientValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.client.Options;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.PlayerModelPart;

@@ -1,7 +1,7 @@
 package com.teampotato.redirector.mixin.com.mojang.realmsclient.gui;
 
 import com.mojang.realmsclient.gui.RealmsDataFetcher;
-import com.teampotato.redirector.redirect.ClientValues;
+import com.teampotato.redirector.utils.values.ClientValues;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;

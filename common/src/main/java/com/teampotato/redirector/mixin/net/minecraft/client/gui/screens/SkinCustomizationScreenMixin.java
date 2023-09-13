@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.gui.screens;
 
-import com.teampotato.redirector.redirect.ClientValues;
+import com.teampotato.redirector.utils.values.ClientValues;
 import net.minecraft.client.gui.screens.SkinCustomizationScreen;
 import net.minecraft.world.entity.player.PlayerModelPart;
 import org.spongepowered.asm.mixin.Mixin;

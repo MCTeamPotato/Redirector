@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.renderer.entity.layers;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.client.renderer.entity.layers.SheepFurLayer;
 import net.minecraft.world.item.DyeColor;
 import org.spongepowered.asm.mixin.Mixin;

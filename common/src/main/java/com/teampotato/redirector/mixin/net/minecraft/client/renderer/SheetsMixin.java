@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.renderer;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.entity.BannerPattern;
 import org.spongepowered.asm.mixin.Mixin;

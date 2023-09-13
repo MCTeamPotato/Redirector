@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.commands.arguments.selector.options;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.commands.arguments.selector.options.EntitySelectorOptions;
 import net.minecraft.world.level.GameType;
 import org.spongepowered.asm.mixin.Dynamic;

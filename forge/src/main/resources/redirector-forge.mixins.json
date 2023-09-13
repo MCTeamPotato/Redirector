@@ -1,0 +1,29 @@
+{
+  "required": false,
+  "package": "com.teampotato.redirector.forge.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "mixinPriority": 10,
+  "refmap": "redirector-forge.refmap.json",
+  "overwrites": {
+    "conformVisibility": true
+  },
+  "mixins": [
+    "net.minecraft.world.level.newbiome.layer.BiomeInitLayerMixin",
+    "net.minecraftforge.common.BiomeManagerMixin",
+    "net.minecraftforge.common.data.ForgeBlockTagsProviderMixin",
+    "net.minecraftforge.common.data.ForgeItemTagsProviderMixin",
+    "net.minecraftforge.fml.ModLoadingStageMixin",
+    "net.minecraftforge.fml.network.NetworkDirectionMixin",
+    "net.minecraftforge.items.wrapper.EntityEquipmentInvWrapperMixin",
+    "net.minecraftforge.items.wrapper.PlayerArmorInvWrapperMixin"
+  ],
+  "client": [
+    "net.minecraftforge.client.model.FluidModelBakedFluidMixin",
+    "net.minecraftforge.client.model.PerspectiveMapWrapperMixin",
+    "net.minecraftforge.client.model.generators.ModelBuilderMixin",
+    "net.minecraftforge.client.model.generators.ModelBuilderMixin$ElementBuilderMixin",
+    "net.minecraftforge.client.model.pipeline.ForgeBlockModelRendererMixin",
+    "net.minecraftforge.fml.client.gui.screen.ModListScreenMixin"
+  ]
+}

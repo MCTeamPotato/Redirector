@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.renderer.block;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.core.Direction;
 import org.spongepowered.asm.mixin.Mixin;

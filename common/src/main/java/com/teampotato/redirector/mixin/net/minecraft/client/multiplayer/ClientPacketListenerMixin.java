@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.multiplayer;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.world.InteractionHand;
 import org.spongepowered.asm.mixin.Mixin;

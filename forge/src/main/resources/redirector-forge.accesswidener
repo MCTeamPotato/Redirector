@@ -1,0 +1,8 @@
+accessWidener   v2  named
+
+accessible class net/minecraftforge/fml/client/gui/screen/ModListScreen$SortType
+accessible class com/mojang/realmsclient/client/Ping$Region
+accessible class net/minecraft/client/gui/screens/advancements/AdvancementTabType
+accessible field net/minecraft/world/entity/monster/SpellcasterIllager$IllagerSpell id I
+accessible field net/minecraft/ChatFormatting code C
+accessible class net/minecraft/world/level/chunk/storage/IOWorker$Priority

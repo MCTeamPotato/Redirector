@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.gui;
 
-import com.teampotato.redirector.redirect.CommonValues;
+import com.teampotato.redirector.utils.values.CommonValues;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.network.chat.ChatType;
 import org.spongepowered.asm.mixin.Mixin;
