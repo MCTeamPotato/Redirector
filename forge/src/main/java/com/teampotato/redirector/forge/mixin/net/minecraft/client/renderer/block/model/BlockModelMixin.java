@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(BlockModel.class)
 public abstract class BlockModelMixin {
-    @Redirect(method = "getTransforms", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/block/model/ItemTransforms$TransformType;values()[Lnet/minecraft/client/renderer/block/model/ItemTransforms$TransformType;"))
+    @Redirect(method = "getTransforms", at = @At(value = "INVOKE", remap = false, target = "Lnet/minecraft/client/renderer/block/model/ItemTransforms$TransformType;values()[Lnet/minecraft/client/renderer/block/model/ItemTransforms$TransformType;"))
     private ItemTransforms.TransformType[] redirectItemTransformsTransformTypes() {
         return ClientValues.TRANSFORM_TYPES;
     }

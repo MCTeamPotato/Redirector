@@ -14,4 +14,3 @@ public abstract class BlockModelGeneratorsMixin {
         return CommonValues.DRIPSTONE_THICKNESSES;
     }
 }
-//TODO: CONTINUE
