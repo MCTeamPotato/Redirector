@@ -1,12 +1,12 @@
-modLoader="javafml"
-loaderVersion="[36,)"
-license="LGPL-v3"
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "LGPL-v3"
 
 [[mods]]
-modId="redirectionor"
-version="${version}"
-displayName="Redirectionor"
-authors="Team Potato"
-description='''
-
+modId = "redirector"
+version = "${version}"
+displayName = "Redirector"
+authors = "TeamPotato"
+description = '''
+A Minecraft mod.
 '''

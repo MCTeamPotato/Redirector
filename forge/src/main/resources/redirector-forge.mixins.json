@@ -1,0 +1,28 @@
+{
+  "required": false,
+  "package": "com.teampotato.redirector.forge.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "mixinPriority": 10,
+  "refmap": "redirector-forge.refmap.json",
+  "overwrites": {
+    "conformVisibility": true
+  },
+  "client": [
+    "net.minecraft.client.renderer.block.model.BlockModelMixin",
+    "net.minecraft.client.renderer.block.model.ItemTransformsDeserializerMixin",
+    "net.minecraftforge.client.gui.ModListScreenMixin",
+    "net.minecraftforge.client.model.generators.ModelBuilderMixin",
+    "net.minecraftforge.client.model.generators.ModelBuilderMixin$ElementBuilderMixin",
+  ],
+  "mixins": [
+    "net.minecraft.world.level.LevelMixin",
+    "net.minecraftforge.common.BiomeManagerMixin",
+    "net.minecraftforge.common.ForgeHooksMixin",
+    "net.minecraftforge.common.data.ForgeBlockTagsProviderMixin",
+    "net.minecraftforge.common.data.ForgeItemTagsProviderMixin",
+    "net.minecraftforge.items.wrapper.EntityEquipmentInvWrapperMixin",
+    "net.minecraftforge.items.wrapper.PlayerArmorInvWrapperMixin",
+    "net.minecraftforge.network.NetworkDirectionMixin"
+  ]
+}
