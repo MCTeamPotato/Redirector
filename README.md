@@ -1,6 +1,7 @@
 [![Curseforge](http://cf.way2muchnoise.eu/full_907559_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/redirectionor-retro) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_907559_all.svg)](https://www.curseforge.com/minecraft/mc-mods/redirectionor-retro)
 # Redirector [Retro]
 https://www.curseforge.com/minecraft/mc-mods/redirectionor-retro
+
 We have changed our name from redirectionor to redirector, because the redirection targets are not only about directions but all enum values now.
 
 ## Preface
