@@ -1,37 +1,34 @@
--------------------------------------------
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+[![Curseforge](http://cf.way2muchnoise.eu/full_907559_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/redirectionor-retro) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_907559_all.svg)](https://www.curseforge.com/minecraft/mc-mods/redirectionor-retro)
+# Redirector [Retro]
+https://www.curseforge.com/minecraft/mc-mods/redirectionor-retro
+We have changed our name from redirectionor to redirector, because the redirection targets are not only about directions but all enum values now.
 
-Note also that the patches are built against "unrenamed" MCP source code (aka
-srgnames) - this means that you will not be able to read them directly against
-normal code.
+## Preface
 
-Source pack installation information:
+In the well-known optimization mods for Minecraft, Sodium, Lithium or Phosphor, there is a common optimization concept: replacing references to element values in enum classes with static final field values references.
 
-Standalone source installation
-==============================
+This technique aims to enhance performance by improving access speed and reducing unnecessary computations when frequently accessing the constants.
 
-To install this source code for development purposes, extract this zip file.
-It ships with a demonstration mod. Run 'gradlew setupDevWorkspace' to create
-a gradle environment primed with FML. Run 'gradlew eclipse' or 'gradlew idea' to
-create an IDE workspace of your choice.
-Refer to ForgeGradle for more information about the gradle environment
-Note: On macs or linux you run the './gradlew.sh' instead of 'gradlew'
+## Introduction
 
-Forge source installation
-=========================
-MinecraftForge ships with this code and installs it as part of the forge
-installation process, no further action is required on your part.
+Redirectionor is the implementation of this concept to reduce the required memory of the game.
 
-For reference this is version @MAJOR@.@MINOR@.@REV@.@BUILD@ of FML
-for Minecraft version @MCVERSION@.
+## What does Redirectionor optimize exactly?
 
-LexManos' Install Video
-=======================
-https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
+It's quite wide. Nearly every Enum#values() call is redirected in this mod......
 
-For more details update more often refer to the Forge Forums:
-http://www.minecraftforge.net/forum/index.php/topic,14048.0.html
+This implementation is not "thorough", but it is still quite impressive.
+
+## Compatibility
+
+Redirectionor is designed as compatible with every mod.
+
+If you encounter any compatibility problem, pls create a new Issue on hileb fork issue https://github.com/Ecdcaeb/Redirectionor/issues.
+
+## Note
+
+Redirectionor works on both the client and server and can be installed on servers without requiring clients to also have the mod.
+# Issue Report
+1.16.5+ : https://github.com/MCTeamPotato/Kasualix-Issue-Tracker
+
+1.12.2-: https://github.com/Ecdcaeb/Redirectionor/issues
