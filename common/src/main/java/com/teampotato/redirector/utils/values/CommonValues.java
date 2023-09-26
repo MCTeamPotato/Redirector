@@ -2,7 +2,6 @@ package com.teampotato.redirector.utils.values;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction8;
-import net.minecraft.network.protocol.game.ClientboundPlayerPositionPacket;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Difficulty;
@@ -12,7 +11,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.animal.horse.Markings;
 import net.minecraft.world.entity.animal.horse.Variant;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.block.Mirror;
@@ -48,11 +46,9 @@ public class CommonValues {
     public static final CommandBlockEntity.Mode[] COMMAND_BLOCK_ENTITY_MODES = CommandBlockEntity.Mode.values();
     public static final JigsawBlockEntity.JointType[] JOINT_TYPES = JigsawBlockEntity.JointType.values();
     public static final Mirror[] MIRRORS = Mirror.values();
-    public static final Boat.Type[] BOAT_TYPES = Boat.Type.values();
     public static final DyeColor[] DYE_COLORS = DyeColor.values();
     public static final GameType[] GAME_TYPES = GameType.values();
     public static final DripstoneThickness[] DRIPSTONE_THICKNESSES = DripstoneThickness.values();
-    public static final ClientboundPlayerPositionPacket.RelativeArgument[] RELATIVE_ARGUMENTS = ClientboundPlayerPositionPacket.RelativeArgument.values();
     public static final EquipmentSlot[] EQUIPMENT_SLOTS = EquipmentSlot.values();
     public static final ObjectiveCriteria.RenderType[] OBJECTIVE_CRITERIA_RENDER_TYPES = ObjectiveCriteria.RenderType.values();
     public static final Markings[] MARKINGS = Markings.values();

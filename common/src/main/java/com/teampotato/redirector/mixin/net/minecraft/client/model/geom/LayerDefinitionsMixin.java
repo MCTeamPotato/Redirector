@@ -1,6 +1,6 @@
 package com.teampotato.redirector.mixin.net.minecraft.client.model.geom;
 
-import com.teampotato.redirector.utils.values.CommonValues;
+import com.teampotato.redirector.utils.special.CommonValues;
 import net.minecraft.client.model.geom.LayerDefinitions;
 import net.minecraft.world.entity.vehicle.Boat;
 import org.spongepowered.asm.mixin.Mixin;
