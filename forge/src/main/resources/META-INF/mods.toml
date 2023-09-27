@@ -1,9 +1,11 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
 license = "LGPL-v3"
+issueTrackerURL="https://github.com/MCTeamPotato/Kasualix-Issue-Tracker"
 
 [[mods]]
 modId = "redirector"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/redirectionor"
 version = "${version}"
 displayName = "Redirector"
 authors = "TeamPotato"
