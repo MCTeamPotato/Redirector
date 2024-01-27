@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Redirectionor.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +56,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
