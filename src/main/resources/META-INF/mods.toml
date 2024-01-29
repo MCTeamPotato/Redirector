@@ -1,0 +1,19 @@
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "LGPL-v3"
+
+[[mods]]
+modId = "redirector"
+version = "${version}"
+displayName = "Redirector"
+authors = "TeamPotato"
+description = '''
+A Minecraft Mod.
+'''
+
+[[dependencies.redirector]]
+modId = "forge"
+mandatory = true
+versionRange = "[36,)"
+ordering = "NONE"
+side = "BOTH"

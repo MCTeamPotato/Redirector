@@ -1,0 +1,117 @@
+import net.darkhax.curseforgegradle.TaskPublishCurseForge
+import net.darkhax.curseforgegradle.UploadArtifact
+
+plugins {
+    id "dev.architectury.loom" version "1.4-SNAPSHOT"
+    id 'com.modrinth.minotaur' version '2.+'
+    id 'net.darkhax.curseforgegradle' version '1.1.+'
+}
+
+base {
+    archivesName = "${archives_base_name}"
+}
+
+version = "${minecraft_version}-${mod_version}"
+group = "${maven_group}"
+
+java {
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+loom {
+    silentMojangMappingsLicense()
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+    maven {
+        name 'ParchmentMC'
+        url 'https://maven.parchmentmc.org'
+    }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.layered() {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+    }
+    //mappings "net.fabricmc:yarn:${minecraft_version}+build.${project.yarn_mappings}:v2"
+    forge "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    modImplementation("maven.modrinth:potacore:0.2.1")
+    modImplementation("maven.modrinth:potacore:0.2.1:universal-sources")
+    modImplementation("maven.modrinth:potacore:0.2.1:universal-javadoc")
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("META-INF/mods.toml") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+    options.release.set(8)
+}
+
+java {
+    withSourcesJar()
+}
+
+jar {
+    manifest {
+        attributes([
+                "Implementation-Title"    : archives_base_name,
+                "Implementation-Version"  : mod_version,
+                "Implementation-Vendor"   : mod_author,
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+String[] supportedGameVersions = new String[]{"${minecraft_version}"}
+String currentChangeLog = file("CHANGELOG.md").getText("UTF-8");
+
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "${archives_base_name}"
+    versionNumber = "${mod_version}"
+    uploadFile = remapJar
+    gameVersions.addAll(supportedGameVersions)
+    loaders = ["forge"]
+    versionType = "release"
+    additionalFiles = [sourcesJar]
+    changelog.set(currentChangeLog)
+}
+
+tasks.register("publishCurseForge", TaskPublishCurseForge) {
+    apiToken = System.getenv("CURSEFORGE_TOKEN")
+    disableVersionDetection()
+
+    UploadArtifact mainFile = upload(cf_project_id, remapJar)
+    mainFile.displayName = "${archives_base_name}-${version}"
+    mainFile.releaseType = "release"
+    mainFile.changelog = currentChangeLog
+    mainFile.changelogType = "markdown"
+    mainFile.addModLoader("Forge")
+    mainFile.addJavaVersion("Java 17", "Java 8")
+    mainFile.addGameVersion(supportedGameVersions)
+
+    UploadArtifact sourcesFile = mainFile.withAdditionalFile(sourcesJar)
+    sourcesFile.changelog = currentChangeLog
+    sourcesFile.changelogType = "markdown"
+}
