@@ -89,7 +89,7 @@ String currentChangeLog = file("CHANGELOG.md").getText("UTF-8");
 modrinth {
     token = System.getenv("MODRINTH_TOKEN")
     projectId = "${archives_base_name}"
-    versionNumber = "${mod_version}"
+    versionNumber = "${mod_version}-forge"
     uploadFile = remapJar
     gameVersions.addAll(supportedGameVersions)
     loaders = ["forge"]
@@ -103,7 +103,7 @@ tasks.register("publishCurseForge", TaskPublishCurseForge) {
     disableVersionDetection()
 
     UploadArtifact mainFile = upload(cf_project_id, remapJar)
-    mainFile.displayName = "${archives_base_name}-${version}"
+    mainFile.displayName = "${archives_base_name}-${version}-forge"
     mainFile.releaseType = "release"
     mainFile.changelog = currentChangeLog
     mainFile.changelogType = "markdown"
