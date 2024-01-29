@@ -11,7 +11,7 @@ base {
     archivesName = "${archives_base_name}"
 }
 
-version = "${minecraft_version}-${mod_version}"
+version = "${mod_version}"
 group = "${maven_group}"
 
 java {
