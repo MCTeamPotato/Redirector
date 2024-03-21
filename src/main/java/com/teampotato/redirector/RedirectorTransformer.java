@@ -45,7 +45,7 @@ public class RedirectorTransformer implements IClassTransformer {
                 return classWriter.toByteArray();
             }
         } catch (Exception e) {
-            Redirector.LOGGER.error("Error redirecting enum class", e);
+            Redirector.LOGGER.error("Error occurs while transforming enum class. Skip.", e);
             return basicClass;
         }
         return basicClass;
