@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "redirector",
+	"version": "${version}",
+	"name": "Redirector",
+	"description": "A Minecraft Mod",
+	"authors": [
+		"TeamPotato"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "LGPL-v3",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.teampotato.redirector.Redirector"
+		]
+	},
+	"depends": {
+		"minecraft": "*"
+	}
+}
