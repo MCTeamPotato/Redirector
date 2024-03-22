@@ -1,6 +1,5 @@
 package com.teampotato.redirector;
 
-import net.minecraft.launchwrapper.IClassTransformer;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Opcodes;
@@ -9,11 +8,13 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.MethodNode;
 
+import java.lang.instrument.ClassFileTransformer;
+import java.security.ProtectionDomain;
 import java.util.ListIterator;
 
-public class RedirectorTransformer implements IClassTransformer {
+public class RedirectorTransformer implements ClassFileTransformer {
     @Override
-    public byte[] transform(String name, String transformedName, byte[] basicClass) {
+    public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] basicClass) {
         try {
             String superClass = RedirectorFastUtil.getSuperClass(basicClass);
             if (!"java/lang/Enum".equals(superClass)) return basicClass;
