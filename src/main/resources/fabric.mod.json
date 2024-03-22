@@ -13,11 +13,6 @@
 	},
 	"license": "LGPL-v3",
 	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.teampotato.redirector.Redirector"
-		]
-	},
 	"depends": {
 		"minecraft": "*"
 	}
