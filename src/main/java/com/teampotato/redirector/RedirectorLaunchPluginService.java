@@ -5,6 +5,7 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.MethodNode;
 
 import java.util.EnumSet;
@@ -26,18 +27,26 @@ public class RedirectorLaunchPluginService implements ILaunchPluginService {
         if (phase == Phase.BEFORE) {
             return false;
         } else if ("classloading".equals(reason)) {
-            if ("java/lang/Enum".equals(classNode.superName)){
+            String name = classNode.name;
+            if ("java/lang/Enum".equals(classNode.superName)) {
                 for(MethodNode methodNode : classNode.methods){
-                    if ("values".equals(methodNode.name) && ("[L"+classNode.name+";").equals(methodNode.desc)){
-                        ListIterator<AbstractInsnNode> iterator = methodNode.instructions.iterator();
-                        AbstractInsnNode node;
-                        int code;
+                    if ("values".equals(methodNode.name) && methodNode.desc.contains("()")){
+                        InsnList insnNodes = methodNode.instructions;
+                        ListIterator<AbstractInsnNode> iterator = insnNodes.iterator();
+                        AbstractInsnNode n1 = null;
+                        AbstractInsnNode n2 = null;
                         while (iterator.hasNext()) {
-                            node = iterator.next();
-                            code = node.getOpcode();
-                            if (code!= Opcodes.GETSTATIC && code!=Opcodes.ARETURN) iterator.remove();
-
+                            AbstractInsnNode node = iterator.next();
+                            if (Opcodes.GETSTATIC == node.getOpcode()) {
+                                n1 = node;
+                            } else if (Opcodes.ARETURN == node.getOpcode()) {
+                                n2 = node;
+                            }
                         }
+                        insnNodes.clear();
+                        insnNodes.add(n1);
+                        insnNodes.add(n2);
+                        Redirector.LOGGER.info("Redirecting " + name);
                         return true;
                     }
                 }
