@@ -1,2 +1,3 @@
-# 5.0.0
-- Change to CoreMod implementation, clean and effective
+# 5.0.1
+- Remove log spam
+- Fix StateHolder crash
