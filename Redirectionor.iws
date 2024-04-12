@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,26 +13,28 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redirectionor.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Redirectionor.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/redirectionor_cfg.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/redirectionor_cfg.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/crash-reports/crash-2023-08-25_12.40.16-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/crash-reports/crash-2023-08-25_12.40.16-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/crash-reports/crash-2023-09-02_12.10.02-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/crash-reports/crash-2023-09-02_12.10.02-client.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/villages.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/session.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usernamecache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

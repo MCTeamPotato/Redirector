@@ -77,7 +77,7 @@ Details:
 MixinBooter (!mixinbooter-4.2.jar)
   
 redirectionor (Redirectionor)
-  com.Hileb.teampotato.redirectionor.RedirectionorTansformer
+  com.Hileb.teampotato.redirectionor.RedirectionorTransformer
 	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
 	Profiler Position: N/A (disabled)
 	Player Count: 1 / 8; [EntityPlayerMP['Player286'/284, l='New World', x=8.58, y=73.00, z=251.16]]

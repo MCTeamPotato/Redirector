@@ -92,5 +92,5 @@ Details:
 Twilight Tweaks (twilighttweaks-1.12.2-v1.0.2.jar.jar)
   
 redirectionor (Redirectionor)
-  com.Hileb.teampotato.redirectionor.RedirectionorTansformer
+  com.Hileb.teampotato.redirectionor.RedirectionorTransformer
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 527.56' Renderer: 'NVIDIA GeForce GTX 1050/PCIe/SSE2'

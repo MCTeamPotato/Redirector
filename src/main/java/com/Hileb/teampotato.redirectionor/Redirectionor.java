@@ -17,7 +17,7 @@ public class Redirectionor implements IFMLLoadingPlugin {
 
     public static final String MODID = "redirectionor";
 
-    public static final String TRANSFORMERCLASS="com.Hileb.teampotato.redirectionor.RedirectionorTansformer";
+    public static final String TRANSFORMERCLASS = "com.Hileb.teampotato.redirectionor.RedirectionorTransformer";
 
 
     @Override
@@ -37,9 +37,7 @@ public class Redirectionor implements IFMLLoadingPlugin {
     }
 
     @Override
-    public void injectData(Map<String, Object> data) {
-
-    }
+    public void injectData(Map<String, Object> data) {}
 
     @Override
     public String getAccessTransformerClass() {
