@@ -34,6 +34,10 @@ jobs:
               java-version: '8'
               distribution: 'zulu'
               cache: gradle
+          - name : Setup Decomp Workspace
+            uses: gradle/gradle-build-action@v2
+            with:
+              arguments: setupDecompWorkspace
           - name: Build
             uses: gradle/gradle-build-action@v2
             with:
