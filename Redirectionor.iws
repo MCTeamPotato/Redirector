@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build_snapshot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build_1.7.10.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CODEOWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CREDITS-fml.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE-fml.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MinecraftForge-Credits.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MinecraftForge-License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
