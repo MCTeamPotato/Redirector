@@ -7,9 +7,7 @@ name: Build Test Artifact
 on:
   push:
     branches:
-        - 'main'
-    paths:
-        - 'src/**'
+        - '1.7.10'
 
 jobs:
   build:
