@@ -1,6 +1,12 @@
 name: Publish Release
 
 on:
+  push:
+    branches-ignore:
+     - 'main'
+     - '1.7.10'
+     - '1.12.2-1.8.8'
+     - '1.12.2'
   workflow_dispatch:
   release:
     types:
