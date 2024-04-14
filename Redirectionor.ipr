@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ASMIdeaPluginConfiguration">
-    <asm skipDebug="true" skipFrames="true" skipCode="false" expandFrames="false" />
+    <asm skipDebug="false" skipFrames="false" skipCode="false" expandFrames="false" />
     <groovy codeStyle="LEGACY" />
   </component>
   <component name="CompilerConfiguration">
@@ -29,11 +29,28 @@
       <item index="3" class="java.lang.String" itemvalue="net.minecraftforge.eventbus.api.SubscribeEvent" />
     </list>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
   <component name="GradleUISettings">
     <setting name="root" />
   </component>
   <component name="GradleUISettings2">
     <setting name="root" />
+  </component>
+  <component name="HotSwapAgentPluginSettingsProvider">
+    <option name="agentPath" value="C:\Users\Hileb\AppData\Roaming\JetBrains\IdeaIC2022.3\plugins\hotswap-agent-intellij-plugin\lib\agent\hotswap-agent-1.4.1.jar" />
   </component>
   <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C" />
   <component name="InspectionProjectProfileManager">

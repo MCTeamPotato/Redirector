@@ -1,9 +1,6 @@
 package com.Hileb.teampotato.redirectionor;
 
-
 import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
-
-import javax.annotation.Nullable;
 import java.util.Map;
 
 @IFMLLoadingPlugin.Name(Redirectionor.MODID)
@@ -18,7 +15,7 @@ public class Redirectionor implements IFMLLoadingPlugin {
 
     public static final String MODID = "redirectionor";
 
-    public static final String TRANSFORMERCLASS="com.Hileb.teampotato.redirectionor.RedirectionorTansformer";
+    public static final String TRANSFORMERCLASS = "com.Hileb.teampotato.redirectionor.RedirectionorTansformer";
 
 
     @Override
@@ -31,7 +28,6 @@ public class Redirectionor implements IFMLLoadingPlugin {
         return "com.Hileb.teampotato.redirectionor.RedirectionorContainer";
     }
 
-    @Nullable
     @Override
     public String getSetupClass() {
         return null;

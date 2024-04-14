@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redirectionor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redirectionor.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Redirectionor.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge-1.7.10-10.13.4.1614-1.7.10-changelog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/Redirectionor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorFastUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Hileb/teampotato.redirectionor/RedirectionorTansformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +65,23 @@
     <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -83,23 +112,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.datadog.showProjectSetup&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/project/MC MOD/UnusuallyProjectPack/github/tomato/Redirectionor/src/main/java/com/Hileb/teampotato.redirectionor&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;问题&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;build.analyzer&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.datadog.showProjectSetup": "true",
+    "last_opened_file_path": "E:/project/MC MOD/UnusuallyProjectPack/github/tomato/Redirectionor",
+    "project.structure.last.edited": "问题",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "build.analyzer"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\src\main\java\com\Hileb\teampotato.redirectionor" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\src\main\java\com\Hileb" />
-      <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor" />
       <recent name="E:\project\MC MOD\UnusuallyProjectPack\github\tomato\Redirectionor\src\main\resources" />
     </key>
   </component>
