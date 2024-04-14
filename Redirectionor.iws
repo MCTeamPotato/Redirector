@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439ffa84-f9f3-4a47-897f-ec7432b75c21" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build_snapshot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build_snapshot.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Redirectionor.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Redirectionor.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build_snapshot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build_1.7.10.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
