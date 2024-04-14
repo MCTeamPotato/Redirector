@@ -1,0 +1,47 @@
+# This workflow will build and upload test artifact
+# Simple workflow with ignoring condition to prevent unneccessary build
+# To download artifact check on job task
+
+name: Build Test Artifact
+
+on:
+  push:
+    branches:
+        - 'main'
+    paths:
+        - 'src/**'
+
+jobs:
+  build:
+    name: Build and Upload Artifact
+    runs-on: ubuntu-latest
+
+    steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v3
+          - name: Gather Gradle properties
+            uses: madhead/read-java-properties@latest
+            id: gradle_properties
+            with:
+                 file: gradle.properties
+                 all: true
+
+          - name: Grant Execute Permission for gradlew
+            run: chmod +x gradlew
+          - name: Change mod version
+            run: sed -i "s/mod_version.*=.*/mod_version = snapshot/g" gradle.properties
+          - name: Setup Java
+            uses: actions/setup-java@v3
+            with:
+              java-version: '8'
+              distribution: 'zulu'
+              cache: gradle
+          - name: Build
+            uses: gradle/gradle-build-action@v2
+            with:
+              arguments: build
+          - name: Upload Build Artifacts
+            uses: actions/upload-artifact@v2.2.3
+            with:
+              name: Redirectionor-snapshot.jar
+              path: build/libs/*
