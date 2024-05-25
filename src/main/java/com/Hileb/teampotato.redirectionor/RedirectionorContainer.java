@@ -17,7 +17,7 @@ public class RedirectionorContainer extends DummyModContainer {
         metadata.modId=Redirectionor.MODID;
         metadata.name="Redirectionor";
         metadata.description="Redirectionor is the implementation of this concept, specifically for the Direction enum class stuff, to reduce the required memory of the game.";
-        metadata.version="1.3 for 1.12.2-1.8.8";
+        metadata.version="1.4 for 1.12.2-1.8.8";
         metadata.url="https://www.curseforge.com/minecraft/mc-mods/redirectionor";
         metadata.logoFile="/icon_redirectionor.png";
         metadata.authorList.add("MCTeamPotato");

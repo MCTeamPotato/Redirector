@@ -42,7 +42,7 @@ public class RedirectionorTransformer implements IClassTransformer {
                     if (isDeBug)System.out.println("Redirect "+transformedName);
                 }
             }
-            ClassWriter classWriter=new ClassWriter(classReader,ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
+            ClassWriter classWriter=new ClassWriter(classReader, 0);
             cn.accept(classWriter);
             return classWriter.toByteArray();
         }catch (Exception ignore){
