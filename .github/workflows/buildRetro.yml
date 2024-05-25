@@ -1,0 +1,48 @@
+# This workflow will build and upload test artifact
+# Simple workflow with ignoring condition to prevent unneccessary build
+# To download artifact check on job task
+
+name: Build Retro
+
+on:
+  push:
+    branches:
+        - '1.7.10'
+        - '1.12.2-1.8.8'
+
+jobs:
+  build:
+    name: Build Retro
+    runs-on: ubuntu-latest
+
+    steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v3
+          - name: Gather Gradle properties
+            uses: madhead/read-java-properties@latest
+            id: gradle_properties
+            with:
+                 file: gradle.properties
+                 all: true
+
+          - name: Grant Execute Permission for gradlew
+            run: chmod +x gradlew
+          - name: Setup Java
+            uses: actions/setup-java@v3
+            with:
+              java-version: '8'
+              distribution: 'zulu'
+              cache: gradle
+          - name : Setup Decomp Workspace
+            uses: gradle/gradle-build-action@v2
+            with:
+              arguments: setupDecompWorkspace
+          - name: Build
+            uses: gradle/gradle-build-action@v2
+            with:
+              arguments: build
+          - name: Upload Build Artifacts
+            uses: actions/upload-artifact@v2.2.3
+            with:
+              name: Redirectionor-snapshot.jar
+              path: build/libs/*
