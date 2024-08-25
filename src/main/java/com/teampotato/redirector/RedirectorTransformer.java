@@ -66,15 +66,15 @@ public class RedirectorTransformer implements ClassFileTransformer {
 
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] basicClass) {
-        if(baiscClass == null) return null;
+        if(baiscClass == null) return null; // some times, make it faster before try-catch
         try {
-            if (!isEnum(basicClass))) return basicClass;
+            if (!isEnum(basicClass)) return basicClass;
             ClassReader classReader = new ClassReader(basicClass);
             if ("java/lang/Enum".equals(classReader.getSuperName())) {
                 ClassNode cn = new ClassNode();
                 classReader.accept(cn, 0);
                 for (MethodNode mn : cn.methods) {
-                    if ("values".equals(mn.name) && mn.desc.contains("()")) {
+                    if ("values".equals(mn.name) && mn.desc.contains("()")) { // Since using Java 8, Minecraft no longer obfuscates this method
                         InsnList il = mn.instructions;
                         ListIterator<AbstractInsnNode> iterator = il.iterator();
                         AbstractInsnNode n1 = null;
@@ -95,7 +95,7 @@ public class RedirectorTransformer implements ClassFileTransformer {
                 }
                 ClassWriter classWriter = new ClassWriter(classReader, 0); // No frame actually
                 cn.accept(classWriter);
-                Redirector.LOGGER.info("Redirecting ");
+                Redirector.LOGGER.debug("Redirecting {}", className); // TODO : deobf?
                 return classWriter.toByteArray();
             }
         } catch (Exception e) {
