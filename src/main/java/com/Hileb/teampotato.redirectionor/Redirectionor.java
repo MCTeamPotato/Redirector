@@ -1,11 +1,12 @@
 package com.Hileb.teampotato.redirectionor;
 
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import com.google.auto.service.AutoService;
+import cpw.mods.modlauncher.api.ITransformer;
+import net.neoforged.neoforgespi.coremod.ICoreMod;
 
-import javax.annotation.Nullable;
-import java.util.Map;
+import java.util.Collections;
 
-@IFMLLoadingPlugin.Name(Redirectionor.MODID)
+@AutoService(ICoreMod.class)
 public class Redirectionor implements IFMLLoadingPlugin {
     public Redirectionor(){
         try{
@@ -15,32 +16,8 @@ public class Redirectionor implements IFMLLoadingPlugin {
         }
     }
 
-    public static final String MODID = "redirectionor";
-
-    public static final String TRANSFORMERCLASS = "com.Hileb.teampotato.redirectionor.RedirectionorTransformer";
-
-
     @Override
-    public String[] getASMTransformerClass() {
-        return new String[]{TRANSFORMERCLASS};
-    }
-
-    @Override
-    public String getModContainerClass() {
-        return "com.Hileb.teampotato.redirectionor.RedirectionorContainer";
-    }
-
-    @Nullable
-    @Override
-    public String getSetupClass() {
-        return null;
-    }
-
-    @Override
-    public void injectData(Map<String, Object> data) {}
-
-    @Override
-    public String getAccessTransformerClass() {
-        return null;
+    public Iterable<? extends ITransformer<?>> getTransformers() {
+        return Collections.singleton(new RedirectionorTransformer());
     }
 }
