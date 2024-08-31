@@ -3,9 +3,12 @@ package com.Hileb.teampotato.redirectionor;
 import com.google.common.eventbus.EventBus;
 import net.minecraftforge.fml.common.DummyModContainer;
 import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.ICrashCallable;
 import net.minecraftforge.fml.common.LoadController;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+
+import java.util.List;
 
 /**
  * @Project Redirectionor
@@ -33,6 +36,7 @@ public class RedirectionorContainer extends DummyModContainer {
     }
 
     public static void onConstruct(){
-        ObfuscationReflectionHelper.setPrivateValue(FMLCommonHandler.class, FMLCommonHandler.instance(), new RedirectionorConfig.CrashHandler(), "crashCallables");
+        List<ICrashCallable> crashCallables = ObfuscationReflectionHelper.getPrivateValue(FMLCommonHandler.class, FMLCommonHandler.instance(), "crashCallables");
+        crashCallables.add(new RedirectionorConfig.CrashHandler());
     }
 }

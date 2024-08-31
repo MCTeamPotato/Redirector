@@ -36,7 +36,7 @@ public class RedirectionorTransformer implements IClassTransformer {
                             iterator.remove();
                         }
                     }
-                    if (RedirectionorConfig.Config.printTransformedClasses) Redirectionor.LOGGER.info(transformedName);
+                    if (RedirectionorConfig.Config.printTransformedClasses) Redirectionor.LOGGER.info("Redirectionor : " + transformedName);
                     ClassWriter classWriter = new ClassWriter(classReader, 0);
                     cn.accept(classWriter);
                     return classWriter.toByteArray();
