@@ -6,11 +6,14 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import net.minecraft.launchwrapper.Launch;
+import net.minecraft.launchwrapper.LaunchClassLoader;
 import net.minecraftforge.fml.common.ICrashCallable;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.util.HashSet;
 import java.util.Locale;
@@ -145,13 +148,19 @@ public class RedirectionorConfig {
         public static void handleCrash(){
             synchronized (lock){
                 if (Config.isBlock){
+                    Method untransformName;
+                    try {
+                        untransformName = Launch.classLoader.getClass().getDeclaredMethod("untransformName", String.class);
+                    } catch (NoSuchMethodException e) {
+                        throw new RuntimeException(e);
+                    }
                     for(Map.Entry<Thread, StackTraceElement[]> thread : Thread.getAllStackTraces().entrySet()){
                         for(StackTraceElement elements : thread.getValue()){
                             try {
-                                if (RedirectionorFastUtil.isEnum(Launch.classLoader.getClassBytes(elements.getClassName()))){
+                                if (RedirectionorFastUtil.isEnum(Launch.classLoader.getClassBytes((String) untransformName.invoke(Launch.classLoader, elements.getClassName())))){
                                     Config.prefix.add(elements.getClassName());
                                 }
-                            } catch (IOException ignored) {
+                            } catch (IOException | InvocationTargetException | IllegalAccessException ignored) {
                                 //declare but never throws
                             }
                         }
