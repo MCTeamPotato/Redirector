@@ -30,15 +30,15 @@ public class RedirectionorConfig {
             if (jsonObject.has("printTransformedClasses")){
                 Config.printTransformedClasses = jsonObject.get("printTransformedClasses").getAsBoolean();
             }
-            Config.isBlock = Config.setBlocking(jsonObject.get("type").getAsString());
-            {
+            if (jsonObject.has("type")) Config.isBlock = Config.setBlocking(jsonObject.get("type").getAsString());
+            if (jsonObject.has("contains")){
                 JsonArray contains = jsonObject.get("contains").getAsJsonArray();
                 Config.contains = new HashSet<>(contains.size());
                 for (JsonElement element : contains) {
                     Config.contains.add(element.getAsString());
                 }
             }
-            {
+            if (jsonObject.has("prefix")){
                 JsonArray prefix = jsonObject.get("prefix").getAsJsonArray();
                 Config.prefix = new HashSet<>(prefix.size());
                 for (JsonElement element : prefix) {
@@ -62,10 +62,10 @@ public class RedirectionorConfig {
 
         JsonArray prefix = new JsonArray();
         for(String element : Config.prefix){
-            contains.add(element);
+            prefix.add(element);
         }
 
-        json.add("contains", contains);
+        json.add("prefix", prefix);
         return json;
     }
 
