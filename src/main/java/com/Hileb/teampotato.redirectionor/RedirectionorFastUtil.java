@@ -1,11 +1,5 @@
 package com.Hileb.teampotato.redirectionor;
 
-import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.Opcodes;
-
-import java.lang.reflect.Modifier;
-
 /**
  * @Project Redirectionor
  * @Author Hileb
@@ -13,7 +7,8 @@ import java.lang.reflect.Modifier;
  **/
 public class RedirectionorFastUtil {
     public static boolean isEnum(byte[] clazz){
-        int constantsCount = readUnsignedShort(clazz,8);
+        if (clazz == null || clazz.length < 8) return false;
+        int constantsCount = readUnsignedShort(clazz, 8);
         int passcount = 10;
         for(int i = 1; i < constantsCount; i++){
             int size=0;
@@ -32,8 +27,7 @@ public class RedirectionorFastUtil {
                     size = 9;
                     break;
                 case 1:
-                    int UTFSize=readUnsignedShort(clazz,passcount + 1);
-                    size = 3 + UTFSize;
+                    size = 3 + readUnsignedShort(clazz,passcount + 1);
                     break;
                 case 15:
                     size = 4;
@@ -50,12 +44,26 @@ public class RedirectionorFastUtil {
     public static int readUnsignedShort(byte[] b, int index) {
         return ((b[index] & 0xFF) << 8) | (b[index + 1] & 0xFF);
     }
+
     public static boolean isAvailable(String name){
+        return RedirectionorConfig.Config.isBlock != (isPrefixed(name) || isContained(name));
+    }
+
+    public static boolean isContained(String name){
         for(String modid : RedirectionorConfig.Config.contains){
             if (name.contains(modid)){
-                return !RedirectionorConfig.Config.isBlocking();
+                return true;
             }
         }
-        return RedirectionorConfig.Config.isBlocking();
+        return false;
+    }
+
+    public static boolean isPrefixed(String name){
+        for(String modid : RedirectionorConfig.Config.prefix){
+            if (name.startsWith(modid)){
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -1,12 +1,17 @@
 package com.Hileb.teampotato.redirectionor;
 
+import net.minecraftforge.fml.relauncher.CoreModManager;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nullable;
+import java.io.File;
 import java.util.Map;
 
 @IFMLLoadingPlugin.Name(Redirectionor.MODID)
 public class Redirectionor implements IFMLLoadingPlugin {
+
     public Redirectionor(){
         try{
             RedirectionorConfig.initConfig();
@@ -15,10 +20,17 @@ public class Redirectionor implements IFMLLoadingPlugin {
         }
     }
 
+    public static void makeFMLCorePluginContainsFMLMod(File file){
+        String name = file.getName();
+        CoreModManager.getIgnoredMods().remove(name);
+        CoreModManager.getReparseableCoremods().add(name);
+    }
+
     public static final String MODID = "redirectionor";
 
     public static final String TRANSFORMERCLASS = "com.Hileb.teampotato.redirectionor.RedirectionorTransformer";
 
+    public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     @Override
     public String[] getASMTransformerClass() {
@@ -37,7 +49,11 @@ public class Redirectionor implements IFMLLoadingPlugin {
     }
 
     @Override
-    public void injectData(Map<String, Object> data) {}
+    public void injectData(Map<String, Object> data) {
+//        if (data.containsKey("coremodLocation")){
+//            makeFMLCorePluginContainsFMLMod((File)data.get("coremodLocation"));
+//        }
+    }
 
     @Override
     public String getAccessTransformerClass() {

@@ -6,7 +6,6 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
-import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.MethodNode;
 
 import java.util.ListIterator;
@@ -17,7 +16,6 @@ import java.util.ListIterator;
  * @Date 2023/8/24 12:31
  **/
 public class RedirectionorTransformer implements IClassTransformer {
-    public static boolean isDeBug = true;
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         try{
@@ -26,10 +24,9 @@ public class RedirectionorTransformer implements IClassTransformer {
             }
             ClassReader classReader = new ClassReader(basicClass);
             ClassNode cn = new ClassNode();
-            classReader.accept(cn,0);
+            classReader.accept(cn, 0);
             for(MethodNode mn:cn.methods){
                 if ("values".equals(mn.name) && mn.desc.startsWith("()")){
-                    InsnList il=mn.instructions;
                     ListIterator<AbstractInsnNode> iterator = mn.instructions.iterator();
                     AbstractInsnNode node;
                     while (iterator.hasNext()){
@@ -39,12 +36,13 @@ public class RedirectionorTransformer implements IClassTransformer {
                             iterator.remove();
                         }
                     }
-                    if (isDeBug)System.out.println("Redirect "+transformedName);
+                    if (RedirectionorConfig.Config.printTransformedClasses) Redirectionor.LOGGER.info(transformedName);
+                    ClassWriter classWriter = new ClassWriter(classReader, 0);
+                    cn.accept(classWriter);
+                    return classWriter.toByteArray();
                 }
             }
-            ClassWriter classWriter=new ClassWriter(classReader, 0);
-            cn.accept(classWriter);
-            return classWriter.toByteArray();
+            return basicClass;
         }catch (Exception ignore){
             return basicClass;
         }
