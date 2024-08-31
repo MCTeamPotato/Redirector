@@ -1,5 +1,7 @@
 package com.Hileb.teampotato.redirectionor;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -14,6 +16,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.HashSet;
 import java.util.Locale;
@@ -25,32 +28,40 @@ import java.util.Map;
  * @Date 2023/9/9 18:14
  **/
 public class RedirectionorConfig {
+    public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static File CONFIG_FILE = null;
 
-    public static void decode(JsonObject jsonObject){
+    public static boolean decode(JsonObject jsonObject){
+        boolean rewrite = false;
         try{
+
             if (jsonObject.has("printTransformedClasses")){
                 Config.printTransformedClasses = jsonObject.get("printTransformedClasses").getAsBoolean();
-            }
+            } else rewrite = true;
+
             if (jsonObject.has("type")) Config.isBlock = Config.setBlocking(jsonObject.get("type").getAsString());
+            else rewrite = true;
+
             if (jsonObject.has("contains")){
                 JsonArray contains = jsonObject.get("contains").getAsJsonArray();
                 Config.contains = new HashSet<>(contains.size());
                 for (JsonElement element : contains) {
                     Config.contains.add(element.getAsString());
                 }
-            }
+            } else rewrite = true;
+
             if (jsonObject.has("prefix")){
                 JsonArray prefix = jsonObject.get("prefix").getAsJsonArray();
                 Config.prefix = new HashSet<>(prefix.size());
                 for (JsonElement element : prefix) {
                     Config.prefix.add(element.getAsString());
                 }
-            }
+            } else rewrite = true;
         }catch (Throwable e){
             throw new RuntimeException("Could not read the config", e);
         }
+        return rewrite;
     }
 
     public static JsonObject encode(){
@@ -73,9 +84,8 @@ public class RedirectionorConfig {
     }
 
     public static void save(){
-        if (CONFIG_FILE == null) initConfig();
-        try (PrintWriter pw = new PrintWriter(CONFIG_FILE,"UTF-8")){
-            pw.println(encode());
+        try (PrintWriter pw = new PrintWriter(CONFIG_FILE, "UTF-8")){
+            pw.println(GSON.toJson(encode()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -91,11 +101,14 @@ public class RedirectionorConfig {
         }
 
         File file = new File(config,"redirectionor_cfg.json");
+        CONFIG_FILE = file;
+
+
         if (file.exists()){
             try {
                 JsonParser jsonParser = new JsonParser();
                 JsonObject jsonObject = (JsonObject)jsonParser.parse(new String(Files.readAllBytes(file.toPath())));
-                decode(jsonObject);
+                if (decode(jsonObject)) save();
             } catch (IOException e) {
                 throw new RuntimeException("Could not read the config", e);
             } catch (JsonSyntaxException e){
@@ -104,16 +117,11 @@ public class RedirectionorConfig {
         } else {
             try {
                 file.createNewFile();
+                save();
             } catch (IOException e) {
-                throw new RuntimeException("Could not operate config file", e);
+                throw new RuntimeException("Could not create config file", e);
             }
         }
-        try (PrintWriter pw = new PrintWriter(file,"UTF-8")){
-            pw.println(encode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        CONFIG_FILE = file;
     }
     public static class Config{
         public static boolean printTransformedClasses = false;
