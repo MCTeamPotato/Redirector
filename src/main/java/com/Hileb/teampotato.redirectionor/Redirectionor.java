@@ -28,13 +28,16 @@ public class Redirectionor implements IFMLLoadingPlugin {
 
     public static final String MODID = "redirectionor";
 
-    public static final String TRANSFORMERCLASS = "com.Hileb.teampotato.redirectionor.RedirectionorTransformer";
+
 
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[]{TRANSFORMERCLASS};
+        return new String[]{
+                "com.Hileb.teampotato.redirectionor.RedirectionorTransformer",
+                "com.Hileb.teampotato.redirectionor.RedirectionorCrashTransformer"
+        };
     }
 
     @Override

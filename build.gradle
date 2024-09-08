@@ -28,7 +28,7 @@ if (useMirror) apply from: "mirror.gradle"
 apply plugin: "net.minecraftforge.gradle.forge"
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-version = "1.5 for 1.12.2-1.8.8"
+version = "1.6 for 1.12.2-1.8.8"
 group = "com.ideallandframework.silent_assassin" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "redirectionor"
 

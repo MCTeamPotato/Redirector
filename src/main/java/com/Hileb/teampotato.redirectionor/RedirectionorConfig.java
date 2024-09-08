@@ -7,20 +7,16 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+import net.minecraft.crash.CrashReport;
 import net.minecraft.launchwrapper.Launch;
-import net.minecraft.launchwrapper.LaunchClassLoader;
 import net.minecraftforge.fml.common.ICrashCallable;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.HashSet;
 import java.util.Locale;
-import java.util.Map;
 
 /**
  * @Project Redirectionor
@@ -66,13 +62,14 @@ public class RedirectionorConfig {
 
     public static JsonObject encode(){
         JsonObject json = new JsonObject();
-        json.addProperty("printTransformedClasses", Config.isBlock);
+        json.addProperty("printTransformedClasses", Config.printTransformedClasses);
         json.addProperty("type", Config.isBlock ? "block" : "allow");
 
         JsonArray contains = new JsonArray();
         for(String element : Config.contains){
             contains.add(element);
         }
+        json.add("contains", contains);
 
         JsonArray prefix = new JsonArray();
         for(String element : Config.prefix){
@@ -141,8 +138,6 @@ public class RedirectionorConfig {
 
         @Override
         public String call() {
-            handleCrash();
-            save();
             return "An automatic prefix block config generated";
         }
 
@@ -151,30 +146,22 @@ public class RedirectionorConfig {
             return "Redirectionor is enabled. Check your enums!";
         }
 
-        public static final Object lock = new Object();
-
-        public static void handleCrash(){
-            synchronized (lock){
-                if (Config.isBlock){
-                    Method untransformName;
-                    try {
-                        untransformName = Launch.classLoader.getClass().getDeclaredMethod("untransformName", String.class);
-                    } catch (NoSuchMethodException e) {
-                        throw new RuntimeException(e);
-                    }
-                    for(Map.Entry<Thread, StackTraceElement[]> thread : Thread.getAllStackTraces().entrySet()){
-                        for(StackTraceElement elements : thread.getValue()){
-                            try {
-                                if (RedirectionorFastUtil.isEnum(Launch.classLoader.getClassBytes((String) untransformName.invoke(Launch.classLoader, elements.getClassName())))){
-                                    Config.prefix.add(elements.getClassName());
-                                }
-                            } catch (IOException | InvocationTargetException | IllegalAccessException ignored) {
-                                //declare but never throws
+        @SuppressWarnings("unused") // ASM invoke
+        public static void handleCrash(CrashReport crashReport){
+                if ("ThisIsFake".equals(crashReport.getDescription())) return;
+                else if (Config.isBlock){
+                    for(StackTraceElement element : crashReport.getCrashCause().getStackTrace()){
+                        try{
+                            Class<?> cls = Class.forName(element.getClassName(), false, Launch.classLoader);
+                            if (cls.isEnum()){
+                                Config.prefix.add(cls.getName());
                             }
+                        } catch (ClassNotFoundException ignored) {
+                            // no ops
                         }
                     }
+                    save();
                 }
-            }
         }
     }
 }
