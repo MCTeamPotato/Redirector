@@ -30,7 +30,7 @@ public class RedirectionorCrashTransformer implements IClassTransformer {
                     hook.add(new VarInsnNode(Opcodes.ALOAD, 1));
                     hook.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "com/Hileb/teampotato/redirectionor/RedirectionorConfig$CrashHandler", "handleCrash", "(Lnet/minecraft/crash/CrashReport;)V", false));
                     methodNode.instructions.insert(hook);
-                    LaunchClassWriter classWriter = LaunchClassWriter(classReader, ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
+                    LaunchClassWriter classWriter = new LaunchClassWriter(classReader, ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
                     cn.accept(classWriter);
                     return classWriter.toByteArray();
                 }
