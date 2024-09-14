@@ -54,6 +54,10 @@ public class RedirectionorConfig {
                     Config.prefix.add(element.getAsString());
                 }
             } else rewrite = true;
+
+            if (jsonObject.has("generateConfigWhenCrash")){
+                Config.generateConfigWhenCrash = jsonObject.get("generateConfigWhenCrash").getAsBoolean();
+            } else rewrite = true;
         }catch (Throwable e){
             throw new RuntimeException("Could not read the config", e);
         }
@@ -77,6 +81,8 @@ public class RedirectionorConfig {
         }
 
         json.add("prefix", prefix);
+
+        json.add("generateConfigWhenCrash", Config.generateConfigWhenCrash);
         return json;
     }
 
@@ -121,6 +127,7 @@ public class RedirectionorConfig {
         }
     }
     public static class Config{
+        public static boolean generateConfigWhenCrash = true;
         public static boolean printTransformedClasses = false;
         public static boolean isBlock = true;
         public static HashSet<String> contains = new HashSet<>();
@@ -148,19 +155,21 @@ public class RedirectionorConfig {
 
         @SuppressWarnings("unused") // ASM invoke
         public static void handleCrash(CrashReport crashReport){
-                if ("ThisIsFake".equals(crashReport.getDescription())) return;
-                else if (Config.isBlock){
-                    for(StackTraceElement element : crashReport.getCrashCause().getStackTrace()){
-                        try{
-                            Class<?> cls = Class.forName(element.getClassName(), false, Launch.classLoader);
-                            if (cls.isEnum()){
-                                Config.prefix.add(cls.getName());
+                if (Config.generateConfigWhenCrash){
+                    if ("ThisIsFake".equals(crashReport.getDescription())) return;
+                    else if (Config.isBlock){
+                        for(StackTraceElement element : crashReport.getCrashCause().getStackTrace()){
+                            try{
+                                Class<?> cls = Class.forName(element.getClassName(), false, Launch.classLoader);
+                                if (cls.isEnum()){
+                                    Config.prefix.add(cls.getName());
+                                }
+                            } catch (ClassNotFoundException ignored) {
+                                // no ops
                             }
-                        } catch (ClassNotFoundException ignored) {
-                            // no ops
                         }
+                        save();
                     }
-                    save();
                 }
         }
     }
