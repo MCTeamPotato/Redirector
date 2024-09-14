@@ -82,7 +82,7 @@ public class RedirectionorConfig {
 
         json.add("prefix", prefix);
 
-        json.add("generateConfigWhenCrash", Config.generateConfigWhenCrash);
+        json.addProperty("generateConfigWhenCrash", Config.generateConfigWhenCrash);
         return json;
     }
 
