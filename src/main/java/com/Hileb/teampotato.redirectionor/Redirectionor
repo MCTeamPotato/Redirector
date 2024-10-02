@@ -1,0 +1,11 @@
+package com.Hileb.teampotato.redirector;
+
+import net.neoforged.fml.common.Mod;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+@Mod(Redirector.MOD_ID)
+public class Redirector {
+    public static final String MOD_ID = "redirectionor";
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+}
