@@ -6,16 +6,19 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSyntaxException;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.launchwrapper.Launch;
 import net.minecraftforge.fml.common.ICrashCallable;
+import sun.awt.windows.ThemeReader;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Locale;
 
 /**
@@ -71,13 +74,13 @@ public class RedirectionorConfig {
 
         JsonArray contains = new JsonArray();
         for(String element : Config.contains){
-            contains.add(element);
+            contains.add(new JsonPrimitive(element));
         }
         json.add("contains", contains);
 
         JsonArray prefix = new JsonArray();
         for(String element : Config.prefix){
-            prefix.add(element);
+            prefix.add(new JsonPrimitive(element));
         }
 
         json.add("prefix", prefix);
@@ -158,14 +161,30 @@ public class RedirectionorConfig {
                 if (Config.generateConfigWhenCrash){
                     if ("ThisIsFake".equals(crashReport.getDescription())) return;
                     else if (Config.isBlock){
-                        for(StackTraceElement element : crashReport.getCrashCause().getStackTrace()){
-                            try{
-                                Class<?> cls = Class.forName(element.getClassName(), false, Launch.classLoader);
-                                if (cls.isEnum()){
-                                    Config.prefix.add(cls.getName());
+                        Iterator<Throwable> iterator = new Iterator<Throwable>() {
+                            public Throwable current = crashReport.getCrashCause();
+                            @Override
+                            public boolean hasNext() {
+                                return current != null;
+                            }
+
+                            @Override
+                            public Throwable next() {
+                                Throwable toReturn = current;
+                                current = toReturn.getCause();
+                                return toReturn;
+                            }
+                        };
+                        while (iterator.hasNext()){
+                            for(StackTraceElement element : iterator.next().getStackTrace()){
+                                try{
+                                    Class<?> cls = Class.forName(element.getClassName(), false, Launch.classLoader);
+                                    if (cls.isEnum()){
+                                        Config.prefix.add(cls.getName());
+                                    }
+                                } catch (ClassNotFoundException ignored) {
+                                    // no ops
                                 }
-                            } catch (ClassNotFoundException ignored) {
-                                // no ops
                             }
                         }
                         save();
