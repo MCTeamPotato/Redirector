@@ -167,13 +167,13 @@ public class RedirectionorTransformer implements nilloader.api.ClassTransformer,
         json.put("printTransformedClasses", printTransformedClasses);
         json.put("type", isBlock ? "block" : "allow");
 
-        JsonArray contains = new JsonArray(contains.size());
-        contains.addAll(contains);
-        json.put("contains", contains);
+        JsonArray contains_ = new JsonArray(contains.size());
+        contains_.addAll(contains);
+        json.put("contains", contains_);
 
-        JsonArray prefix = new JsonArray(prefix.size());
-        prefix.addAll(prefix);
-        json.put("prefix", prefix);
+        JsonArray prefix_ = new JsonArray(prefix.size());
+        prefix_.addAll(prefix);
+        json.put("prefix", prefix_);
 
         json.put("generateConfigWhenCrash", generateConfigWhenCrash);
         return json;
