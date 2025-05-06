@@ -13,6 +13,10 @@ import nilloader.api.lib.nanojson.JsonObject;
 import nilloader.api.lib.nanojson.JsonParser;
 import nilloader.api.lib.nanojson.JsonParserException;
 
+import nilloader.api.ClassTransformer;
+import nilloader.api.ModRemapper;
+import nilloader.api.NilLogger;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
