@@ -20,11 +20,13 @@ public class RedirectionorFastUtil {
                 case 4:
                 case 12:
                 case 18:
+                case 17:
                     size = 5;
                     break;
                 case 5:
                 case 6:
                     size = 9;
+                    ++i;
                     break;
                 case 1:
                     size = 3 + readUnsignedShort(clazz,passcount + 1);
