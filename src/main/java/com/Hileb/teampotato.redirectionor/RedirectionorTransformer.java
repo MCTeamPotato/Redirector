@@ -117,7 +117,7 @@ public class RedirectionorTransformer implements nilloader.api.ClassTransformer,
         passcount = readUnsignedShort(clazz, passcount);
         return (passcount & 16384) !=0;
     }
-    \
+    
     public static int readUnsignedShort(byte[] b, int index) {
         return ((b[index] & 0xFF) << 8) | (b[index + 1] & 0xFF);
     }
