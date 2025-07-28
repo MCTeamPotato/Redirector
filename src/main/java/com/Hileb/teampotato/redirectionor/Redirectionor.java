@@ -26,18 +26,27 @@ public class Redirectionor implements IFMLLoadingPlugin {
         CoreModManager.getReparseableCoremods().add(name);
     }
 
-    public static final String MODID = "redirectionor";
+    public static void logError(Throwable throwable) {
+        throwable.printStackTrace();
+    }
 
+    public static final String MODID = "redirectionor";
 
 
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[]{
-                "com.Hileb.teampotato.redirectionor.RedirectionorTransformer",
-                "com.Hileb.teampotato.redirectionor.RedirectionorCrashTransformer"
-        };
+        if (RedirectionorConfig.Config.runOnAbsoluteSafeEnvironment) {
+            return new String[]{
+
+            };
+        } else {
+            return new String[]{
+                    "com.Hileb.teampotato.redirectionor.transformers.RedirectionorTransformer",
+                    "com.Hileb.teampotato.redirectionor.transformers.RedirectionorCrashTransformer"
+            };
+        }
     }
 
     @Override

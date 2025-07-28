@@ -11,7 +11,6 @@ import com.google.gson.JsonSyntaxException;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.launchwrapper.Launch;
 import net.minecraftforge.fml.common.ICrashCallable;
-import sun.awt.windows.ThemeReader;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,11 +20,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Locale;
 
-/**
- * @Project Redirectionor
- * @Author Hileb
- * @Date 2023/9/9 18:14
- **/
+@SuppressWarnings("unused")
 public class RedirectionorConfig {
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
@@ -37,6 +32,14 @@ public class RedirectionorConfig {
 
             if (jsonObject.has("printTransformedClasses")){
                 Config.printTransformedClasses = jsonObject.get("printTransformedClasses").getAsBoolean();
+            } else rewrite = true;
+
+            if (jsonObject.has("checkEnumsWhenRunningTime")){
+                Config.checkEnumsWhenRunningTime = jsonObject.get("checkEnumsWhenRunningTime").getAsBoolean();
+            } else rewrite = true;
+
+            if (jsonObject.has("runOnAbsoluteSafeEnvironment")){
+                Config.runOnAbsoluteSafeEnvironment = jsonObject.get("runOnAbsoluteSafeEnvironment").getAsBoolean();
             } else rewrite = true;
 
             if (jsonObject.has("type")) Config.isBlock = Config.setBlocking(jsonObject.get("type").getAsString());
@@ -70,6 +73,8 @@ public class RedirectionorConfig {
     public static JsonObject encode(){
         JsonObject json = new JsonObject();
         json.addProperty("printTransformedClasses", Config.printTransformedClasses);
+        json.addProperty("checkEnumsWhenRunningTime", Config.checkEnumsWhenRunningTime);
+        json.addProperty("runOnAbsoluteSafeEnvironment", Config.runOnAbsoluteSafeEnvironment);
         json.addProperty("type", Config.isBlock ? "block" : "allow");
 
         JsonArray contains = new JsonArray();
@@ -135,6 +140,8 @@ public class RedirectionorConfig {
         public static boolean isBlock = true;
         public static HashSet<String> contains = new HashSet<>();
         public static HashSet<String> prefix = new HashSet<>();
+        public static boolean checkEnumsWhenRunningTime = false;
+        public static boolean runOnAbsoluteSafeEnvironment = false;
         public static boolean setBlocking(String s){
             if ("block".equals(s.toLowerCase(Locale.ENGLISH))) return true;
             else if ("allow".equals(s.toLowerCase(Locale.ENGLISH))) return false;
@@ -148,12 +155,12 @@ public class RedirectionorConfig {
 
         @Override
         public String call() {
-            return "An automatic prefix block config generated";
+            return "An automatic prefix block config generated. Check your full logs!";
         }
 
         @Override
         public String getLabel() {
-            return "Redirectionor is enabled. Check your enums!";
+            return "Redirectionor";
         }
 
         @SuppressWarnings("unused") // ASM invoke

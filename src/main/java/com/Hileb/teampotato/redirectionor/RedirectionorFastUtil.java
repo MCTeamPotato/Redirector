@@ -1,10 +1,6 @@
 package com.Hileb.teampotato.redirectionor;
 
-/**
- * @Project Redirectionor
- * @Author Hileb
- * @Date 2023/8/29 22:00
- **/
+@SuppressWarnings("unused")
 public class RedirectionorFastUtil {
     public static boolean isEnum(byte[] clazz){
         if (clazz == null || clazz.length < 8) return false;
