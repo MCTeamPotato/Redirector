@@ -62,7 +62,7 @@ public class RedirectionorTransformer implements IClassTransformer {
                             methodVisitor.visitCode();
                             methodVisitor.visitTypeInsn(Opcodes.NEW, "java/lang/IllegalStateException");
                             methodVisitor.visitInsn(Opcodes.DUP);
-                            methodVisitor.visitLdc("Enum#values() has been broken.");
+                            methodVisitor.visitLdcInsn("Enum#values() has been broken.");
                             methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/IllegalStateException", "<init>", "(Ljava/lang/String;)V", false);
                             methodVisitor.visitMethodInsn(INVOKESTATIC, "com/Hileb/teampotato/redirectionor/Redirectionor", "logError", "(Ljava/lang/Throwable;)V", false);
                             methodVisitor.visitInsn(Opcodes.RETURN);
