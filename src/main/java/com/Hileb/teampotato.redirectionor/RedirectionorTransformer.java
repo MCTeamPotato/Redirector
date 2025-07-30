@@ -45,8 +45,6 @@ public class RedirectionorTransformer implements nilloader.api.ClassTransformer,
     // NilLoader comes with a logger abstraction that Does The Right Thing depending on the environment.
     // You should always use it.
     public static final NilLogger LOGGER = NilLogger.get("Redirectionor");
-  
-    public static final int ASM_API = SystemUtils.IS_JAVA_1_8 ? (5 << 16 | 0 << 8) : (9 << 16 | 0 << 8); // ASM5 : ASM9
 
     @Override
     public byte[] transform(String transformedName, byte[] basicClass) {
@@ -57,11 +55,11 @@ public class RedirectionorTransformer implements nilloader.api.ClassTransformer,
             ClassReader classReader = new ClassReader(basicClass);
             final String arrayType = "[L" + classReader.getClassName() + ';';
             ClassWriter classWriter = new ClassWriter(0);
-            ClassVisitor classVisitor = new ClassVisitor(ASM_API, classWriter) {
+            ClassVisitor classVisitor = new ClassVisitor(ASM9, classWriter) {
                 @Override
                 public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
                     if ("values".equals(name) && desc.startsWith("()")) {
-                        return new MethodVisitor(ASM_API, super.visitMethod(access, name, desc, signature, exceptions)) {
+                        return new MethodVisitor(ASM9, super.visitMethod(access, name, desc, signature, exceptions)) {
                             @Override
                             public void visitMethodInsn(int opcode, String owner, String name, String desc, boolean itf) {
                                 if ("clone".equals(name)) {
@@ -72,8 +70,8 @@ public class RedirectionorTransformer implements nilloader.api.ClassTransformer,
                                 } else super.visitMethodInsn(opcode, owner, name, desc, itf);
                             }
                         };
-                    } else if ("<clinit>".equals(name) && RedirectionorConfig.Config.checkEnumsWhenRunningTime) {
-                        return new MethodVisitor(ASM_API, super.visitMethod(access, name, desc, signature, exceptions)) {
+                    } else if ("<clinit>".equals(name) && checkEnumsWhenRunningTime) {
+                        return new MethodVisitor(ASM9, super.visitMethod(access, name, desc, signature, exceptions)) {
 
                             @Override
                             public void visitInsn(int opcode) {
@@ -164,7 +162,7 @@ public class RedirectionorTransformer implements nilloader.api.ClassTransformer,
             classReader.accept(classVisitor, 0);
             return classWriter.toByteArray();
         }catch (Exception ignore){
-            LOGGER.error(ignore);
+            LOGGER.info(ignore);
             return basicClass;
         }
     }
