@@ -162,7 +162,7 @@ public class RedirectionorTransformer implements nilloader.api.ClassTransformer,
             classReader.accept(classVisitor, 0);
             return classWriter.toByteArray();
         }catch (Exception ignore){
-            LOGGER.info(ignore);
+            ignore.printStackTrace();
             return basicClass;
         }
     }
