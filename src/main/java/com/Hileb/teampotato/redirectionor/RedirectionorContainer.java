@@ -1,6 +1,5 @@
 package com.Hileb.teampotato.redirectionor;
 
-import com.Hileb.teampotato.redirectionor.demo.EnumTestDemo;
 import com.google.common.eventbus.EventBus;
 import net.minecraftforge.fml.common.DummyModContainer;
 import net.minecraftforge.fml.common.FMLCommonHandler;
